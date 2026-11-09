@@ -1,0 +1,29 @@
+id,name,category,subcategory,slot,rarity,set,hypothetical_price_chronons,status
+desert-navigator,Desert Navigator,characters,alternative-appearance,character,common,desert-caravan,25,proposed example
+aurora-scout,Aurora Scout,characters,alternative-appearance,character,rare,,60,proposed example
+neon-voyager,Neon Voyager,characters,alternative-appearance,character,epic,neon-pathfinder,125,proposed example
+chrono-wanderer,Chrono Wanderer,characters,alternative-appearance,character,legendary,chrono-voyager,250,proposed example
+pocket-fennec,Pocket Fennec,pets,small-animal,companion,common,desert-caravan,25,proposed example
+trail-terrier,Trail Terrier,pets,small-animal,companion,common,,25,proposed example
+holo-owl,Holo Owl,pets,futuristic,companion,rare,,60,proposed example
+ember-fox-spirit,Ember Fox Spirit,pets,fantasy,companion,epic,,125,proposed example
+starlit-griffin-cub,Starlit Griffin Cub,pets,fantasy,companion,legendary,,250,proposed example
+sunrise-bucket-hat,Sunrise Bucket Hat,clothing,headwear,head,common,desert-caravan,25,proposed example
+aurora-beanie,Aurora Beanie,clothing,headwear,head,common,polar-explorer,25,proposed example
+holo-visor-cap,Holo-Visor Cap,clothing,headwear,head,rare,neon-pathfinder,60,proposed example
+city-windbreaker,City Windbreaker,clothing,shirts-and-jackets,top,common,,25,proposed example
+thermal-trail-hoodie,Thermal Trail Hoodie,clothing,shirts-and-jackets,top,rare,polar-explorer,60,proposed example
+solar-weave-jacket,Solar-Weave Jacket,clothing,shirts-and-jackets,top,epic,,125,proposed example
+cloudstep-sneakers,Cloudstep Sneakers,clothing,shoes,feet,common,,25,proposed example
+magnetic-trail-boots,Magnetic Trail Boots,clothing,shoes,feet,rare,polar-explorer,60,proposed example
+gravity-glide-runners,Gravity-Glide Runners,clothing,shoes,feet,epic,,125,proposed example
+polar-expedition-suit,Polar Expedition Suit,clothing,full-outfit,outfit,epic,polar-explorer,125,proposed example
+nightcity-runner-kit,Night-City Runner Kit,clothing,full-outfit,outfit,legendary,neon-pathfinder,250,proposed example
+hologram-compass-band,Hologram Compass Band,equipment,holographic-accessory,wrist,rare,chrono-voyager,60,proposed example
+chrono-lens-glasses,Chrono-Lens Glasses,equipment,holographic-accessory,face,epic,chrono-voyager,125,proposed example
+solar-sail-backpack,Solar-Sail Backpack,equipment,backpack,back,rare,neon-pathfinder,60,proposed example
+pathfinder-thruster-pack,Pathfinder Thruster Pack,equipment,backpack,back,legendary,chrono-voyager,250,proposed example
+pulse-light-laces,Pulse-Light Laces,equipment,glowing-wearable,wearable,common,neon-pathfinder,25,proposed example
+glow-thread-scarf,Glow-Thread Scarf,equipment,glowing-wearable,wearable,rare,,60,proposed example
+star-map-tablet,Star-Map Tablet,equipment,exploration-gear,gear,common,desert-caravan,25,proposed example
+terrain-scanner-staff,Terrain-Scanner Staff,equipment,exploration-gear,gear,epic,,125,proposed example

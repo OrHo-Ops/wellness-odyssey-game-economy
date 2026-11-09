@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 472" width="760" height="472" role="img" aria-labelledby="title desc">
+<title id="title">Waiting time by journey for each player type</title>
+<desc id="desc">Line chart of median waiting days before each journey unlock.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="472" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">E2. Where Chronon scarcity starts affecting journey access</text>
+<text x="24" y="56" font-size="12.5" class="t2">Median wait per journey, moderate walkers. First journey with a median wait of a day or more: Walking</text>
+<text x="24" y="74" font-size="12.5" class="t2">only 60; Organic missions 83; Sponsored missions 93; Store purchases 69; Chronon bundles 93.</text>
+<rect class="c1" x="24" y="97" width="16" height="4" rx="2"/>
+<text x="46" y="103" font-size="12" class="t2">Walking only</text>
+<rect class="c3" x="144.6" y="97" width="16" height="4" rx="2"/>
+<text x="166.6" y="103" font-size="12" class="t2">Organic missions</text>
+<rect class="c4" x="292.2" y="97" width="16" height="4" rx="2"/>
+<text x="314.2" y="103" font-size="12" class="t2">Sponsored missions</text>
+<rect class="c5" x="453.1" y="97" width="16" height="4" rx="2"/>
+<text x="475.1" y="103" font-size="12" class="t2">Store purchases</text>
+<rect class="c6" x="593.9" y="97" width="16" height="4" rx="2"/>
+<text x="615.9" y="103" font-size="12" class="t2">Chronon bundles</text>
+<line class="axis" x1="72" y1="396" x2="720" y2="396"/>
+<text x="64" y="400" font-size="11" class="mu" text-anchor="end">0</text>
+<line class="grid" x1="72" y1="331" x2="720" y2="331"/>
+<text x="64" y="335" font-size="11" class="mu" text-anchor="end">5</text>
+<line class="grid" x1="72" y1="266" x2="720" y2="266"/>
+<text x="64" y="270" font-size="11" class="mu" text-anchor="end">10</text>
+<line class="grid" x1="72" y1="201" x2="720" y2="201"/>
+<text x="64" y="205" font-size="11" class="mu" text-anchor="end">15</text>
+<line class="grid" x1="72" y1="136" x2="720" y2="136"/>
+<text x="64" y="140" font-size="11" class="mu" text-anchor="end">20</text>
+<text x="72" y="414" font-size="11" class="mu" text-anchor="middle">1</text>
+<text x="130.9" y="414" font-size="11" class="mu" text-anchor="middle">10</text>
+<text x="229.1" y="414" font-size="11" class="mu" text-anchor="middle">25</text>
+<text x="392.7" y="414" font-size="11" class="mu" text-anchor="middle">50</text>
+<text x="556.4" y="414" font-size="11" class="mu" text-anchor="middle">75</text>
+<text x="720" y="414" font-size="11" class="mu" text-anchor="middle">100</text>
+<text x="720" y="432" font-size="11" class="mu" text-anchor="end">Journey to unlock</text>
+<text x="72" y="124" font-size="11" class="mu">Median days waiting</text>
+<path class="l1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78.5,396L85.1,396L91.6,396L98.2,396L104.7,396L111.3,396L117.8,396L124.4,396L130.9,396L137.5,396L144,396L150.5,396L157.1,396L163.6,396L170.2,396L176.7,396L183.3,396L189.8,396L196.4,396L202.9,396L209.5,396L216,396L222.5,396L229.1,396L235.6,396L242.2,396L248.7,396L255.3,396L261.8,396L268.4,396L274.9,396L281.5,396L288,396L294.5,396L301.1,396L307.6,396L314.2,396L320.7,396L327.3,396L333.8,396L340.4,396L346.9,396L353.5,396L360,396L366.5,396L373.1,396L379.6,396L386.2,396L392.7,396L399.3,396L405.8,396L412.4,396L418.9,396L425.5,396L432,396L438.5,396L445.1,396L451.6,396L458.2,383L464.7,344L471.3,305L477.8,266L484.4,253L490.9,253L497.5,240L504,253L510.5,253L517.1,253L523.6,240L530.2,240L536.7,233.5L543.3,240L549.8,227L556.4,227L562.9,227L569.5,227L576,220.5L582.5,201L589.1,214L595.6,214L602.2,201L608.7,201L615.3,201L621.8,214L628.4,201L634.9,188L641.5,188L648,188L654.5,188L661.1,175L667.6,188L674.2,175L680.7,175L687.3,175L693.8,175L700.4,162L706.9,162L713.5,149L720,149"><title>Walking only</title></path>
+<path class="l3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78.5,396L85.1,396L91.6,396L98.2,396L104.7,396L111.3,396L117.8,396L124.4,396L130.9,396L137.5,396L144,396L150.5,396L157.1,396L163.6,396L170.2,396L176.7,396L183.3,396L189.8,396L196.4,396L202.9,396L209.5,396L216,396L222.5,396L229.1,396L235.6,396L242.2,396L248.7,396L255.3,396L261.8,396L268.4,396L274.9,396L281.5,396L288,396L294.5,396L301.1,396L307.6,396L314.2,396L320.7,396L327.3,396L333.8,396L340.4,396L346.9,396L353.5,396L360,396L366.5,396L373.1,396L379.6,396L386.2,396L392.7,396L399.3,396L405.8,396L412.4,396L418.9,396L425.5,396L432,396L438.5,396L445.1,396L451.6,396L458.2,396L464.7,396L471.3,396L477.8,396L484.4,396L490.9,396L497.5,396L504,396L510.5,396L517.1,396L523.6,396L530.2,396L536.7,396L543.3,396L549.8,396L556.4,396L562.9,396L569.5,396L576,396L582.5,396L589.1,396L595.6,396L602.2,396L608.7,370L615.3,344L621.8,318L628.4,305L634.9,292L641.5,279L648,279L654.5,266L661.1,253L667.6,253L674.2,240L680.7,227L687.3,227L693.8,227L700.4,227L706.9,227L713.5,214L720,214"><title>Organic missions</title></path>
+<path class="l4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78.5,396L85.1,396L91.6,396L98.2,396L104.7,396L111.3,396L117.8,396L124.4,396L130.9,396L137.5,396L144,396L150.5,396L157.1,396L163.6,396L170.2,396L176.7,396L183.3,396L189.8,396L196.4,396L202.9,396L209.5,396L216,396L222.5,396L229.1,396L235.6,396L242.2,396L248.7,396L255.3,396L261.8,396L268.4,396L274.9,396L281.5,396L288,396L294.5,396L301.1,396L307.6,396L314.2,396L320.7,396L327.3,396L333.8,396L340.4,396L346.9,396L353.5,396L360,396L366.5,396L373.1,396L379.6,396L386.2,396L392.7,396L399.3,396L405.8,396L412.4,396L418.9,396L425.5,396L432,396L438.5,396L445.1,396L451.6,396L458.2,396L464.7,396L471.3,396L477.8,396L484.4,396L490.9,396L497.5,396L504,396L510.5,396L517.1,396L523.6,396L530.2,396L536.7,396L543.3,396L549.8,396L556.4,396L562.9,396L569.5,396L576,396L582.5,396L589.1,396L595.6,396L602.2,396L608.7,396L615.3,396L621.8,396L628.4,396L634.9,396L641.5,396L648,396L654.5,396L661.1,396L667.6,396L674.2,344L680.7,318L687.3,292L693.8,279L700.4,279L706.9,266L713.5,266L720,253"><title>Sponsored missions</title></path>
+<path class="l5" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78.5,396L85.1,396L91.6,396L98.2,396L104.7,396L111.3,396L117.8,396L124.4,396L130.9,396L137.5,396L144,396L150.5,396L157.1,396L163.6,396L170.2,396L176.7,396L183.3,396L189.8,396L196.4,396L202.9,396L209.5,396L216,396L222.5,396L229.1,396L235.6,396L242.2,396L248.7,396L255.3,396L261.8,396L268.4,396L274.9,396L281.5,396L288,396L294.5,396L301.1,396L307.6,396L314.2,396L320.7,396L327.3,396L333.8,396L340.4,396L346.9,396L353.5,396L360,396L366.5,396L373.1,396L379.6,396L386.2,396L392.7,396L399.3,396L405.8,396L412.4,396L418.9,396L425.5,396L432,396L438.5,396L445.1,396L451.6,396L458.2,396L464.7,396L471.3,396L477.8,396L484.4,396L490.9,396L497.5,396L504,396L510.5,396L517.1,370L523.6,344L530.2,318L536.7,298.5L543.3,285.5L549.8,272.5L556.4,266L562.9,266L569.5,253L576,240L582.5,240L589.1,240L595.6,227L602.2,227L608.7,227L615.3,227L621.8,214L628.4,214L634.9,214L641.5,201L648,214L654.5,201L661.1,188L667.6,188L674.2,188L680.7,188L687.3,188L693.8,188L700.4,175L706.9,175L713.5,175L720,175"><title>Store purchases</title></path>
+<path class="l6" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78.5,396L85.1,396L91.6,396L98.2,396L104.7,396L111.3,396L117.8,396L124.4,396L130.9,396L137.5,396L144,396L150.5,396L157.1,396L163.6,396L170.2,396L176.7,396L183.3,396L189.8,396L196.4,396L202.9,396L209.5,396L216,396L222.5,396L229.1,396L235.6,396L242.2,396L248.7,396L255.3,396L261.8,396L268.4,396L274.9,396L281.5,396L288,396L294.5,396L301.1,396L307.6,396L314.2,396L320.7,396L327.3,396L333.8,396L340.4,396L346.9,396L353.5,396L360,396L366.5,396L373.1,396L379.6,396L386.2,396L392.7,396L399.3,396L405.8,396L412.4,396L418.9,396L425.5,396L432,396L438.5,396L445.1,396L451.6,396L458.2,396L464.7,396L471.3,396L477.8,396L484.4,396L490.9,396L497.5,396L504,396L510.5,396L517.1,396L523.6,396L530.2,396L536.7,396L543.3,396L549.8,396L556.4,396L562.9,396L569.5,396L576,396L582.5,396L589.1,396L595.6,396L602.2,396L608.7,396L615.3,396L621.8,396L628.4,396L634.9,396L641.5,396L648,396L654.5,396L661.1,396L667.6,396L674.2,344L680.7,305L687.3,292L693.8,279L700.4,266L706.9,253L713.5,253L720,240"><title>Chronon bundles</title></path>
+<text x="24" y="454" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/wait_by_journey.csv</text>
+</svg>

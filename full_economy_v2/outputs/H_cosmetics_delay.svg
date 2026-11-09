@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 486" width="760" height="486" role="img" aria-labelledby="title desc">
+<title id="title">Cosmetic spending versus progression delay</title>
+<desc id="desc">Grouped horizontal bars of extra days to finish the tour, by cosmetic spending policy, for walking-only and mission players.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="486" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">H. Cosmetic spending vs progression delay</text>
+<text x="24" y="56" font-size="12.5" class="t2">Extra days to finish journey 100 compared with the same players buying no cosmetics. Starter catalog:</text>
+<text x="24" y="74" font-size="12.5" class="t2">28 proposed items costing 2,580 Chronons in all. Timing matters more than amount: spending from a</text>
+<text x="24" y="92" font-size="12.5" class="t2">surplus costs little, spending during scarcity costs a lot.</text>
+<rect class="c1" x="24" y="111" width="12" height="12" rx="3"/>
+<text x="46" y="121" font-size="12" class="t2">Moderate, walking only</text>
+<rect class="c3" x="211.8" y="111" width="12" height="12" rx="3"/>
+<text x="233.8" y="121" font-size="12" class="t2">Moderate, regular missions</text>
+<line class="axis" x1="236" y1="146" x2="236" y2="424"/>
+<line class="grid" x1="329.5" y1="146" x2="329.5" y2="424"/>
+<line class="grid" x1="423" y1="146" x2="423" y2="424"/>
+<line class="grid" x1="516.5" y1="146" x2="516.5" y2="424"/>
+<line class="grid" x1="610" y1="146" x2="610" y2="424"/>
+<text x="226" y="169" font-size="12" class="t1" text-anchor="end">Progression-first</text>
+<path class="c1" d="M236,152H237.7A1.7364285714285757,1.7364285714285757 0 0 1 239.5,153.7V162.3A1.7364285714285757,1.7364285714285757 0 0 1 237.7,164H236Z"><title>Walking only, Progression-first: 13 more days to journey 100</title></path>
+<text x="245.5" y="161" font-size="11.5" class="t2">+13 d</text>
+<path class="c3" d="M236,166H244.3A4,4 0 0 1 248.3,170V174A4,4 0 0 1 244.3,178H236Z"><title>Regular missions, Progression-first: 46 more days to journey 100</title></path>
+<text x="254.3" y="175" font-size="11.5" class="t2">+46 d</text>
+<text x="226" y="207" font-size="12" class="t1" text-anchor="end">20% of earnings</text>
+<path class="c1" d="M236,190H347.4A4,4 0 0 1 351.4,194V198A4,4 0 0 1 347.4,202H236Z"><title>Walking only, 20% of earnings: 432 more days to journey 100</title></path>
+<text x="357.4" y="199" font-size="11.5" class="t2">+432 d</text>
+<path class="c3" d="M236,204H321A4,4 0 0 1 325,208V212A4,4 0 0 1 321,216H236Z"><title>Regular missions, 20% of earnings: 333 more days to journey 100</title></path>
+<text x="331" y="213" font-size="11.5" class="t2">+333 d</text>
+<text x="226" y="245" font-size="12" class="t1" text-anchor="end">40% of earnings</text>
+<path class="c1" d="M236,228H393.1A4,4 0 0 1 397.1,232V236A4,4 0 0 1 393.1,240H236Z"><title>Walking only, 40% of earnings: 603 more days to journey 100</title></path>
+<text x="403.1" y="237" font-size="11.5" class="t2">+603 d</text>
+<path class="c3" d="M236,242H357.8A4,4 0 0 1 361.8,246V250A4,4 0 0 1 357.8,254H236Z"><title>Regular missions, 40% of earnings: 471 more days to journey 100</title></path>
+<text x="367.8" y="251" font-size="11.5" class="t2">+471 d</text>
+<text x="226" y="283" font-size="12" class="t1" text-anchor="end">60% of earnings</text>
+<path class="c1" d="M236,266H393.1A4,4 0 0 1 397.1,270V274A4,4 0 0 1 393.1,278H236Z"><title>Walking only, 60% of earnings: 603 more days to journey 100</title></path>
+<text x="403.1" y="275" font-size="11.5" class="t2">+603 d</text>
+<path class="c3" d="M236,280H357.8A4,4 0 0 1 361.8,284V288A4,4 0 0 1 357.8,292H236Z"><title>Regular missions, 60% of earnings: 471 more days to journey 100</title></path>
+<text x="367.8" y="289" font-size="11.5" class="t2">+471 d</text>
+<text x="226" y="321" font-size="12" class="t1" text-anchor="end">Cosmetics-first</text>
+<path class="c1" d="M236,304H247.2A4,4 0 0 1 251.2,308V312A4,4 0 0 1 247.2,316H236Z"><title>Walking only, Cosmetics-first: 57 more days to journey 100</title></path>
+<text x="257.2" y="313" font-size="11.5" class="t2">+57 d</text>
+<path class="c3" d="M236,318H251.5A4,4 0 0 1 255.5,322V326A4,4 0 0 1 251.5,330H236Z"><title>Regular missions, Cosmetics-first: 73 more days to journey 100</title></path>
+<text x="261.5" y="327" font-size="11.5" class="t2">+73 d</text>
+<text x="226" y="359" font-size="12" class="t1" text-anchor="end">Collector (60%, sets first)</text>
+<path class="c1" d="M236,342H393.1A4,4 0 0 1 397.1,346V350A4,4 0 0 1 393.1,354H236Z"><title>Walking only, Collector (60%, sets first): 603 more days to journey 100</title></path>
+<text x="403.1" y="351" font-size="11.5" class="t2">+603 d</text>
+<path class="c3" d="M236,356H357.8A4,4 0 0 1 361.8,360V364A4,4 0 0 1 357.8,368H236Z"><title>Regular missions, Collector (60%, sets first): 471 more days to journey 100</title></path>
+<text x="367.8" y="365" font-size="11.5" class="t2">+471 d</text>
+<text x="226" y="397" font-size="12" class="t1" text-anchor="end">Paying cosmetics enthusiast</text>
+<path class="c1" d="M236,380H250.4A4,4 0 0 1 254.4,384V388A4,4 0 0 1 250.4,392H236Z"><title>Walking only, Paying cosmetics enthusiast: 69 more days to journey 100</title></path>
+<text x="260.4" y="389" font-size="11.5" class="t2">+69 d</text>
+<path class="c3" d="M236,394H262.5A4,4 0 0 1 266.5,398V402A4,4 0 0 1 262.5,406H236Z"><title>Regular missions, Paying cosmetics enthusiast: 114 more days to journey 100</title></path>
+<text x="272.5" y="403" font-size="11.5" class="t2">+114 d</text>
+<text x="236" y="428" font-size="11" class="mu" text-anchor="middle">0</text>
+<text x="329.5" y="428" font-size="11" class="mu" text-anchor="middle">350</text>
+<text x="423" y="428" font-size="11" class="mu" text-anchor="middle">700</text>
+<text x="516.5" y="428" font-size="11" class="mu" text-anchor="middle">1,050</text>
+<text x="610" y="428" font-size="11" class="mu" text-anchor="middle">1,400</text>
+<text x="610" y="446" font-size="11" class="mu" text-anchor="end">Extra days to journey 100</text>
+<text x="24" y="468" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/cosmetics.csv</text>
+</svg>

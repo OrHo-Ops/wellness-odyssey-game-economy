@@ -1,0 +1,17 @@
+cohort,lever,range,base_day_journey_100,low_day_journey_100,high_day_journey_100,base_first_wait,low_first_wait,high_first_wait
+moderate-walking,Organic Chronon rate,"0.5 / 2 per 1,000 steps",952,1909,737,60,3,
+moderate-walking,Completion reward,0.5 / 2 per 100 PP,952,1349,737,60,4,
+moderate-walking,Journey price level,scarce / generous coverage,952,1341,737,60,20,
+moderate-walking,PP pacing curve,capped / flat (prices frozen),952,921,1190,60,,35
+moderate-walking,Mission reward,0.5x / 2x the reference,952,952,952,60,60,60
+moderate-walking,Mission supply,0.25 / 0.9 offers per active day,952,952,952,60,60,60
+moderate-walking,Energy cap,250 / 500 (baseline: none),952,1799,974,60,,98
+moderate-walking,Daily bonuses,on (baseline: off),952,952,,60,37,
+moderate-regular-organic,Organic Chronon rate,"0.5 / 2 per 1,000 steps",761,1309,695,83,15,
+moderate-regular-organic,Completion reward,0.5 / 2 per 100 PP,761,1067,695,83,12,
+moderate-regular-organic,Journey price level,scarce / generous coverage,761,1063,695,83,37,
+moderate-regular-organic,PP pacing curve,capped / flat (prices frozen),761,872,942,83,,44
+moderate-regular-organic,Mission reward,0.5x / 2x the reference,761,813,692,83,75,
+moderate-regular-organic,Mission supply,0.25 / 0.9 offers per active day,761,847,667,83,72,100
+moderate-regular-organic,Energy cap,250 / 500 (baseline: none),761,1797,941,83,,
+moderate-regular-organic,Daily bonuses,on (baseline: off),761,761,,83,53,

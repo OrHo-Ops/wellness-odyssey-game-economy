@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" role="img" aria-labelledby="title desc">
+<title id="title">Store reward liability versus affiliate commission</title>
+<desc id="desc">Two line charts of net contribution per order against the reward rate for three commission levels.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="460" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">G2. Does commission pay for the Chronons? Net contribution per $45 order</text>
+<text x="24" y="56" font-size="12.5" class="t2">Commission on kept orders, minus the bundle revenue the awarded Chronons displace (net of a 30%</text>
+<text x="24" y="74" font-size="12.5" class="t2">platform fee) and $0.15 handling. Left: half of store Chronons displace bundle purchases. Right: all</text>
+<text x="24" y="92" font-size="12.5" class="t2">of them do. Dots mark the break-even reward rate.</text>
+<rect class="o1" x="24" y="115" width="16" height="4" rx="2"/>
+<text x="46" y="121" font-size="12" class="t2">4% commission</text>
+<rect class="o2" x="151.4" y="115" width="16" height="4" rx="2"/>
+<text x="173.4" y="121" font-size="12" class="t2">8% commission</text>
+<rect class="o3" x="278.7" y="115" width="16" height="4" rx="2"/>
+<text x="300.7" y="121" font-size="12" class="t2">12% commission</text>
+<text x="72" y="148" font-size="12" class="t2" font-weight="600">50% of store Chronons displace bundles</text>
+<text x="440" y="148" font-size="12" class="t2" font-weight="600">100% displace bundles</text>
+<line class="axis" x1="72" y1="384" x2="362" y2="384"/>
+<text x="64" y="388" font-size="11" class="mu" text-anchor="end">$-4</text>
+<line class="grid" x1="72" y1="340" x2="362" y2="340"/>
+<text x="64" y="344" font-size="11" class="mu" text-anchor="end">$-2</text>
+<line class="grid" x1="72" y1="296" x2="362" y2="296"/>
+<text x="64" y="300" font-size="11" class="mu" text-anchor="end">$0</text>
+<line class="grid" x1="72" y1="252" x2="362" y2="252"/>
+<text x="64" y="256" font-size="11" class="mu" text-anchor="end">$2</text>
+<line class="grid" x1="72" y1="208" x2="362" y2="208"/>
+<text x="64" y="212" font-size="11" class="mu" text-anchor="end">$4</text>
+<line class="grid" x1="72" y1="164" x2="362" y2="164"/>
+<text x="64" y="168" font-size="11" class="mu" text-anchor="end">$6</text>
+<text x="72" y="402" font-size="11" class="mu" text-anchor="middle">0%</text>
+<text x="144.5" y="402" font-size="11" class="mu" text-anchor="middle">5%</text>
+<text x="217" y="402" font-size="11" class="mu" text-anchor="middle">10%</text>
+<text x="289.5" y="402" font-size="11" class="mu" text-anchor="middle">15%</text>
+<text x="362" y="402" font-size="11" class="mu" text-anchor="middle">20%</text>
+<path class="ol1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,267.2L86.5,269.5L101,272.8L115.5,275L130,278.4L144.5,280.6L159,284L173.5,286.2L188,289.5L202.5,291.8L217,295.1L231.5,297.3L246,300.7L260.5,302.9L275,306.3L289.5,308.5L304,311.8L318.5,314.1L333,317.4L347.5,319.7L362,323"><title>4% commission</title></path>
+<circle class="o1 ring" stroke-width="2" cx="220.7" cy="296" r="4.5"><title>4% commission breaks even at a 10.3% reward</title></circle>
+<path class="ol2" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,235.1L86.5,237.4L101,240.7L115.5,243L130,246.3L144.5,248.5L159,251.9L173.5,254.1L188,257.5L202.5,259.7L217,263L231.5,265.3L246,268.6L260.5,270.8L275,274.2L289.5,276.4L304,279.8L318.5,282L333,285.3L347.5,287.6L362,290.9"><title>8% commission</title></path>
+<path class="ol3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,203.1L86.5,205.3L101,208.6L115.5,210.9L130,214.2L144.5,216.5L159,219.8L173.5,222L188,225.4L202.5,227.6L217,231L231.5,233.2L246,236.5L260.5,238.8L275,242.1L289.5,244.3L304,247.7L318.5,249.9L333,253.3L347.5,255.5L362,258.8"><title>12% commission</title></path>
+<line class="axis" x1="440" y1="384" x2="730" y2="384"/>
+<text x="432" y="388" font-size="11" class="mu" text-anchor="end">$-4</text>
+<line class="grid" x1="440" y1="340" x2="730" y2="340"/>
+<text x="432" y="344" font-size="11" class="mu" text-anchor="end">$-2</text>
+<line class="grid" x1="440" y1="296" x2="730" y2="296"/>
+<text x="432" y="300" font-size="11" class="mu" text-anchor="end">$0</text>
+<line class="grid" x1="440" y1="252" x2="730" y2="252"/>
+<text x="432" y="256" font-size="11" class="mu" text-anchor="end">$2</text>
+<line class="grid" x1="440" y1="208" x2="730" y2="208"/>
+<text x="432" y="212" font-size="11" class="mu" text-anchor="end">$4</text>
+<line class="grid" x1="440" y1="164" x2="730" y2="164"/>
+<text x="432" y="168" font-size="11" class="mu" text-anchor="end">$6</text>
+<text x="440" y="402" font-size="11" class="mu" text-anchor="middle">0%</text>
+<text x="512.5" y="402" font-size="11" class="mu" text-anchor="middle">5%</text>
+<text x="585" y="402" font-size="11" class="mu" text-anchor="middle">10%</text>
+<text x="657.5" y="402" font-size="11" class="mu" text-anchor="middle">15%</text>
+<text x="730" y="402" font-size="11" class="mu" text-anchor="middle">20%</text>
+<path class="ol1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M440,267.2L454.5,271.7L469,278.4L483.5,282.8L498,289.5L512.5,294L527,300.7L541.5,305.2L556,311.8L570.5,316.3L585,323L599.5,327.5L614,334.2L628.5,338.6L643,345.3L657.5,349.8L672,356.5L686.5,360.9L701,367.6L715.5,372.1L730,378.8"><title>4% commission</title></path>
+<circle class="o1 ring" stroke-width="2" cx="514.3" cy="296" r="4.5"><title>4% commission breaks even at a 5.1% reward</title></circle>
+<path class="ol2" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M440,235.1L454.5,239.6L469,246.3L483.5,250.8L498,257.5L512.5,261.9L527,268.6L541.5,273.1L556,279.8L570.5,284.2L585,290.9L599.5,295.4L614,302.1L628.5,306.5L643,313.2L657.5,317.7L672,324.4L686.5,328.9L701,335.5L715.5,340L730,346.7"><title>8% commission</title></path>
+<circle class="o2 ring" stroke-width="2" cx="597.2" cy="296" r="4.5"><title>8% commission breaks even at a 10.8% reward</title></circle>
+<path class="ol3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M440,203.1L454.5,207.5L469,214.2L483.5,218.7L498,225.4L512.5,229.8L527,236.5L541.5,241L556,247.7L570.5,252.2L585,258.8L599.5,263.3L614,270L628.5,274.5L643,281.2L657.5,285.6L672,292.3L686.5,296.8L701,303.5L715.5,307.9L730,314.6"><title>12% commission</title></path>
+<circle class="o3 ring" stroke-width="2" cx="680" cy="296" r="4.5"><title>12% commission breaks even at a 16.6% reward</title></circle>
+<text x="730" y="420" font-size="11" class="mu" text-anchor="end">Reward rate (bundle-equivalent value per eligible dollar)</text>
+<text x="24" y="442" font-size="11" class="mu">Hypothetical commercial inputs; not a forecast. Data: full_economy_v2/outputs/store_business.csv</text>
+</svg>

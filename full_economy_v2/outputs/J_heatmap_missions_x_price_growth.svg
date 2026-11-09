@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" role="img" aria-labelledby="title desc">
+<title id="title">Mission frequency by price growth</title>
+<desc id="desc">Heatmap of median journeys completed in two years for combinations of weekly missions and price growth.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="470" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">J. Sensitivity: mission frequency x Chronon price growth</text>
+<text x="24" y="56" font-size="12.5" class="t2">Median journeys completed in the first two years by a moderate walker. Prices grow by the shown</text>
+<text x="24" y="74" font-size="12.5" class="t2">factor per journey from a fixed 23-Chronon start (not budget-matched). Missions completed per week</text>
+<text x="24" y="92" font-size="12.5" class="t2">are set exactly.</text>
+<text x="435" y="118" font-size="11" class="mu" text-anchor="middle">Missions completed per week</text>
+<text x="225" y="136" font-size="12" class="t2" text-anchor="middle">0</text>
+<text x="295" y="136" font-size="12" class="t2" text-anchor="middle">0.5</text>
+<text x="365" y="136" font-size="12" class="t2" text-anchor="middle">1</text>
+<text x="435" y="136" font-size="12" class="t2" text-anchor="middle">1.5</text>
+<text x="505" y="136" font-size="12" class="t2" text-anchor="middle">2</text>
+<text x="575" y="136" font-size="12" class="t2" text-anchor="middle">3</text>
+<text x="645" y="136" font-size="12" class="t2" text-anchor="middle">4</text>
+<text x="178" y="163" font-size="12" class="t1" text-anchor="end">x1.000 per journey</text>
+<rect class="h7" x="191" y="145" width="68" height="28" rx="3"><title>x1 per journey, 0 missions a week: 97 journeys in two years</title></rect>
+<text x="225" y="163" font-size="12" class="ht7" text-anchor="middle">97</text>
+<rect class="h7" x="261" y="145" width="68" height="28" rx="3"><title>x1 per journey, 0.5 missions a week: 99 journeys in two years</title></rect>
+<text x="295" y="163" font-size="12" class="ht7" text-anchor="middle">99</text>
+<rect class="h7" x="331" y="145" width="68" height="28" rx="3"><title>x1 per journey, 1 missions a week: 100 journeys in two years</title></rect>
+<text x="365" y="163" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="401" y="145" width="68" height="28" rx="3"><title>x1 per journey, 1.5 missions a week: 100 journeys in two years</title></rect>
+<text x="435" y="163" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="471" y="145" width="68" height="28" rx="3"><title>x1 per journey, 2 missions a week: 100 journeys in two years</title></rect>
+<text x="505" y="163" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="541" y="145" width="68" height="28" rx="3"><title>x1 per journey, 3 missions a week: 100 journeys in two years</title></rect>
+<text x="575" y="163" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="611" y="145" width="68" height="28" rx="3"><title>x1 per journey, 4 missions a week: 100 journeys in two years</title></rect>
+<text x="645" y="163" font-size="12" class="ht7" text-anchor="middle">100</text>
+<text x="178" y="193" font-size="12" class="t1" text-anchor="end">x1.010 per journey</text>
+<rect class="h7" x="191" y="175" width="68" height="28" rx="3"><title>x1.01 per journey, 0 missions a week: 97 journeys in two years</title></rect>
+<text x="225" y="193" font-size="12" class="ht7" text-anchor="middle">97</text>
+<rect class="h7" x="261" y="175" width="68" height="28" rx="3"><title>x1.01 per journey, 0.5 missions a week: 99 journeys in two years</title></rect>
+<text x="295" y="193" font-size="12" class="ht7" text-anchor="middle">99</text>
+<rect class="h7" x="331" y="175" width="68" height="28" rx="3"><title>x1.01 per journey, 1 missions a week: 100 journeys in two years</title></rect>
+<text x="365" y="193" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="401" y="175" width="68" height="28" rx="3"><title>x1.01 per journey, 1.5 missions a week: 100 journeys in two years</title></rect>
+<text x="435" y="193" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="471" y="175" width="68" height="28" rx="3"><title>x1.01 per journey, 2 missions a week: 100 journeys in two years</title></rect>
+<text x="505" y="193" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="541" y="175" width="68" height="28" rx="3"><title>x1.01 per journey, 3 missions a week: 100 journeys in two years</title></rect>
+<text x="575" y="193" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="611" y="175" width="68" height="28" rx="3"><title>x1.01 per journey, 4 missions a week: 100 journeys in two years</title></rect>
+<text x="645" y="193" font-size="12" class="ht7" text-anchor="middle">100</text>
+<text x="178" y="223" font-size="12" class="t1" text-anchor="end">x1.015 per journey</text>
+<rect class="h7" x="191" y="205" width="68" height="28" rx="3"><title>x1.015 per journey, 0 missions a week: 97 journeys in two years</title></rect>
+<text x="225" y="223" font-size="12" class="ht7" text-anchor="middle">97</text>
+<rect class="h7" x="261" y="205" width="68" height="28" rx="3"><title>x1.015 per journey, 0.5 missions a week: 99 journeys in two years</title></rect>
+<text x="295" y="223" font-size="12" class="ht7" text-anchor="middle">99</text>
+<rect class="h7" x="331" y="205" width="68" height="28" rx="3"><title>x1.015 per journey, 1 missions a week: 100 journeys in two years</title></rect>
+<text x="365" y="223" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="401" y="205" width="68" height="28" rx="3"><title>x1.015 per journey, 1.5 missions a week: 100 journeys in two years</title></rect>
+<text x="435" y="223" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="471" y="205" width="68" height="28" rx="3"><title>x1.015 per journey, 2 missions a week: 100 journeys in two years</title></rect>
+<text x="505" y="223" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="541" y="205" width="68" height="28" rx="3"><title>x1.015 per journey, 3 missions a week: 100 journeys in two years</title></rect>
+<text x="575" y="223" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="611" y="205" width="68" height="28" rx="3"><title>x1.015 per journey, 4 missions a week: 100 journeys in two years</title></rect>
+<text x="645" y="223" font-size="12" class="ht7" text-anchor="middle">100</text>
+<text x="178" y="253" font-size="12" class="t1" text-anchor="end">x1.020 per journey</text>
+<rect class="h7" x="191" y="235" width="68" height="28" rx="3"><title>x1.02 per journey, 0 missions a week: 94 journeys in two years</title></rect>
+<text x="225" y="253" font-size="12" class="ht7" text-anchor="middle">94</text>
+<rect class="h7" x="261" y="235" width="68" height="28" rx="3"><title>x1.02 per journey, 0.5 missions a week: 97 journeys in two years</title></rect>
+<text x="295" y="253" font-size="12" class="ht7" text-anchor="middle">97</text>
+<rect class="h7" x="331" y="235" width="68" height="28" rx="3"><title>x1.02 per journey, 1 missions a week: 100 journeys in two years</title></rect>
+<text x="365" y="253" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="401" y="235" width="68" height="28" rx="3"><title>x1.02 per journey, 1.5 missions a week: 100 journeys in two years</title></rect>
+<text x="435" y="253" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="471" y="235" width="68" height="28" rx="3"><title>x1.02 per journey, 2 missions a week: 100 journeys in two years</title></rect>
+<text x="505" y="253" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="541" y="235" width="68" height="28" rx="3"><title>x1.02 per journey, 3 missions a week: 100 journeys in two years</title></rect>
+<text x="575" y="253" font-size="12" class="ht7" text-anchor="middle">100</text>
+<rect class="h7" x="611" y="235" width="68" height="28" rx="3"><title>x1.02 per journey, 4 missions a week: 100 journeys in two years</title></rect>
+<text x="645" y="253" font-size="12" class="ht7" text-anchor="middle">100</text>
+<text x="178" y="283" font-size="12" class="t1" text-anchor="end">x1.025 per journey</text>
+<rect class="h6" x="191" y="265" width="68" height="28" rx="3"><title>x1.025 per journey, 0 missions a week: 80 journeys in two years</title></rect>
+<text x="225" y="283" font-size="12" class="ht6" text-anchor="middle">80</text>
+<rect class="h6" x="261" y="265" width="68" height="28" rx="3"><title>x1.025 per journey, 0.5 missions a week: 82 journeys in two years</title></rect>
+<text x="295" y="283" font-size="12" class="ht6" text-anchor="middle">82</text>
+<rect class="h6" x="331" y="265" width="68" height="28" rx="3"><title>x1.025 per journey, 1 missions a week: 84 journeys in two years</title></rect>
+<text x="365" y="283" font-size="12" class="ht6" text-anchor="middle">84</text>
+<rect class="h7" x="401" y="265" width="68" height="28" rx="3"><title>x1.025 per journey, 1.5 missions a week: 86 journeys in two years</title></rect>
+<text x="435" y="283" font-size="12" class="ht7" text-anchor="middle">86</text>
+<rect class="h7" x="471" y="265" width="68" height="28" rx="3"><title>x1.025 per journey, 2 missions a week: 89 journeys in two years</title></rect>
+<text x="505" y="283" font-size="12" class="ht7" text-anchor="middle">89</text>
+<rect class="h7" x="541" y="265" width="68" height="28" rx="3"><title>x1.025 per journey, 3 missions a week: 93 journeys in two years</title></rect>
+<text x="575" y="283" font-size="12" class="ht7" text-anchor="middle">93</text>
+<rect class="h7" x="611" y="265" width="68" height="28" rx="3"><title>x1.025 per journey, 4 missions a week: 96 journeys in two years</title></rect>
+<text x="645" y="283" font-size="12" class="ht7" text-anchor="middle">96</text>
+<text x="178" y="313" font-size="12" class="t1" text-anchor="end">x1.030 per journey</text>
+<rect class="h5" x="191" y="295" width="68" height="28" rx="3"><title>x1.03 per journey, 0 missions a week: 70 journeys in two years</title></rect>
+<text x="225" y="313" font-size="12" class="ht5" text-anchor="middle">70</text>
+<rect class="h6" x="261" y="295" width="68" height="28" rx="3"><title>x1.03 per journey, 0.5 missions a week: 72 journeys in two years</title></rect>
+<text x="295" y="313" font-size="12" class="ht6" text-anchor="middle">72</text>
+<rect class="h6" x="331" y="295" width="68" height="28" rx="3"><title>x1.03 per journey, 1 missions a week: 74 journeys in two years</title></rect>
+<text x="365" y="313" font-size="12" class="ht6" text-anchor="middle">74</text>
+<rect class="h6" x="401" y="295" width="68" height="28" rx="3"><title>x1.03 per journey, 1.5 missions a week: 76 journeys in two years</title></rect>
+<text x="435" y="313" font-size="12" class="ht6" text-anchor="middle">76</text>
+<rect class="h6" x="471" y="295" width="68" height="28" rx="3"><title>x1.03 per journey, 2 missions a week: 78 journeys in two years</title></rect>
+<text x="505" y="313" font-size="12" class="ht6" text-anchor="middle">78</text>
+<rect class="h6" x="541" y="295" width="68" height="28" rx="3"><title>x1.03 per journey, 3 missions a week: 81 journeys in two years</title></rect>
+<text x="575" y="313" font-size="12" class="ht6" text-anchor="middle">81</text>
+<rect class="h6" x="611" y="295" width="68" height="28" rx="3"><title>x1.03 per journey, 4 missions a week: 84 journeys in two years</title></rect>
+<text x="645" y="313" font-size="12" class="ht6" text-anchor="middle">84</text>
+<text x="178" y="343" font-size="12" class="t1" text-anchor="end">x1.035 per journey</text>
+<rect class="h5" x="191" y="325" width="68" height="28" rx="3"><title>x1.035 per journey, 0 missions a week: 63 journeys in two years</title></rect>
+<text x="225" y="343" font-size="12" class="ht5" text-anchor="middle">63</text>
+<rect class="h5" x="261" y="325" width="68" height="28" rx="3"><title>x1.035 per journey, 0.5 missions a week: 65 journeys in two years</title></rect>
+<text x="295" y="343" font-size="12" class="ht5" text-anchor="middle">65</text>
+<rect class="h5" x="331" y="325" width="68" height="28" rx="3"><title>x1.035 per journey, 1 missions a week: 66 journeys in two years</title></rect>
+<text x="365" y="343" font-size="12" class="ht5" text-anchor="middle">66</text>
+<rect class="h5" x="401" y="325" width="68" height="28" rx="3"><title>x1.035 per journey, 1.5 missions a week: 68 journeys in two years</title></rect>
+<text x="435" y="343" font-size="12" class="ht5" text-anchor="middle">68</text>
+<rect class="h5" x="471" y="325" width="68" height="28" rx="3"><title>x1.035 per journey, 2 missions a week: 70 journeys in two years</title></rect>
+<text x="505" y="343" font-size="12" class="ht5" text-anchor="middle">70</text>
+<rect class="h6" x="541" y="325" width="68" height="28" rx="3"><title>x1.035 per journey, 3 missions a week: 73 journeys in two years</title></rect>
+<text x="575" y="343" font-size="12" class="ht6" text-anchor="middle">73</text>
+<rect class="h6" x="611" y="325" width="68" height="28" rx="3"><title>x1.035 per journey, 4 missions a week: 75 journeys in two years</title></rect>
+<text x="645" y="343" font-size="12" class="ht6" text-anchor="middle">75</text>
+<text x="178" y="373" font-size="12" class="t1" text-anchor="end">x1.040 per journey</text>
+<rect class="h4" x="191" y="355" width="68" height="28" rx="3"><title>x1.04 per journey, 0 missions a week: 57 journeys in two years</title></rect>
+<text x="225" y="373" font-size="12" class="ht4" text-anchor="middle">57</text>
+<rect class="h5" x="261" y="355" width="68" height="28" rx="3"><title>x1.04 per journey, 0.5 missions a week: 59 journeys in two years</title></rect>
+<text x="295" y="373" font-size="12" class="ht5" text-anchor="middle">59</text>
+<rect class="h5" x="331" y="355" width="68" height="28" rx="3"><title>x1.04 per journey, 1 missions a week: 60 journeys in two years</title></rect>
+<text x="365" y="373" font-size="12" class="ht5" text-anchor="middle">60</text>
+<rect class="h5" x="401" y="355" width="68" height="28" rx="3"><title>x1.04 per journey, 1.5 missions a week: 62 journeys in two years</title></rect>
+<text x="435" y="373" font-size="12" class="ht5" text-anchor="middle">62</text>
+<rect class="h5" x="471" y="355" width="68" height="28" rx="3"><title>x1.04 per journey, 2 missions a week: 63 journeys in two years</title></rect>
+<text x="505" y="373" font-size="12" class="ht5" text-anchor="middle">63</text>
+<rect class="h5" x="541" y="355" width="68" height="28" rx="3"><title>x1.04 per journey, 3 missions a week: 66 journeys in two years</title></rect>
+<text x="575" y="373" font-size="12" class="ht5" text-anchor="middle">66</text>
+<rect class="h5" x="611" y="355" width="68" height="28" rx="3"><title>x1.04 per journey, 4 missions a week: 69 journeys in two years</title></rect>
+<text x="645" y="373" font-size="12" class="ht5" text-anchor="middle">69</text>
+<text x="178" y="412" font-size="11" class="mu" text-anchor="end">Journeys in two years</text>
+<rect class="h1" x="190" y="401" width="48" height="14" rx="3"/>
+<text x="214" y="428" font-size="10" class="mu" text-anchor="middle">0-14</text>
+<rect class="h2" x="240" y="401" width="48" height="14" rx="3"/>
+<text x="264" y="428" font-size="10" class="mu" text-anchor="middle">14-29</text>
+<rect class="h3" x="290" y="401" width="48" height="14" rx="3"/>
+<text x="314" y="428" font-size="10" class="mu" text-anchor="middle">29-43</text>
+<rect class="h4" x="340" y="401" width="48" height="14" rx="3"/>
+<text x="364" y="428" font-size="10" class="mu" text-anchor="middle">43-57</text>
+<rect class="h5" x="390" y="401" width="48" height="14" rx="3"/>
+<text x="414" y="428" font-size="10" class="mu" text-anchor="middle">57-71</text>
+<rect class="h6" x="440" y="401" width="48" height="14" rx="3"/>
+<text x="464" y="428" font-size="10" class="mu" text-anchor="middle">71-86</text>
+<rect class="h7" x="490" y="401" width="48" height="14" rx="3"/>
+<text x="514" y="428" font-size="10" class="mu" text-anchor="middle">86-100</text>
+<text x="24" y="452" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/heatmap.csv</text>
+</svg>

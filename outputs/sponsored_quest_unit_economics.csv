@@ -1,0 +1,10 @@
+model,visits_per_quest_per_month,verified_visits_per_month,revenue_usd,operating_cost_usd,contribution_usd,contribution_margin_pct,merchant_cost_per_visit_usd
+Fixed fee,10.0,200.0,3000.0,850.0,2150.0,71.67,15.0
+Per verified visit,10.0,200.0,400.0,850.0,-450.0,-112.5,2.0
+Hybrid,10.0,200.0,1250.0,850.0,400.0,32.0,6.25
+Fixed fee,25.0,500.0,3000.0,925.0,2075.0,69.17,6.0
+Per verified visit,25.0,500.0,1000.0,925.0,75.0,7.5,2.0
+Hybrid,25.0,500.0,1625.0,925.0,700.0,43.08,3.25
+Fixed fee,60.0,1200.0,3000.0,1100.0,1900.0,63.33,2.5
+Per verified visit,60.0,1200.0,2400.0,1100.0,1300.0,54.17,2.0
+Hybrid,60.0,1200.0,2500.0,1100.0,1400.0,56.0,2.08

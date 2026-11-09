@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" role="img" aria-labelledby="title desc">
+<title id="title">Store spending versus journey access</title>
+<desc id="desc">Line chart of median days to finish journey 100 against monthly store spending, for three reward rates.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="480" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">G. Wellness Store spending vs access to journeys</text>
+<text x="24" y="56" font-size="12.5" class="t2">Moderate walker who shops through the Store: median day journey 100 is finished, by monthly spend and</text>
+<text x="24" y="74" font-size="12.5" class="t2">reward rate. Store Chronons are worth the reward rate at the bundle price; purchases never add</text>
+<text x="24" y="92" font-size="12.5" class="t2">Energy, PP or progress.</text>
+<rect class="o1" x="24" y="115" width="16" height="4" rx="2"/>
+<text x="46" y="121" font-size="12" class="t2">2% reward</text>
+<rect class="o2" x="124.5" y="115" width="16" height="4" rx="2"/>
+<text x="146.5" y="121" font-size="12" class="t2">5% reward</text>
+<rect class="o3" x="225" y="115" width="16" height="4" rx="2"/>
+<text x="247" y="121" font-size="12" class="t2">10% reward</text>
+<line class="axis" x1="72" y1="404" x2="720" y2="404"/>
+<text x="64" y="408" font-size="11" class="mu" text-anchor="end">700</text>
+<line class="grid" x1="72" y1="362.3" x2="720" y2="362.3"/>
+<text x="64" y="366.3" font-size="11" class="mu" text-anchor="end">750</text>
+<line class="grid" x1="72" y1="320.7" x2="720" y2="320.7"/>
+<text x="64" y="324.7" font-size="11" class="mu" text-anchor="end">800</text>
+<line class="grid" x1="72" y1="279" x2="720" y2="279"/>
+<text x="64" y="283" font-size="11" class="mu" text-anchor="end">850</text>
+<line class="grid" x1="72" y1="237.3" x2="720" y2="237.3"/>
+<text x="64" y="241.3" font-size="11" class="mu" text-anchor="end">900</text>
+<line class="grid" x1="72" y1="195.7" x2="720" y2="195.7"/>
+<text x="64" y="199.7" font-size="11" class="mu" text-anchor="end">950</text>
+<line class="grid" x1="72" y1="154" x2="720" y2="154"/>
+<text x="64" y="158" font-size="11" class="mu" text-anchor="end">1,000</text>
+<text x="72" y="422" font-size="11" class="mu" text-anchor="middle">$0</text>
+<text x="180" y="422" font-size="11" class="mu" text-anchor="middle">$20</text>
+<text x="288" y="422" font-size="11" class="mu" text-anchor="middle">$40</text>
+<text x="396" y="422" font-size="11" class="mu" text-anchor="middle">$60</text>
+<text x="504" y="422" font-size="11" class="mu" text-anchor="middle">$80</text>
+<text x="612" y="422" font-size="11" class="mu" text-anchor="middle">$100</text>
+<text x="720" y="422" font-size="11" class="mu" text-anchor="middle">$120</text>
+<text x="720" y="440" font-size="11" class="mu" text-anchor="end">Store spending per month</text>
+<text x="72" y="142" font-size="11" class="mu">Median day journey 100 is finished</text>
+<path class="ol1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,194.4L169,204L273.7,215.3L373.6,223.6L667.2,253.6"><title>2% reward</title></path>
+<circle class="o1 ring" stroke-width="2" cx="72" cy="194.4" r="4.5"><title>2% reward, $0 a month: journey 100 on day 952</title></circle>
+<circle class="o1 ring" stroke-width="2" cx="169" cy="204" r="4.5"><title>2% reward, $18 a month: journey 100 on day 940</title></circle>
+<circle class="o1 ring" stroke-width="2" cx="273.7" cy="215.3" r="4.5"><title>2% reward, $37 a month: journey 100 on day 927</title></circle>
+<circle class="o1 ring" stroke-width="2" cx="373.6" cy="223.6" r="4.5"><title>2% reward, $56 a month: journey 100 on day 917</title></circle>
+<circle class="o1 ring" stroke-width="2" cx="667.2" cy="253.6" r="4.5"><title>2% reward, $110 a month: journey 100 on day 881</title></circle>
+<path class="ol2" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,194.4L168.9,221.1L272.8,244.4L372.5,267.8L667.2,329.4"><title>5% reward</title></path>
+<circle class="o2 ring" stroke-width="2" cx="72" cy="194.4" r="4.5"><title>5% reward, $0 a month: journey 100 on day 952</title></circle>
+<circle class="o2 ring" stroke-width="2" cx="168.9" cy="221.1" r="4.5"><title>5% reward, $18 a month: journey 100 on day 920</title></circle>
+<circle class="o2 ring" stroke-width="2" cx="272.8" cy="244.4" r="4.5"><title>5% reward, $37 a month: journey 100 on day 892</title></circle>
+<circle class="o2 ring" stroke-width="2" cx="372.5" cy="267.8" r="4.5"><title>5% reward, $56 a month: journey 100 on day 864</title></circle>
+<circle class="o2 ring" stroke-width="2" cx="667.2" cy="329.4" r="4.5"><title>5% reward, $110 a month: journey 100 on day 790</title></circle>
+<path class="ol3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,194.4L169.4,245.7L272.6,296.9L372.1,329L666.3,369.4"><title>10% reward</title></path>
+<circle class="o3 ring" stroke-width="2" cx="72" cy="194.4" r="4.5"><title>10% reward, $0 a month: journey 100 on day 952</title></circle>
+<circle class="o3 ring" stroke-width="2" cx="169.4" cy="245.7" r="4.5"><title>10% reward, $18 a month: journey 100 on day 890</title></circle>
+<circle class="o3 ring" stroke-width="2" cx="272.6" cy="296.9" r="4.5"><title>10% reward, $37 a month: journey 100 on day 829</title></circle>
+<circle class="o3 ring" stroke-width="2" cx="372.1" cy="329" r="4.5"><title>10% reward, $56 a month: journey 100 on day 790</title></circle>
+<circle class="o3 ring" stroke-width="2" cx="666.3" cy="369.4" r="4.5"><title>10% reward, $110 a month: journey 100 on day 742</title></circle>
+<text x="24" y="462" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/store_player.csv</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 406" width="760" height="406" role="img" aria-labelledby="title desc">
+<title id="title">Production Wheel V1 outcome probabilities</title>
+<desc id="desc">Horizontal bars of the probability of each of the eight wheel outcomes at the 50-Energy base stake, with each outcome's share of the expected Progress Points.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}
+.f1{fill:#2a78d6}.f2{fill:#eb6834}.f3{fill:#1baf7a}.s1{stroke:#2a78d6}.s2{stroke:#eb6834}.s3{stroke:#1baf7a}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.grid{stroke:#2c2c2a}.axis{stroke:#383835}
+.f1{fill:#3987e5}.f2{fill:#d95926}.f3{fill:#199e70}.s1{stroke:#3987e5}.s2{stroke:#d95926}.s3{stroke:#199e70}}
+</style>
+<rect class="bg" width="760" height="406" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">Production Wheel V1: what one 50-Energy spin pays</text>
+<text x="24" y="56" font-size="12.5" class="t2">Expected 52.25 PP per spin, standard deviation 36.2. Median 35 PP: 70% of spins pay less than the mean.</text>
+<text x="24" y="92" font-size="11" class="mu">Outcome</text>
+<text x="196" y="92" font-size="11" class="mu">Probability</text>
+<text x="736" y="92" font-size="11" class="mu" text-anchor="end">Share of expected PP</text>
+<line class="grid" x1="196" y1="102" x2="196" y2="348"/>
+<text x="196" y="364" font-size="11" class="mu" text-anchor="middle">0%</text>
+<line class="grid" x1="306" y1="102" x2="306" y2="348"/>
+<text x="306" y="364" font-size="11" class="mu" text-anchor="middle">10%</text>
+<line class="grid" x1="416" y1="102" x2="416" y2="348"/>
+<text x="416" y="364" font-size="11" class="mu" text-anchor="middle">20%</text>
+<line class="grid" x1="526" y1="102" x2="526" y2="348"/>
+<text x="526" y="364" font-size="11" class="mu" text-anchor="middle">30%</text>
+<text x="24" y="127" font-size="13" class="t1">20 PP</text>
+<path class="f1" d="M196,114H467A4,4 0 0 1 471,118V128A4,4 0 0 1 467,132H196Z"/>
+<text x="479" y="127" font-size="12.5" class="t1">25.0%</text>
+<text x="736" y="127" font-size="12.5" class="t2" text-anchor="end">9.6%</text>
+<text x="24" y="157" font-size="13" class="t1">35 PP</text>
+<path class="f1" d="M196,144H467A4,4 0 0 1 471,148V158A4,4 0 0 1 467,162H196Z"/>
+<text x="479" y="157" font-size="12.5" class="t1">25.0%</text>
+<text x="736" y="157" font-size="12.5" class="t2" text-anchor="end">16.7%</text>
+<text x="24" y="187" font-size="13" class="t1">50 PP</text>
+<path class="f1" d="M196,174H412A4,4 0 0 1 416,178V188A4,4 0 0 1 412,192H196Z"/>
+<text x="424" y="187" font-size="12.5" class="t1">20.0%</text>
+<text x="736" y="187" font-size="12.5" class="t2" text-anchor="end">19.1%</text>
+<text x="24" y="217" font-size="13" class="t1">70 PP</text>
+<path class="f1" d="M196,204H357A4,4 0 0 1 361,208V218A4,4 0 0 1 357,222H196Z"/>
+<text x="369" y="217" font-size="12.5" class="t1">15.0%</text>
+<text x="736" y="217" font-size="12.5" class="t2" text-anchor="end">20.1%</text>
+<text x="24" y="247" font-size="13" class="t1">100 PP</text>
+<path class="f1" d="M196,234H302A4,4 0 0 1 306,238V248A4,4 0 0 1 302,252H196Z"/>
+<text x="314" y="247" font-size="12.5" class="t1">10.0%</text>
+<text x="736" y="247" font-size="12.5" class="t2" text-anchor="end">19.1%</text>
+<text x="24" y="277" font-size="13" class="t1">150 PP</text>
+<path class="f1" d="M196,264H236A4,4 0 0 1 240,268V278A4,4 0 0 1 236,282H196Z"/>
+<text x="248" y="277" font-size="12.5" class="t1">4.0%</text>
+<text x="736" y="277" font-size="12.5" class="t2" text-anchor="end">11.5%</text>
+<text x="24" y="307" font-size="13" class="t1">250 PP</text>
+<path class="f1" d="M196,294H200.8A4,4 0 0 1 204.8,298V308A4,4 0 0 1 200.8,312H196Z"/>
+<text x="212.8" y="307" font-size="12.5" class="t1">0.8%</text>
+<text x="736" y="307" font-size="12.5" class="t2" text-anchor="end">3.8%</text>
+<text x="24" y="337" font-size="13" class="t1">Free respin: stake returned</text>
+<path class="f1" d="M196,324H197.1A1.0999999999999943,1.0999999999999943 0 0 1 198.2,325.1V340.9A1.0999999999999943,1.0999999999999943 0 0 1 197.1,342H196Z"/>
+<text x="206.2" y="337" font-size="12.5" class="t1">0.2%</text>
+<text x="736" y="337" font-size="12.5" class="t2" text-anchor="end">0%</text>
+<line class="axis" x1="196" y1="102" x2="196" y2="348"/>
+<text x="24" y="388" font-size="11" class="mu">Weights out of 1,000, from the game's server code. Data: outputs/portfolio/wheel_outcomes.csv · analysis/wheel.js</text>
+</svg>

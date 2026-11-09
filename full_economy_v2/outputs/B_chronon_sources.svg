@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" role="img" aria-labelledby="title desc">
+<title id="title">Chronon sources by cohort</title>
+<desc id="desc">Stacked horizontal bars of the share of Chronons each cohort earns from walking, completion rewards, missions, store purchases and bundles.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="480" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">B. Where each cohort's Chronons come from</text>
+<text x="24" y="56" font-size="12.5" class="t2">Share of all Chronons earned over the simulated horizon, by source. Reference scenario.</text>
+<rect class="c1" x="24" y="75" width="12" height="12" rx="3"/>
+<text x="46" y="85" font-size="12" class="t2">Walking (organic)</text>
+<rect class="c2" x="178.2" y="75" width="12" height="12" rx="3"/>
+<text x="200.2" y="85" font-size="12" class="t2">Journey completion</text>
+<rect class="c3" x="339.2" y="75" width="12" height="12" rx="3"/>
+<text x="361.2" y="85" font-size="12" class="t2">Organic missions</text>
+<rect class="c4" x="486.7" y="75" width="12" height="12" rx="3"/>
+<text x="508.7" y="85" font-size="12" class="t2">Sponsored missions</text>
+<rect class="c5" x="24" y="95" width="12" height="12" rx="3"/>
+<text x="46" y="105" font-size="12" class="t2">Wellness Store</text>
+<rect class="c6" x="158.1" y="95" width="12" height="12" rx="3"/>
+<text x="180.1" y="105" font-size="12" class="t2">Chronon bundles</text>
+<text x="226" y="145" font-size="12" class="t1" text-anchor="end">Casual, walking only</text>
+<path class="c1" d="M240,132H501V150H240A4,4 0 0 1 236,146V136A4,4 0 0 1 240,132Z"><title>Casual, walking only: Walking (organic) 54.1%</title></path>
+<text x="241" y="145" font-size="11" class="tw">54%</text>
+<path class="c2" d="M503,132H726A4,4 0 0 1 730,136V146A4,4 0 0 1 726,150H503V132Z"><title>Casual, walking only: Journey completion 45.9%</title></path>
+<text x="508" y="145" font-size="11" class="tw">46%</text>
+<text x="226" y="173" font-size="12" class="t1" text-anchor="end">Moderate, walking only</text>
+<path class="c1" d="M240,160H504.5V178H240A4,4 0 0 1 236,174V164A4,4 0 0 1 240,160Z"><title>Moderate, walking only: Walking (organic) 54.8%</title></path>
+<text x="241" y="173" font-size="11" class="tw">55%</text>
+<path class="c2" d="M506.5,160H726A4,4 0 0 1 730,164V174A4,4 0 0 1 726,178H506.5V160Z"><title>Moderate, walking only: Journey completion 45.2%</title></path>
+<text x="511.5" y="173" font-size="11" class="tw">45%</text>
+<text x="226" y="201" font-size="12" class="t1" text-anchor="end">Active, walking only</text>
+<path class="c1" d="M240,188H504.6V206H240A4,4 0 0 1 236,202V192A4,4 0 0 1 240,188Z"><title>Active, walking only: Walking (organic) 54.8%</title></path>
+<text x="241" y="201" font-size="11" class="tw">55%</text>
+<path class="c2" d="M506.6,188H726A4,4 0 0 1 730,192V202A4,4 0 0 1 726,206H506.6V188Z"><title>Active, walking only: Journey completion 45.2%</title></path>
+<text x="511.6" y="201" font-size="11" class="tw">45%</text>
+<text x="226" y="229" font-size="12" class="t1" text-anchor="end">Moderate, occasional missions</text>
+<path class="c1" d="M240,216H487.7V234H240A4,4 0 0 1 236,230V220A4,4 0 0 1 240,216Z"><title>Moderate, occasional missions: Walking (organic) 51.4%</title></path>
+<text x="241" y="229" font-size="11" class="tw">51%</text>
+<path class="c2" d="M489.7,216H711.2V234H489.7V216Z"><title>Moderate, occasional missions: Journey completion 45.2%</title></path>
+<text x="494.7" y="229" font-size="11" class="tw">45%</text>
+<path class="c3" d="M713.2,216H726A4,4 0 0 1 730,220V230A4,4 0 0 1 726,234H713.2V216Z"><title>Moderate, occasional missions: Organic missions 3.4%</title></path>
+<text x="226" y="257" font-size="12" class="t1" text-anchor="end">Moderate, regular missions</text>
+<path class="c1" d="M240,244H461.6V262H240A4,4 0 0 1 236,258V248A4,4 0 0 1 240,244Z"><title>Moderate, regular missions: Walking (organic) 46.1%</title></path>
+<text x="241" y="257" font-size="11" class="tw">46%</text>
+<path class="c2" d="M463.6,244H684.7V262H463.6V244Z"><title>Moderate, regular missions: Journey completion 45.2%</title></path>
+<text x="468.6" y="257" font-size="11" class="tw">45%</text>
+<path class="c3" d="M686.7,244H726A4,4 0 0 1 730,248V258A4,4 0 0 1 726,262H686.7V244Z"><title>Moderate, regular missions: Organic missions 8.8%</title></path>
+<text x="691.7" y="257" font-size="11" class="tw">9%</text>
+<text x="226" y="285" font-size="12" class="t1" text-anchor="end">Moderate, missions + sponsor</text>
+<path class="c1" d="M240,272H449.3V290H240A4,4 0 0 1 236,286V276A4,4 0 0 1 240,272Z"><title>Moderate, missions + sponsor: Walking (organic) 43.6%</title></path>
+<text x="241" y="285" font-size="11" class="tw">44%</text>
+<path class="c2" d="M451.3,272H670.9V290H451.3V272Z"><title>Moderate, missions + sponsor: Journey completion 44.9%</title></path>
+<text x="456.3" y="285" font-size="11" class="tw">45%</text>
+<path class="c3" d="M672.9,272H703.6V290H672.9V272Z"><title>Moderate, missions + sponsor: Organic missions 6.6%</title></path>
+<text x="677.9" y="285" font-size="11" class="tw">7%</text>
+<path class="c4" d="M705.6,272H726A4,4 0 0 1 730,276V286A4,4 0 0 1 726,290H705.6V272Z"><title>Moderate, missions + sponsor: Sponsored missions 4.9%</title></path>
+<text x="710.6" y="285" font-size="11" class="tb">5%</text>
+<text x="226" y="313" font-size="12" class="t1" text-anchor="end">Active, missions + sponsor</text>
+<path class="c1" d="M240,300H466.9V318H240A4,4 0 0 1 236,314V304A4,4 0 0 1 240,300Z"><title>Active, missions + sponsor: Walking (organic) 47.1%</title></path>
+<text x="241" y="313" font-size="11" class="tw">47%</text>
+<path class="c2" d="M468.9,300H690.1V318H468.9V300Z"><title>Active, missions + sponsor: Journey completion 45.2%</title></path>
+<text x="473.9" y="313" font-size="11" class="tw">45%</text>
+<path class="c3" d="M692.1,300H711.8V318H692.1V300Z"><title>Active, missions + sponsor: Organic missions 4.4%</title></path>
+<path class="c4" d="M713.8,300H726A4,4 0 0 1 730,304V314A4,4 0 0 1 726,318H713.8V300Z"><title>Active, missions + sponsor: Sponsored missions 3.3%</title></path>
+<text x="226" y="341" font-size="12" class="t1" text-anchor="end">Moderate, store purchases</text>
+<path class="c1" d="M240,328H487.1V346H240A4,4 0 0 1 236,342V332A4,4 0 0 1 240,328Z"><title>Moderate, store purchases: Walking (organic) 51.2%</title></path>
+<text x="241" y="341" font-size="11" class="tw">51%</text>
+<path class="c2" d="M489.1,328H710.5V346H489.1V328Z"><title>Moderate, store purchases: Journey completion 45.2%</title></path>
+<text x="494.1" y="341" font-size="11" class="tw">45%</text>
+<path class="c5" d="M712.5,328H726A4,4 0 0 1 730,332V342A4,4 0 0 1 726,346H712.5V328Z"><title>Moderate, store purchases: Wellness Store 3.5%</title></path>
+<text x="226" y="369" font-size="12" class="t1" text-anchor="end">Moderate, Chronon bundles</text>
+<path class="c1" d="M240,356H452V374H240A4,4 0 0 1 236,370V360A4,4 0 0 1 240,356Z"><title>Moderate, Chronon bundles: Walking (organic) 44.1%</title></path>
+<text x="241" y="369" font-size="11" class="tw">44%</text>
+<path class="c2" d="M454,356H673.5V374H454V356Z"><title>Moderate, Chronon bundles: Journey completion 44.8%</title></path>
+<text x="459" y="369" font-size="11" class="tw">45%</text>
+<path class="c6" d="M675.5,356H726A4,4 0 0 1 730,360V370A4,4 0 0 1 726,374H675.5V356Z"><title>Moderate, Chronon bundles: Chronon bundles 11.0%</title></path>
+<text x="680.5" y="369" font-size="11" class="tw">11%</text>
+<text x="226" y="397" font-size="12" class="t1" text-anchor="end">Moderate, missions + cosmetics</text>
+<path class="c1" d="M240,384H494V402H240A4,4 0 0 1 236,398V388A4,4 0 0 1 240,384Z"><title>Moderate, missions + cosmetics: Walking (organic) 52.6%</title></path>
+<text x="241" y="397" font-size="11" class="tw">53%</text>
+<path class="c2" d="M496,384H678.5V402H496V384Z"><title>Moderate, missions + cosmetics: Journey completion 37.4%</title></path>
+<text x="501" y="397" font-size="11" class="tw">37%</text>
+<path class="c3" d="M680.5,384H726A4,4 0 0 1 730,388V398A4,4 0 0 1 726,402H680.5V384Z"><title>Moderate, missions + cosmetics: Organic missions 10.0%</title></path>
+<text x="685.5" y="397" font-size="11" class="tw">10%</text>
+<text x="226" y="425" font-size="12" class="t1" text-anchor="end">High-engagement collector</text>
+<path class="c1" d="M240,412H501.7V430H240A4,4 0 0 1 236,426V416A4,4 0 0 1 240,412Z"><title>High-engagement collector: Walking (organic) 54.2%</title></path>
+<text x="241" y="425" font-size="11" class="tw">54%</text>
+<path class="c2" d="M503.7,412H667.9V430H503.7V412Z"><title>High-engagement collector: Journey completion 33.6%</title></path>
+<text x="508.7" y="425" font-size="11" class="tw">34%</text>
+<path class="c3" d="M669.9,412H700.5V430H669.9V412Z"><title>High-engagement collector: Organic missions 6.6%</title></path>
+<text x="674.9" y="425" font-size="11" class="tw">7%</text>
+<path class="c4" d="M702.5,412H726A4,4 0 0 1 730,416V426A4,4 0 0 1 726,430H702.5V412Z"><title>High-engagement collector: Sponsored missions 5.6%</title></path>
+<text x="707.5" y="425" font-size="11" class="tb">6%</text>
+<text x="24" y="462" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/chronon_sources.csv</text>
+</svg>

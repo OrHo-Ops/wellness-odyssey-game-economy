@@ -1,0 +1,7 @@
+pattern,sponsor_in_reach,label,tour_complete_share,median_day_journey_25,median_day_journey_50,median_day_journey_100,p10_day_journey_100,p90_day_journey_100,first_wait_journey_median,first_journey_median_wait_1d,median_wait_j10,median_wait_j25,median_wait_j50,median_wait_j75,median_wait_j100,mean_wait_2-10,mean_wait_11-25,mean_wait_26-50,mean_wait_51-75,mean_wait_76-100,blocked_session_share,journeys_by_day_365,journeys_by_day_730,missions_per_week,puzzles_per_year,puzzle_energy_share,energy_while_waiting_share,energy_lost_to_cap_share,chronons_earned_per_sim_year,cosmetics_owned,cosmetic_spend,deadlocked_share
+none,false,No missions,0.985,137,305,952,646,1378,60,60,0,0,0,13,19,0.00,0.00,0.00,7.07,16.75,0.539,58,87,0.00,27.6,0.0180,0.598,0.000,2745,0.0,0,0.000
+occasional,false,Occasional (organic),1.000,134,296,882,615,1234,68,68,0,0,0,11,17,0.00,0.00,0.00,2.44,15.21,0.434,59,91,0.39,35.2,0.0223,0.497,0.000,3002,0.0,0,0.000
+regular,false,Regular (organic),1.000,128,284,761,559,1047,83,83,0,0,0,0,14,0.00,0.00,0.00,0.04,7.62,0.213,61,98,1.18,45.9,0.0277,0.278,0.000,3497,0.0,0,0.000
+high,false,High (organic),1.000,124,275,700,514,966,94,94,0,0,0,0,10,0.00,0.00,0.00,0.00,2.97,0.086,62,100,1.76,50.1,0.0294,0.133,0.000,3820,0.0,0,0.000
+regular,true,"Regular, sponsor in reach",1.000,125,278,699,519,966,93,93,0,0,0,0,11,0.00,0.00,0.00,0.01,3.51,0.102,62,100,1.67,49.6,0.0292,0.153,0.000,3776,0.0,0,0.000
+high,true,"High, sponsor in reach",1.000,121,270,661,482,929,,,0,0,0,0,0,0.00,0.00,0.00,0.00,0.92,0.027,64,100,2.35,52.7,0.0303,0.051,0.000,4092,0.0,0,0.000

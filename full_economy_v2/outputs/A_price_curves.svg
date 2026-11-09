@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 530" width="760" height="530" role="img" aria-labelledby="title desc">
+<title id="title">Chronon unlock price across the World Tour</title>
+<desc id="desc">Line chart of the Chronon price of journeys 2 to 100 under five hypothetical price families with equal totals.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="530" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">A. Chronon unlock price across the 100-journey World Tour</text>
+<text x="24" y="56" font-size="12.5" class="t2">Five hypothetical price families. Each charges the same total, 7,443 Chronons for journeys 2 to 100;</text>
+<text x="24" y="74" font-size="12.5" class="t2">they differ only in when they charge it. Jerusalem is the free start journey. Prices are calibrated</text>
+<text x="24" y="92" font-size="12.5" class="t2">once and then frozen.</text>
+<rect class="c1" x="24" y="115" width="16" height="4" rx="2"/>
+<text x="46" y="121" font-size="12" class="t2">Linear</text>
+<rect class="c2" x="104.3" y="115" width="16" height="4" rx="2"/>
+<text x="126.3" y="121" font-size="12" class="t2">Exponential</text>
+<rect class="c3" x="218.2" y="115" width="16" height="4" rx="2"/>
+<text x="240.2" y="121" font-size="12" class="t2">Piecewise</text>
+<rect class="c4" x="318.7" y="115" width="16" height="4" rx="2"/>
+<text x="340.7" y="121" font-size="12" class="t2">Milestone jumps</text>
+<rect class="c5" x="24" y="135" width="16" height="4" rx="2"/>
+<text x="46" y="141" font-size="12" class="t2">Coverage-targeted hybrid (reference)</text>
+<line class="axis" x1="72" y1="454" x2="664" y2="454"/>
+<text x="64" y="458" font-size="11" class="mu" text-anchor="end">0</text>
+<line class="grid" x1="72" y1="398" x2="664" y2="398"/>
+<text x="64" y="402" font-size="11" class="mu" text-anchor="end">50</text>
+<line class="grid" x1="72" y1="342" x2="664" y2="342"/>
+<text x="64" y="346" font-size="11" class="mu" text-anchor="end">100</text>
+<line class="grid" x1="72" y1="286" x2="664" y2="286"/>
+<text x="64" y="290" font-size="11" class="mu" text-anchor="end">150</text>
+<line class="grid" x1="72" y1="230" x2="664" y2="230"/>
+<text x="64" y="234" font-size="11" class="mu" text-anchor="end">200</text>
+<line class="grid" x1="72" y1="174" x2="664" y2="174"/>
+<text x="64" y="178" font-size="11" class="mu" text-anchor="end">250</text>
+<text x="72" y="472" font-size="11" class="mu" text-anchor="middle">1</text>
+<text x="125.8" y="472" font-size="11" class="mu" text-anchor="middle">10</text>
+<text x="215.5" y="472" font-size="11" class="mu" text-anchor="middle">25</text>
+<text x="365" y="472" font-size="11" class="mu" text-anchor="middle">50</text>
+<text x="514.5" y="472" font-size="11" class="mu" text-anchor="middle">75</text>
+<text x="664" y="472" font-size="11" class="mu" text-anchor="middle">100</text>
+<text x="664" y="490" font-size="11" class="mu" text-anchor="end">Journey in unlock order</text>
+<text x="72" y="162" font-size="11" class="mu">Chronons to unlock</text>
+<path class="l1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78,426L84,424.9L89.9,423.8L95.9,422.6L101.9,421.5L107.9,420.4L113.9,419.3L119.8,417L125.8,415.9L131.8,414.8L137.8,413.7L143.8,412.6L149.7,411.4L155.7,410.3L161.7,409.2L167.7,408.1L173.7,407L179.6,405.8L185.6,404.7L191.6,403.6L197.6,402.5L203.6,401.4L209.5,400.2L215.5,399.1L221.5,398L227.5,396.9L233.5,395.8L239.4,394.6L245.4,393.5L251.4,392.4L257.4,391.3L263.4,390.2L269.3,389L275.3,387.9L281.3,386.8L287.3,385.7L293.3,384.6L299.2,383.4L305.2,382.3L311.2,381.2L317.2,380.1L323.2,379L329.1,377.8L335.1,376.7L341.1,375.6L347.1,374.5L353.1,373.4L359,372.2L365,371.1L371,370L377,368.9L382.9,367.8L388.9,366.6L394.9,365.5L400.9,364.4L406.9,363.3L412.8,362.2L418.8,361L424.8,359.9L430.8,358.8L436.8,357.7L442.7,356.6L448.7,355.4L454.7,354.3L460.7,353.2L466.7,352.1L472.6,351L478.6,349.8L484.6,348.7L490.6,346.5L496.6,345.4L502.5,344.2L508.5,343.1L514.5,342L520.5,340.9L526.5,339.8L532.4,338.6L538.4,337.5L544.4,336.4L550.4,335.3L556.4,334.2L562.3,333L568.3,331.9L574.3,330.8L580.3,329.7L586.3,328.6L592.2,327.4L598.2,326.3L604.2,325.2L610.2,324.1L616.2,323L622.1,321.8L628.1,320.7L634.1,319.6L640.1,318.5L646.1,317.4L652,316.2L658,315.1L664,314"><title>Linear</title></path>
+<path class="l2" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78,439.4L84,439.4L89.9,439.4L95.9,438.3L101.9,438.3L107.9,437.2L113.9,437.2L119.8,436.1L125.8,436.1L131.8,436.1L137.8,435L143.8,433.8L149.7,433.8L155.7,432.7L161.7,432.7L167.7,431.6L173.7,431.6L179.6,430.5L185.6,429.4L191.6,429.4L197.6,428.2L203.6,427.1L209.5,427.1L215.5,426L221.5,424.9L227.5,424.9L233.5,423.8L239.4,422.6L245.4,421.5L251.4,420.4L257.4,419.3L263.4,418.2L269.3,417L275.3,415.9L281.3,414.8L287.3,413.7L293.3,412.6L299.2,411.4L305.2,410.3L311.2,409.2L317.2,408.1L323.2,407L329.1,404.7L335.1,403.6L341.1,402.5L347.1,400.2L353.1,399.1L359,396.9L365,395.8L371,393.5L377,392.4L382.9,390.2L388.9,387.9L394.9,385.7L400.9,384.6L406.9,382.3L412.8,380.1L418.8,377.8L424.8,375.6L430.8,373.4L436.8,371.1L442.7,367.8L448.7,365.5L454.7,363.3L460.7,359.9L466.7,357.7L472.6,354.3L478.6,351L484.6,348.7L490.6,345.4L496.6,342L502.5,338.6L508.5,335.3L514.5,331.9L520.5,327.4L526.5,324.1L532.4,319.6L538.4,316.2L544.4,311.8L550.4,307.3L556.4,302.8L562.3,298.3L568.3,293.8L574.3,289.4L580.3,284.9L586.3,279.3L592.2,273.7L598.2,269.2L604.2,263.6L610.2,256.9L616.2,251.3L622.1,245.7L628.1,239L634.1,232.2L640.1,225.5L646.1,218.8L652,212.1L658,205.4L664,197.5"><title>Exponential</title></path>
+<path class="l3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78,424.9L84,424.9L89.9,423.8L95.9,423.8L101.9,423.8L107.9,423.8L113.9,422.6L119.8,422.6L125.8,422.6L131.8,421.5L137.8,420.4L143.8,419.3L149.7,419.3L155.7,418.2L161.7,417L167.7,415.9L173.7,414.8L179.6,414.8L185.6,413.7L191.6,412.6L197.6,411.4L203.6,411.4L209.5,410.3L215.5,409.2L221.5,408.1L227.5,407L233.5,407L239.4,405.8L245.4,404.7L251.4,403.6L257.4,402.5L263.4,402.5L269.3,401.4L275.3,400.2L281.3,399.1L287.3,399.1L293.3,398L299.2,396.9L305.2,395.8L311.2,394.6L317.2,392.4L323.2,390.2L329.1,389L335.1,386.8L341.1,385.7L347.1,383.4L353.1,382.3L359,380.1L365,377.8L371,376.7L377,374.5L382.9,373.4L388.9,371.1L394.9,370L400.9,367.8L406.9,365.5L412.8,364.4L418.8,362.2L424.8,361L430.8,358.8L436.8,357.7L442.7,355.4L448.7,353.2L454.7,352.1L460.7,349.8L466.7,348.7L472.6,346.5L478.6,345.4L484.6,343.1L490.6,340.9L496.6,339.8L502.5,337.5L508.5,336.4L514.5,334.2L520.5,333L526.5,330.8L532.4,328.6L538.4,327.4L544.4,325.2L550.4,324.1L556.4,321.8L562.3,320.7L568.3,318.5L574.3,316.2L580.3,315.1L586.3,312.9L592.2,311.8L598.2,309.5L604.2,308.4L610.2,306.2L616.2,303.9L622.1,302.8L628.1,300.6L634.1,299.4L640.1,297.2L646.1,296.1L652,293.8L658,291.6L664,290.5"><title>Piecewise</title></path>
+<path class="l4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78,439.4L84,439.4L89.9,439.4L95.9,439.4L101.9,438.3L107.9,438.3L113.9,438.3L119.8,437.2L125.8,437.2L131.8,433.8L137.8,433.8L143.8,432.7L149.7,432.7L155.7,432.7L161.7,431.6L167.7,431.6L173.7,431.6L179.6,431.6L185.6,430.5L191.6,426L197.6,424.9L203.6,424.9L209.5,424.9L215.5,423.8L221.5,423.8L227.5,422.6L233.5,422.6L239.4,422.6L245.4,421.5L251.4,414.8L257.4,414.8L263.4,413.7L269.3,413.7L275.3,412.6L281.3,412.6L287.3,412.6L293.3,411.4L299.2,411.4L305.2,410.3L311.2,401.4L317.2,400.2L323.2,400.2L329.1,399.1L335.1,399.1L341.1,398L347.1,398L353.1,396.9L359,396.9L365,395.8L371,383.4L377,383.4L382.9,382.3L388.9,381.2L394.9,381.2L400.9,380.1L406.9,379L412.8,379L418.8,377.8L424.8,377.8L430.8,361L436.8,359.9L442.7,359.9L448.7,358.8L454.7,357.7L460.7,356.6L466.7,356.6L472.6,355.4L478.6,354.3L484.6,353.2L490.6,331.9L496.6,330.8L502.5,330.8L508.5,329.7L514.5,328.6L520.5,327.4L526.5,326.3L532.4,325.2L538.4,324.1L544.4,323L550.4,296.1L556.4,295L562.3,293.8L568.3,291.6L574.3,290.5L580.3,289.4L586.3,288.2L592.2,287.1L598.2,286L604.2,284.9L610.2,249L616.2,247.9L622.1,246.8L628.1,244.6L634.1,243.4L640.1,242.3L646.1,240.1L652,239L658,237.8L664,235.6"><title>Milestone jumps</title></path>
+<path class="l5" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M78,428.2L84,427.1L89.9,423.8L95.9,421.5L101.9,418.2L107.9,414.8L113.9,411.4L119.8,410.3L125.8,410.3L131.8,408.1L137.8,408.1L143.8,407L149.7,407L155.7,405.8L161.7,404.7L167.7,404.7L173.7,403.6L179.6,402.5L185.6,401.4L191.6,400.2L197.6,400.2L203.6,399.1L209.5,398L215.5,396.9L221.5,396.9L227.5,395.8L233.5,393.5L239.4,393.5L245.4,392.4L251.4,391.3L257.4,390.2L263.4,389L269.3,387.9L275.3,387.9L281.3,386.8L287.3,384.6L293.3,383.4L299.2,383.4L305.2,382.3L311.2,380.1L317.2,380.1L323.2,379L329.1,379L335.1,376.7L341.1,375.6L347.1,375.6L353.1,374.5L359,373.4L365,372.2L371,371.1L377,371.1L382.9,368.9L388.9,368.9L394.9,367.8L400.9,366.6L406.9,366.6L412.8,364.4L418.8,363.3L424.8,363.3L430.8,362.2L436.8,359.9L442.7,358.8L448.7,358.8L454.7,357.7L460.7,355.4L466.7,354.3L472.6,354.3L478.6,353.2L484.6,351L490.6,349.8L496.6,349.8L502.5,348.7L508.5,346.5L514.5,345.4L520.5,344.2L526.5,343.1L532.4,343.1L538.4,340.9L544.4,339.8L550.4,338.6L556.4,337.5L562.3,335.3L568.3,334.2L574.3,333L580.3,331.9L586.3,329.7L592.2,328.6L598.2,327.4L604.2,326.3L610.2,324.1L616.2,323L622.1,321.8L628.1,320.7L634.1,318.5L640.1,317.4L646.1,316.2L652,315.1L658,312.9L664,310.6"><title>Coverage-targeted hybrid (reference)</title></path>
+<text x="672" y="201.5" font-size="12" class="t1">229</text>
+<text x="672" y="314.6" font-size="12" class="t1">128</text>
+<text x="24" y="512" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/price_curves.csv</text>
+</svg>

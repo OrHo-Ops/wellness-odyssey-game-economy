@@ -1,0 +1,13 @@
+comparison,less_active_steps,more_active_steps,less_active_stake,more_active_stake,p_less_active_ahead,p_level,p_more_active_ahead
+same tier,10000,11000,10,10,0.1571,0.0023,0.8406
+same tier,10000,11000,50,50,0.3212,0.0078,0.6710
+same tier,10000,11000,100,100,0.3651,0.0129,0.6220
+same tier,50000,55000,10,10,0.0127,0.0001,0.9872
+same tier,50000,55000,50,50,0.1571,0.0023,0.8406
+same tier,50000,55000,100,100,0.2367,0.0042,0.7591
+same tier,100000,110000,10,10,0.0008,0.0000,0.9992
+same tier,100000,110000,50,50,0.0781,0.0010,0.9209
+same tier,100000,110000,100,100,0.1571,0.0023,0.8406
+less active player chooses,50000,55000,10,50,0.0986,0.0005,0.9009
+less active player chooses,50000,55000,50,50,0.1571,0.0023,0.8406
+less active player chooses,50000,55000,100,50,0.2017,0.0022,0.7962

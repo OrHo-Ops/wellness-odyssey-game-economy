@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 499" width="760" height="499" role="img" aria-labelledby="title desc">
+<title id="title">Pacing scenarios</title>
+<desc id="desc">Grouped horizontal bars of the median day the tour is finished under nine pacing and price combinations.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="499" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">K. Pacing scenarios: tour length vs price level</text>
+<text x="24" y="56" font-size="12.5" class="t2">Median day a moderate walker finishes journey 100, for three PP pacing curves and three price levels,</text>
+<text x="24" y="74" font-size="12.5" class="t2">with prices calibrated to each curve. No completion target is assumed: the figure shows the</text>
+<text x="24" y="92" font-size="12.5" class="t2">trade-off, not a recommendation.</text>
+<rect class="c1" x="24" y="111" width="12" height="12" rx="3"/>
+<text x="46" y="121" font-size="12" class="t2">Walking only</text>
+<rect class="c3" x="144.6" y="111" width="12" height="12" rx="3"/>
+<text x="166.6" y="121" font-size="12" class="t2">Regular organic missions</text>
+<line class="axis" x1="200" y1="146" x2="200" y2="444"/>
+<line class="grid" x1="268.3" y1="146" x2="268.3" y2="444"/>
+<line class="grid" x1="336.7" y1="146" x2="336.7" y2="444"/>
+<line class="grid" x1="405" y1="146" x2="405" y2="444"/>
+<line class="grid" x1="473.3" y1="146" x2="473.3" y2="444"/>
+<line class="grid" x1="541.7" y1="146" x2="541.7" y2="444"/>
+<line class="grid" x1="610" y1="146" x2="610" y2="444"/>
+<text x="190" y="167" font-size="12" class="t1" text-anchor="end">flat PP, generous prices</text>
+<path class="c1" d="M200,152H292A4,4 0 0 1 296,156V158A4,4 0 0 1 292,162H200Z"><title>Walking only, flat PP and generous prices: day 513</title></path>
+<text x="302" y="159" font-size="11.5" class="t2">513 d</text>
+<path class="c3" d="M200,164H285.4A4,4 0 0 1 289.4,168V170A4,4 0 0 1 285.4,174H200Z"><title>Organic missions, flat PP and generous prices: day 478</title></path>
+<text x="295.4" y="171" font-size="11.5" class="t2">478 d</text>
+<text x="190" y="198" font-size="12" class="t1" text-anchor="end">flat PP, reference prices</text>
+<path class="c1" d="M200,183H313.5A4,4 0 0 1 317.5,187V189A4,4 0 0 1 313.5,193H200Z"><title>Walking only, flat PP and reference prices: day 628</title></path>
+<text x="323.5" y="190" font-size="11.5" class="t2">628 d</text>
+<path class="c3" d="M200,195H289.8A4,4 0 0 1 293.8,199V201A4,4 0 0 1 289.8,205H200Z"><title>Organic missions, flat PP and reference prices: day 501</title></path>
+<text x="299.8" y="202" font-size="11.5" class="t2">501 d</text>
+<text x="190" y="229" font-size="12" class="t1" text-anchor="end">flat PP, scarce prices</text>
+<path class="c1" d="M200,214H360.6A4,4 0 0 1 364.6,218V220A4,4 0 0 1 360.6,224H200Z"><title>Walking only, flat PP and scarce prices: day 879</title></path>
+<text x="370.6" y="221" font-size="11.5" class="t2">879 d</text>
+<path class="c3" d="M200,226H327.7A4,4 0 0 1 331.7,230V232A4,4 0 0 1 327.7,236H200Z"><title>Organic missions, flat PP and scarce prices: day 704</title></path>
+<text x="337.7" y="233" font-size="11.5" class="t2">704 d</text>
+<text x="190" y="260" font-size="12" class="t1" text-anchor="end">gentle PP, generous prices</text>
+<path class="c1" d="M200,245H334A4,4 0 0 1 338,249V251A4,4 0 0 1 334,255H200Z"><title>Walking only, gentle PP and generous prices: day 737</title></path>
+<text x="344" y="252" font-size="11.5" class="t2">737 d</text>
+<path class="c3" d="M200,257H326A4,4 0 0 1 330,261V263A4,4 0 0 1 326,267H200Z"><title>Organic missions, gentle PP and generous prices: day 695</title></path>
+<text x="336" y="264" font-size="11.5" class="t2">695 d</text>
+<text x="190" y="291" font-size="12" class="t1" text-anchor="end">gentle PP, reference prices</text>
+<path class="c1" d="M200,276H374.1A4,4 0 0 1 378.1,280V282A4,4 0 0 1 374.1,286H200Z"><title>Walking only, gentle PP and reference prices: day 952</title></path>
+<text x="384.1" y="283" font-size="11.5" class="t2">952 d</text>
+<path class="c3" d="M200,288H338.5A4,4 0 0 1 342.5,292V294A4,4 0 0 1 338.5,298H200Z"><title>Organic missions, gentle PP and reference prices: day 761</title></path>
+<text x="348.5" y="295" font-size="11.5" class="t2">761 d</text>
+<text x="190" y="322" font-size="12" class="t1" text-anchor="end">gentle PP, scarce prices</text>
+<path class="c1" d="M200,307H447A4,4 0 0 1 451,311V313A4,4 0 0 1 447,317H200Z"><title>Walking only, gentle PP and scarce prices: day 1,341</title></path>
+<text x="457" y="314" font-size="11.5" class="t2">1,341 d</text>
+<path class="c3" d="M200,319H394.9A4,4 0 0 1 398.9,323V325A4,4 0 0 1 394.9,329H200Z"><title>Organic missions, gentle PP and scarce prices: day 1,063</title></path>
+<text x="404.9" y="326" font-size="11.5" class="t2">1,063 d</text>
+<text x="190" y="353" font-size="12" class="t1" text-anchor="end">capped PP, generous prices</text>
+<path class="c1" d="M200,338H368.4A4,4 0 0 1 372.4,342V344A4,4 0 0 1 368.4,348H200Z"><title>Walking only, capped PP and generous prices: day 921</title></path>
+<text x="378.4" y="345" font-size="11.5" class="t2">921 d</text>
+<path class="c3" d="M200,350H359.3A4,4 0 0 1 363.3,354V356A4,4 0 0 1 359.3,360H200Z"><title>Organic missions, capped PP and generous prices: day 872</title></path>
+<text x="369.3" y="357" font-size="11.5" class="t2">872 d</text>
+<text x="190" y="384" font-size="12" class="t1" text-anchor="end">capped PP, reference prices</text>
+<path class="c1" d="M200,369H412.4A4,4 0 0 1 416.4,373V375A4,4 0 0 1 412.4,379H200Z"><title>Walking only, capped PP and reference prices: day 1,156</title></path>
+<text x="422.4" y="376" font-size="11.5" class="t2">1,156 d</text>
+<path class="c3" d="M200,381H367.3A4,4 0 0 1 371.3,385V387A4,4 0 0 1 367.3,391H200Z"><title>Organic missions, capped PP and reference prices: day 915</title></path>
+<text x="377.3" y="388" font-size="11.5" class="t2">915 d</text>
+<text x="190" y="415" font-size="12" class="t1" text-anchor="end">capped PP, scarce prices</text>
+<path class="c1" d="M200,400H499.6A4,4 0 0 1 503.6,404V406A4,4 0 0 1 499.6,410H200Z"><title>Walking only, capped PP and scarce prices: day 1,622</title></path>
+<text x="509.6" y="407" font-size="11.5" class="t2">1,622 d</text>
+<path class="c3" d="M200,412H436.8A4,4 0 0 1 440.8,416V418A4,4 0 0 1 436.8,422H200Z"><title>Organic missions, capped PP and scarce prices: day 1,286</title></path>
+<text x="446.8" y="419" font-size="11.5" class="t2">1,286 d</text>
+<text x="200" y="441" font-size="11" class="mu" text-anchor="middle">0</text>
+<text x="268.3" y="441" font-size="11" class="mu" text-anchor="middle">1 yr</text>
+<text x="336.7" y="441" font-size="11" class="mu" text-anchor="middle">2 yr</text>
+<text x="405" y="441" font-size="11" class="mu" text-anchor="middle">3 yr</text>
+<text x="473.3" y="441" font-size="11" class="mu" text-anchor="middle">4 yr</text>
+<text x="541.7" y="441" font-size="11" class="mu" text-anchor="middle">5 yr</text>
+<text x="610" y="441" font-size="11" class="mu" text-anchor="middle">6 yr</text>
+<text x="610" y="459" font-size="11" class="mu" text-anchor="end">Median day journey 100 is finished</text>
+<text x="24" y="481" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/pacing.csv</text>
+</svg>

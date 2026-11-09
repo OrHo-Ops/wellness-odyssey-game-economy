@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 652" width="760" height="652" role="img" aria-labelledby="title desc">
+<title id="title">Late-game balance sweep</title>
+<desc id="desc">Two line charts against late-game coverage: share of fully blocked sessions and median wait before journey 100, by player type.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="652" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">L. Balance sweep: how much late-game scarcity, and who feels it</text>
+<text x="24" y="56" font-size="12.5" class="t2">Coverage at journey 100 is the Chronons a walking-only player earns during the journey before it,</text>
+<text x="24" y="74" font-size="12.5" class="t2">divided by its price; the other anchors stay at the reference. Lower means scarcer.</text>
+<text x="24" y="92" font-size="12.5" class="t2">Walking-only players start to be blocked below a coverage of about 1.0 (36% of sessions at 0.9);</text>
+<text x="24" y="110" font-size="12.5" class="t2">missions and bundles keep players unblocked to about 0.8.</text>
+<rect class="c1" x="24" y="133" width="16" height="4" rx="2"/>
+<text x="46" y="139" font-size="12" class="t2">Walking only</text>
+<rect class="c3" x="144.6" y="133" width="16" height="4" rx="2"/>
+<text x="166.6" y="139" font-size="12" class="t2">Organic missions</text>
+<rect class="c4" x="292.2" y="133" width="16" height="4" rx="2"/>
+<text x="314.2" y="139" font-size="12" class="t2">Sponsored missions</text>
+<rect class="c6" x="453.1" y="133" width="16" height="4" rx="2"/>
+<text x="475.1" y="139" font-size="12" class="t2">Chronon bundles</text>
+<line class="axis" x1="72" y1="336" x2="700" y2="336"/>
+<text x="64" y="340" font-size="11" class="mu" text-anchor="end">0%</text>
+<line class="grid" x1="72" y1="282.7" x2="700" y2="282.7"/>
+<text x="64" y="286.7" font-size="11" class="mu" text-anchor="end">20%</text>
+<line class="grid" x1="72" y1="229.3" x2="700" y2="229.3"/>
+<text x="64" y="233.3" font-size="11" class="mu" text-anchor="end">40%</text>
+<line class="grid" x1="72" y1="176" x2="700" y2="176"/>
+<text x="64" y="180" font-size="11" class="mu" text-anchor="end">60%</text>
+<text x="72" y="354" font-size="11" class="mu" text-anchor="middle">1.1</text>
+<text x="197.6" y="354" font-size="11" class="mu" text-anchor="middle">1</text>
+<text x="323.2" y="354" font-size="11" class="mu" text-anchor="middle">0.9</text>
+<text x="448.8" y="354" font-size="11" class="mu" text-anchor="middle">0.8</text>
+<text x="574.4" y="354" font-size="11" class="mu" text-anchor="middle">0.7</text>
+<text x="700" y="354" font-size="11" class="mu" text-anchor="middle">0.6</text>
+<text x="72" y="164" font-size="11" class="mu">Sessions fully blocked (share of active days in the tour)</text>
+<path class="l1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,336L197.6,335.9L323.2,239.7L448.8,211.3L574.4,192.2L700,176"><title>Walking only</title></path>
+<circle class="c1 ring" stroke-width="2" cx="72" cy="336" r="4.5"><title>Walking only at late coverage 1.1: 0</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="197.6" cy="335.9" r="4.5"><title>Walking only at late coverage 1: 0</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="323.2" cy="239.7" r="4.5"><title>Walking only at late coverage 0.9: 36</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="448.8" cy="211.3" r="4.5"><title>Walking only at late coverage 0.8: 47</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="574.4" cy="192.2" r="4.5"><title>Walking only at late coverage 0.7: 54</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="700" cy="176" r="4.5"><title>Walking only at late coverage 0.6: 60</title></circle>
+<path class="l3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,336L197.6,336L323.2,335.9L448.8,322.8L574.4,279.2L700,240.1"><title>Organic missions</title></path>
+<circle class="c3 ring" stroke-width="2" cx="72" cy="336" r="4.5"><title>Organic missions at late coverage 1.1: 0</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="197.6" cy="336" r="4.5"><title>Organic missions at late coverage 1: 0</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="323.2" cy="335.9" r="4.5"><title>Organic missions at late coverage 0.9: 0</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="448.8" cy="322.8" r="4.5"><title>Organic missions at late coverage 0.8: 5</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="574.4" cy="279.2" r="4.5"><title>Organic missions at late coverage 0.7: 21</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="700" cy="240.1" r="4.5"><title>Organic missions at late coverage 0.6: 36</title></circle>
+<path class="l4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,336L197.6,336L323.2,336L448.8,333.8L574.4,308.9L700,267.2"><title>Sponsored missions</title></path>
+<circle class="c4 ring" stroke-width="2" cx="72" cy="336" r="4.5"><title>Sponsored missions at late coverage 1.1: 0</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="197.6" cy="336" r="4.5"><title>Sponsored missions at late coverage 1: 0</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="323.2" cy="336" r="4.5"><title>Sponsored missions at late coverage 0.9: 0</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="448.8" cy="333.8" r="4.5"><title>Sponsored missions at late coverage 0.8: 1</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="574.4" cy="308.9" r="4.5"><title>Sponsored missions at late coverage 0.7: 10</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="700" cy="267.2" r="4.5"><title>Sponsored missions at late coverage 0.6: 26</title></circle>
+<path class="l6" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,336L197.6,336L323.2,336L448.8,334.2L574.4,309.8L700,268.3"><title>Chronon bundles</title></path>
+<circle class="c6 ring" stroke-width="2" cx="72" cy="336" r="4.5"><title>Chronon bundles at late coverage 1.1: 0</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="197.6" cy="336" r="4.5"><title>Chronon bundles at late coverage 1: 0</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="323.2" cy="336" r="4.5"><title>Chronon bundles at late coverage 0.9: 0</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="448.8" cy="334.2" r="4.5"><title>Chronon bundles at late coverage 0.8: 1</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="574.4" cy="309.8" r="4.5"><title>Chronon bundles at late coverage 0.7: 10</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="700" cy="268.3" r="4.5"><title>Chronon bundles at late coverage 0.6: 25</title></circle>
+<line class="axis" x1="72" y1="576" x2="700" y2="576"/>
+<text x="64" y="580" font-size="11" class="mu" text-anchor="end">0</text>
+<line class="grid" x1="72" y1="522.7" x2="700" y2="522.7"/>
+<text x="64" y="526.7" font-size="11" class="mu" text-anchor="end">10</text>
+<line class="grid" x1="72" y1="469.3" x2="700" y2="469.3"/>
+<text x="64" y="473.3" font-size="11" class="mu" text-anchor="end">20</text>
+<line class="grid" x1="72" y1="416" x2="700" y2="416"/>
+<text x="64" y="420" font-size="11" class="mu" text-anchor="end">30</text>
+<text x="72" y="594" font-size="11" class="mu" text-anchor="middle">1.1</text>
+<text x="197.6" y="594" font-size="11" class="mu" text-anchor="middle">1</text>
+<text x="323.2" y="594" font-size="11" class="mu" text-anchor="middle">0.9</text>
+<text x="448.8" y="594" font-size="11" class="mu" text-anchor="middle">0.8</text>
+<text x="574.4" y="594" font-size="11" class="mu" text-anchor="middle">0.7</text>
+<text x="700" y="594" font-size="11" class="mu" text-anchor="middle">0.6</text>
+<text x="700" y="612" font-size="11" class="mu" text-anchor="end">Late-game coverage at journey 100</text>
+<text x="72" y="404" font-size="11" class="mu">Median wait before journey 100 (days)</text>
+<path class="l1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,576L197.6,570.7L323.2,512L448.8,496L574.4,474.7L700,453.3"><title>Walking only</title></path>
+<circle class="c1 ring" stroke-width="2" cx="72" cy="576" r="4.5"><title>Walking only at late coverage 1.1: 0</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="197.6" cy="570.7" r="4.5"><title>Walking only at late coverage 1: 1</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="323.2" cy="512" r="4.5"><title>Walking only at late coverage 0.9: 12</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="448.8" cy="496" r="4.5"><title>Walking only at late coverage 0.8: 15</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="574.4" cy="474.7" r="4.5"><title>Walking only at late coverage 0.7: 19</title></circle>
+<circle class="c1 ring" stroke-width="2" cx="700" cy="453.3" r="4.5"><title>Walking only at late coverage 0.6: 23</title></circle>
+<path class="l3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,576L197.6,576L323.2,576L448.8,538.7L574.4,501.3L700,474.7"><title>Organic missions</title></path>
+<circle class="c3 ring" stroke-width="2" cx="72" cy="576" r="4.5"><title>Organic missions at late coverage 1.1: 0</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="197.6" cy="576" r="4.5"><title>Organic missions at late coverage 1: 0</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="323.2" cy="576" r="4.5"><title>Organic missions at late coverage 0.9: 0</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="448.8" cy="538.7" r="4.5"><title>Organic missions at late coverage 0.8: 7</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="574.4" cy="501.3" r="4.5"><title>Organic missions at late coverage 0.7: 14</title></circle>
+<circle class="c3 ring" stroke-width="2" cx="700" cy="474.7" r="4.5"><title>Organic missions at late coverage 0.6: 19</title></circle>
+<path class="l4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,576L197.6,576L323.2,576L448.8,576L574.4,517.3L700,485.3"><title>Sponsored missions</title></path>
+<circle class="c4 ring" stroke-width="2" cx="72" cy="576" r="4.5"><title>Sponsored missions at late coverage 1.1: 0</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="197.6" cy="576" r="4.5"><title>Sponsored missions at late coverage 1: 0</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="323.2" cy="576" r="4.5"><title>Sponsored missions at late coverage 0.9: 0</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="448.8" cy="576" r="4.5"><title>Sponsored missions at late coverage 0.8: 0</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="574.4" cy="517.3" r="4.5"><title>Sponsored missions at late coverage 0.7: 11</title></circle>
+<circle class="c4 ring" stroke-width="2" cx="700" cy="485.3" r="4.5"><title>Sponsored missions at late coverage 0.6: 17</title></circle>
+<path class="l6" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,576L197.6,576L323.2,576L448.8,576L574.4,512L700,474.7"><title>Chronon bundles</title></path>
+<circle class="c6 ring" stroke-width="2" cx="72" cy="576" r="4.5"><title>Chronon bundles at late coverage 1.1: 0</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="197.6" cy="576" r="4.5"><title>Chronon bundles at late coverage 1: 0</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="323.2" cy="576" r="4.5"><title>Chronon bundles at late coverage 0.9: 0</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="448.8" cy="576" r="4.5"><title>Chronon bundles at late coverage 0.8: 0</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="574.4" cy="512" r="4.5"><title>Chronon bundles at late coverage 0.7: 12</title></circle>
+<circle class="c6 ring" stroke-width="2" cx="700" cy="474.7" r="4.5"><title>Chronon bundles at late coverage 0.6: 19</title></circle>
+<text x="24" y="634" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/balance_sweep.csv</text>
+</svg>

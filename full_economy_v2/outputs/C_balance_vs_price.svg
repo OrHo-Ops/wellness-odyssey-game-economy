@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 515" width="760" height="515" role="img" aria-labelledby="title desc">
+<title id="title">Chronon balance versus the next unlock price</title>
+<desc id="desc">Line chart of Chronons held on completing each journey, for walking-only and mission players, against the price of the next journey.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}.ring{stroke:#fcfcfb}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}.zero{stroke:#898781;stroke-width:1}
+.tw{fill:#ffffff}.tb{fill:#0b0b0b}.lp{stroke:#52514e}.fp{fill:#52514e}
+.c1{fill:#2a78d6}.l1{stroke:#2a78d6}
+.c2{fill:#eb6834}.l2{stroke:#eb6834}
+.c3{fill:#1baf7a}.l3{stroke:#1baf7a}
+.c4{fill:#eda100}.l4{stroke:#eda100}
+.c5{fill:#e87ba4}.l5{stroke:#e87ba4}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#6250d6}.l7{stroke:#6250d6}
+.c8{fill:#e34948}.l8{stroke:#e34948}
+.o1{fill:#86b6ef}.ol1{stroke:#86b6ef}
+.o2{fill:#2a78d6}.ol2{stroke:#2a78d6}
+.o3{fill:#104281}.ol3{stroke:#104281}
+.h1{fill:#cde2fb}.ht1{fill:#0b0b0b}
+.h2{fill:#9ec5f4}.ht2{fill:#0b0b0b}
+.h3{fill:#6da7ec}.ht3{fill:#0b0b0b}
+.h4{fill:#3987e5}.ht4{fill:#ffffff}
+.h5{fill:#256abf}.ht5{fill:#ffffff}
+.h6{fill:#184f95}.ht6{fill:#ffffff}
+.h7{fill:#0d366b}.ht7{fill:#ffffff}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.ring{stroke:#1a1a19}.grid{stroke:#2c2c2a}.axis{stroke:#383835}.lp{stroke:#c3c2b7}.fp{fill:#c3c2b7}
+.c1{fill:#3987e5}.l1{stroke:#3987e5}
+.c2{fill:#d95926}.l2{stroke:#d95926}
+.c3{fill:#199e70}.l3{stroke:#199e70}
+.c4{fill:#c98500}.l4{stroke:#c98500}
+.c5{fill:#d55181}.l5{stroke:#d55181}
+.c6{fill:#008300}.l6{stroke:#008300}
+.c7{fill:#9085e9}.l7{stroke:#9085e9}
+.c8{fill:#e66767}.l8{stroke:#e66767}
+.o1{fill:#256abf}.ol1{stroke:#256abf}
+.o2{fill:#5598e7}.ol2{stroke:#5598e7}
+.o3{fill:#9ec5f4}.ol3{stroke:#9ec5f4}
+.h1{fill:#183049}.ht1{fill:#ffffff}
+.h2{fill:#184f95}.ht2{fill:#ffffff}
+.h3{fill:#1c5cab}.ht3{fill:#ffffff}
+.h4{fill:#256abf}.ht4{fill:#ffffff}
+.h5{fill:#3987e5}.ht5{fill:#ffffff}
+.h6{fill:#6da7ec}.ht6{fill:#0b0b0b}
+.h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
+</style>
+<rect class="bg" width="760" height="515" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">C. Chronons held on finishing a journey vs the next journey's price</text>
+<text x="24" y="56" font-size="12.5" class="t2">Closed-form ledger, moderate walker. Walking alone stays ahead of prices until journey 61; from then</text>
+<text x="24" y="74" font-size="12.5" class="t2">on the balance reaches the next price only after a wait. Regular missions keep the balance ahead for</text>
+<text x="24" y="92" font-size="12.5" class="t2">longer.</text>
+<rect class="fp" x="24" y="115" width="16" height="4" rx="2"/>
+<text x="46" y="121" font-size="12" class="t2">Next journey's price</text>
+<rect class="c1" x="198.4" y="115" width="16" height="4" rx="2"/>
+<text x="220.4" y="121" font-size="12" class="t2">Held: walking only</text>
+<rect class="c3" x="359.4" y="115" width="16" height="4" rx="2"/>
+<text x="381.4" y="121" font-size="12" class="t2">Held: regular organic missions</text>
+<line class="axis" x1="72" y1="424" x2="720" y2="424"/>
+<text x="64" y="428" font-size="11" class="mu" text-anchor="end">0</text>
+<line class="grid" x1="72" y1="370" x2="720" y2="370"/>
+<text x="64" y="374" font-size="11" class="mu" text-anchor="end">100</text>
+<line class="grid" x1="72" y1="316" x2="720" y2="316"/>
+<text x="64" y="320" font-size="11" class="mu" text-anchor="end">200</text>
+<line class="grid" x1="72" y1="262" x2="720" y2="262"/>
+<text x="64" y="266" font-size="11" class="mu" text-anchor="end">300</text>
+<line class="grid" x1="72" y1="208" x2="720" y2="208"/>
+<text x="64" y="212" font-size="11" class="mu" text-anchor="end">400</text>
+<line class="grid" x1="72" y1="154" x2="720" y2="154"/>
+<text x="64" y="158" font-size="11" class="mu" text-anchor="end">500</text>
+<text x="72" y="442" font-size="11" class="mu" text-anchor="middle">1</text>
+<text x="131.5" y="442" font-size="11" class="mu" text-anchor="middle">10</text>
+<text x="230.7" y="442" font-size="11" class="mu" text-anchor="middle">25</text>
+<text x="396" y="442" font-size="11" class="mu" text-anchor="middle">50</text>
+<text x="561.3" y="442" font-size="11" class="mu" text-anchor="middle">75</text>
+<text x="720" y="442" font-size="11" class="mu" text-anchor="middle">99</text>
+<text x="720" y="460" font-size="11" class="mu" text-anchor="end">Journey just completed</text>
+<text x="72" y="142" font-size="11" class="mu">Chronons</text>
+<path class="lp" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,411.6L78.6,411L85.2,409.4L91.8,408.3L98.4,406.7L105.1,405.1L111.7,403.5L118.3,402.9L124.9,402.9L131.5,401.9L138.1,401.9L144.7,401.3L151.3,401.3L158,400.8L164.6,400.2L171.2,400.2L177.8,399.7L184.4,399.2L191,398.6L197.6,398.1L204.2,398.1L210.9,397.5L217.5,397L224.1,396.5L230.7,396.5L237.3,395.9L243.9,394.8L250.5,394.8L257.1,394.3L263.8,393.8L270.4,393.2L277,392.7L283.6,392.1L290.2,392.1L296.8,391.6L303.4,390.5L310,390L316.7,390L323.3,389.4L329.9,388.4L336.5,388.4L343.1,387.8L349.7,387.8L356.3,386.7L362.9,386.2L369.6,386.2L376.2,385.7L382.8,385.1L389.4,384.6L396,384L402.6,384L409.2,383L415.8,383L422.4,382.4L429.1,381.9L435.7,381.9L442.3,380.8L448.9,380.3L455.5,380.3L462.1,379.7L468.7,378.6L475.3,378.1L482,378.1L488.6,377.6L495.2,376.5L501.8,375.9L508.4,375.9L515,375.4L521.6,374.3L528.2,373.8L534.9,373.8L541.5,373.2L548.1,372.2L554.7,371.6L561.3,371.1L567.9,370.5L574.5,370.5L581.1,369.5L587.8,368.9L594.4,368.4L601,367.8L607.6,366.8L614.2,366.2L620.8,365.7L627.4,365.1L634,364.1L640.7,363.5L647.3,363L653.9,362.4L660.5,361.4L667.1,360.8L673.7,360.3L680.3,359.7L686.9,358.7L693.6,358.1L700.2,357.6L706.8,357L713.4,356L720,354.9"><title>Price of the next journey</title></path>
+<path class="l1" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,408.2L78.6,403.6L85.2,397.8L91.8,392.4L98.4,386.7L105.1,380.7L111.7,374.4L118.3,369.6L124.9,365.2L131.5,360.1L138.1,355.9L144.7,351.7L151.3,347.9L158,343.9L164.6,339.8L171.2,336.2L177.8,332.4L184.4,329L191,325.5L197.6,322.5L204.2,319.8L210.9,317.1L217.5,314.2L224.1,311.7L230.7,309.6L237.3,307.4L243.9,305.1L250.5,303.8L257.1,302.3L263.8,301.2L270.4,300.1L277,299.3L283.6,298.9L290.2,299L296.8,299L303.4,298.8L310,299.6L316.7,300.8L323.3,301.9L329.9,302.8L336.5,304.7L343.1,306.5L349.7,308.7L356.3,310.3L362.9,312.8L369.6,315.7L376.2,318.5L382.8,321.2L389.4,324.2L396,327.8L402.6,331.7L409.2,334.9L415.8,339.2L422.4,343.3L429.1,347.8L435.7,352.7L442.3,357L448.9,362.2L455.5,367.8L462.1,373.4L468.7,378.8L475.3,385.1L482,391.9L488.6,398.5L495.2,403.5L501.8,403.5L508.4,403.5L515,403.5L521.6,402.9L528.2,402.9L534.9,402.9L541.5,402.9L548.1,402.4L554.7,402.4L561.3,402.4L567.9,402.4L574.5,402.4L581.1,401.9L587.8,401.9L594.4,401.9L601,401.9L607.6,401.3L614.2,401.3L620.8,401.3L627.4,401.3L634,400.8L640.7,400.8L647.3,400.8L653.9,400.8L660.5,400.2L667.1,400.2L673.7,400.2L680.3,400.2L686.9,399.7L693.6,399.7L700.2,399.7L706.8,399.7L713.4,399.7L720,399.2"><title>Chronons held, walking only</title></path>
+<circle class="c1 ring" stroke-width="2" cx="468.7" cy="378.8" r="4.5"><title>First wait: journey 62</title></circle>
+<path class="l3" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M72,406.8L78.6,400.7L85.2,393.3L91.8,386.1L98.4,378.5L105.1,370.5L111.7,362L118.3,354.9L124.9,348.3L131.5,340.9L138.1,334.5L144.7,327.9L151.3,321.7L158,315.4L164.6,309L171.2,302.9L177.8,296.7L184.4,290.9L191,284.9L197.6,279.3L204.2,274.2L210.9,268.9L217.5,263.4L224.1,258.3L230.7,253.7L237.3,248.9L243.9,243.9L250.5,239.9L257.1,235.7L263.8,231.9L270.4,228L277,224.5L283.6,221.4L290.2,218.6L296.8,215.8L303.4,212.7L310,210.6L316.7,209L323.3,207.1L329.9,205.1L336.5,204.1L343.1,202.9L349.7,202.1L356.3,200.6L362.9,200.1L369.6,199.9L376.2,199.6L382.8,199.2L389.4,199.1L396,199.5L402.6,200.2L409.2,200.3L415.8,201.3L422.4,202.1L429.1,203.4L435.7,205L442.3,206L448.9,207.9L455.5,210.2L462.1,212.3L468.7,214.3L475.3,217.2L482,220.6L488.6,223.8L495.2,226.8L501.8,230.8L508.4,235.1L515,239.4L521.6,243.4L528.2,248.5L534.9,253.9L541.5,259.1L548.1,264.2L554.7,270.3L561.3,276.7L567.9,283.6L574.5,290.8L581.1,297.4L587.8,304.9L594.4,312.8L601,321L607.6,329.2L614.2,338.3L620.8,347.7L627.4,357.6L634,367.3L640.7,378L647.3,389L653.9,400.4L660.5,400.2L667.1,400.2L673.7,400.2L680.3,400.2L686.9,399.7L693.6,399.7L700.2,399.7L706.8,399.7L713.4,399.7L720,399.2"><title>Chronons held, regular organic missions</title></path>
+<text x="24" y="482" font-size="11" class="mu">Expected-value arithmetic, not simulation.</text>
+<text x="24" y="497" font-size="11" class="mu">Synthetic players; every economy value is hypothetical. Data: full_economy_v2/outputs/journey_economy.csv</text>
+</svg>

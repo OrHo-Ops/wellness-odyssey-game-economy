@@ -1,0 +1,53 @@
+group,parameter,value,unit,status,note
+core_loop,steps_per_energy,10,steps per Energy,verified,Real steps convert to Energy when the app syncs. Leftover steps (under 10) carry to the next sync.
+core_loop,energy_bank_cap,500,Energy,verified,Ceiling on step-earned Energy only and checked at every sync. Energy converted above the remaining headroom is discarded. An earlier design used 250.
+core_loop,spin_cost,50,Energy,verified,Energy spent on one wheel spin.
+core_loop,starting_energy,0,Energy,verified,Balance of a new account.
+core_loop,starting_coins,10,Coins,verified,Balance of a new account.
+bonuses,default_step_goal,5000,steps per day,verified,Personal daily goal of a new account. Players can change it.
+bonuses,min_step_goal,1000,steps per day,verified,Lowest personal goal a player is allowed to set.
+bonuses,goal_bonus_energy,100,Energy,verified,Paid once per day when the personal goal is reached. Bypasses the bank cap.
+bonuses,milestone_3000_energy,50,Energy,verified,Daily step milestone. Paid once per day. Bypasses the bank cap.
+bonuses,milestone_3000_coins,25,Coins,verified,Daily step milestone.
+bonuses,milestone_7000_energy,75,Energy,verified,Daily step milestone. Paid once per day. Bypasses the bank cap.
+bonuses,milestone_7000_coins,50,Coins,verified,Daily step milestone.
+bonuses,milestone_10000_energy,100,Energy,verified,Daily step milestone. Paid once per day. Bypasses the bank cap.
+bonuses,milestone_10000_coins,100,Coins,verified,Daily step milestone.
+bonuses,milestone_15000_energy,150,Energy,verified,Daily step milestone. Paid once per day. Bypasses the bank cap.
+bonuses,milestone_15000_coins,200,Coins,verified,Daily step milestone.
+wheel,wheel_weight_pp_20,22,weight of 100,illustrative,Illustrative stand-in. The production reward table was not published when this model was built; it is now in docs/v1_core_economy.md section 3.1.
+wheel,wheel_weight_pp_30,26,weight of 100,illustrative,Illustrative stand-in.
+wheel,wheel_weight_pp_50,28,weight of 100,illustrative,Illustrative stand-in.
+wheel,wheel_weight_pp_80,16,weight of 100,illustrative,Illustrative stand-in.
+wheel,wheel_weight_pp_150,7,weight of 100,illustrative,Illustrative stand-in.
+wheel,wheel_weight_free_respin,1,weight of 100,illustrative,"Illustrative weight. The rule is the game's: a free respin pays no points, charges no Energy and is followed by another draw, so the average per paid spin is the per-draw average divided by (1 - respin probability)."
+progression,region_base_cost,1500,Progress Points,verified,Cost of region 1.
+progression,region_cost_multiplier,1.08,ratio,verified,"Each region costs 8% more than the last, rounded to a whole point."
+progression,region_count,7,regions,verified,Regions in the current game. Spinning stops once the last one is complete.
+quests,quest_reward_energy,150,Energy,verified,Default reward for a verified arrival at a quest destination. Bypasses the bank cap.
+quests,quest_reward_coins,100,Coins,verified,Default reward for a verified arrival at a quest destination.
+quests,quest_walking_bonus_rate,0.2,share of step Energy,verified,Extra Energy on real steps walked between starting a quest and claiming it. The game limits how many steps can earn it.
+synthetic,profile_low_mean_steps,3000,steps per day,assumption,Synthetic profile below the first reward milestone on about half its days.
+synthetic,profile_moderate_mean_steps,6000,steps per day,assumption,Synthetic profile just above the 5000-step design target.
+synthetic,profile_high_mean_steps,10000,steps per day,assumption,Synthetic profile at twice the design target.
+synthetic,step_cv,0.3,coefficient of variation,assumption,Day-to-day variation of a player's steps around the profile mean (gamma distribution). Not measured.
+synthetic,sessions_per_day,1,app sessions per day,assumption,Baseline: the player opens the app once a day and syncs then spins. Not measured.
+synthetic,alt_sessions_per_day,2,app sessions per day,assumption,Comparison case: two evenly spaced sessions.
+synthetic,scenario_quests_per_week,2,quests per week,assumption,Scenario only. The baseline has no quests.
+synthetic,scenario_quest_walk_steps,1300,steps,assumption,Scenario only. Steps that earn the walking bonus on one quest: about a 1 km walk.
+synthetic,n_players,2000,synthetic players per profile,assumption,Simulation size.
+synthetic,horizon_days,28,days,assumption,Reported window.
+synthetic,projection_days,120,days,assumption,Each run continues this far so that finish days later than the reported window can be projected.
+synthetic,random_seed,2026,seed,assumption,Fixes every random draw so results reproduce exactly.
+commercial,pilot_sponsored_quests,20,quests,hypothetical,One sponsoring merchant per quest in a single-city pilot.
+commercial,pilot_monthly_active_players,5000,players,hypothetical,Monthly active players in the pilot city.
+commercial,pilot_eligible_share,0.4,share of players,hypothetical,Location permission granted and at least one sponsored quest within reach.
+commercial,pilot_participation_rate,0.25,share of eligible players,hypothetical,Eligible players who start at least one sponsored quest in the month.
+commercial,pilot_quests_started_per_participant,2,quests per month,hypothetical,Sponsored quests started per participating player.
+commercial,pilot_verified_visit_rate,0.5,share of started quests,hypothetical,Started quests that end in a verified arrival.
+commercial,price_fixed_fee,150,USD per quest per month,hypothetical,Model 1: fixed sponsorship fee.
+commercial,price_per_verified_visit,2,USD per visit,hypothetical,Model 2: cost per verified visit.
+commercial,price_hybrid_fixed_fee,50,USD per quest per month,hypothetical,Model 3: fixed part.
+commercial,price_hybrid_per_visit,1.25,USD per visit,hypothetical,Model 3: variable part.
+commercial,cost_merchant_servicing,40,USD per quest per month,hypothetical,"Onboarding, signage, reporting and account support."
+commercial,cost_per_verified_visit,0.25,USD per visit,hypothetical,"Verification, fraud review and billing."

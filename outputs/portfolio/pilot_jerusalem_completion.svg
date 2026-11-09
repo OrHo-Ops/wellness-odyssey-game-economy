@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-labelledby="title desc">
+<title id="title">Share of enrolled testers who have finished Jerusalem (1,500 PP)</title>
+<desc id="desc">Three lines, one per behavioural scenario, showing the share of the 30 synthetic testers who have completed the Jerusalem journey on each pilot day.</desc>
+<style>
+.bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.mu{fill:#898781}
+.grid{stroke:#e1e0d9;stroke-width:1}.axis{stroke:#c3c2b7;stroke-width:1}
+.f1{fill:#2a78d6}.f2{fill:#eb6834}.f3{fill:#1baf7a}.s1{stroke:#2a78d6}.s2{stroke:#eb6834}.s3{stroke:#1baf7a}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){
+.bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.grid{stroke:#2c2c2a}.axis{stroke:#383835}
+.f1{fill:#3987e5}.f2{fill:#d95926}.f3{fill:#199e70}.s1{stroke:#3987e5}.s2{stroke:#d95926}.s3{stroke:#199e70}}
+</style>
+<rect class="bg" width="760" height="400" rx="8"/>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">Share of enrolled testers who have finished Jerusalem (1,500 PP)</text>
+<text x="24" y="56" font-size="12.5" class="t2">Median finishing day among finishers: 8.2 conservative, 4.4 baseline, 2.9 optimistic.</text>
+<rect class="f1" x="24" y="72" width="14" height="4" rx="2"/>
+<text x="44" y="78" font-size="12" class="t2">Conservative</text>
+<rect class="f2" x="154" y="72" width="14" height="4" rx="2"/>
+<text x="174" y="78" font-size="12" class="t2">Baseline</text>
+<rect class="f3" x="256" y="72" width="14" height="4" rx="2"/>
+<text x="276" y="78" font-size="12" class="t2">Optimistic</text>
+<text x="372" y="78" font-size="11" class="mu">Band: 10th–90th percentile of cohorts</text>
+<line class="axis" x1="64" y1="346" x2="628" y2="346"/>
+<text x="56" y="350" font-size="11" class="mu" text-anchor="end">0%</text>
+<line class="grid" x1="64" y1="285.5" x2="628" y2="285.5"/>
+<text x="56" y="289.5" font-size="11" class="mu" text-anchor="end">25%</text>
+<line class="grid" x1="64" y1="225" x2="628" y2="225"/>
+<text x="56" y="229" font-size="11" class="mu" text-anchor="end">50%</text>
+<line class="grid" x1="64" y1="164.5" x2="628" y2="164.5"/>
+<text x="56" y="168.5" font-size="11" class="mu" text-anchor="end">75%</text>
+<line class="grid" x1="64" y1="104" x2="628" y2="104"/>
+<text x="56" y="108" font-size="11" class="mu" text-anchor="end">100%</text>
+<text x="64" y="364" font-size="11" class="mu" text-anchor="middle">Day 1</text>
+<text x="189.3" y="364" font-size="11" class="mu" text-anchor="middle">Day 7</text>
+<text x="335.6" y="364" font-size="11" class="mu" text-anchor="middle">Day 14</text>
+<text x="481.8" y="364" font-size="11" class="mu" text-anchor="middle">Day 21</text>
+<text x="628" y="364" font-size="11" class="mu" text-anchor="middle">Day 28</text>
+<polygon class="f1" fill-opacity="0.12" points="64,346 84.9,337.9 105.8,329.9 126.7,313.7 147.6,289.5 168.4,273.4 189.3,249.2 210.2,233.1 231.1,216.9 252,200 272.9,184.7 293.8,176.6 314.7,168.5 335.6,160.5 356.4,160.5 377.3,160.5 398.2,152.4 419.1,152.4 440,152.4 460.9,152.4 481.8,152.4 502.7,152.4 523.6,152.4 544.4,152.4 565.3,152.4 586.2,152.4 607.1,152.4 628,152.4 628,208.9 607.1,208.9 586.2,208.9 565.3,208.9 544.4,208.9 523.6,208.9 502.7,208.9 481.8,208.9 460.9,208.9 440,208.9 419.1,208.9 398.2,216.9 377.3,216.9 356.4,216.9 335.6,225 314.7,225.8 293.8,233.1 272.9,241.1 252,257.3 231.1,265.3 210.2,282.3 189.3,297.6 168.4,314.5 147.6,329.9 126.7,338.7 105.8,346 84.9,346 64,346"/>
+<path class="s1" fill="none" stroke-width="2" stroke-linejoin="round" d="M64,346L84.9,345L105.8,340.3L126.7,329.9L147.6,314L168.4,294.4L189.3,275.2L210.2,257.5L231.1,241.5L252,226.7L272.9,215.5L293.8,206.4L314.7,199L335.6,193.2L356.4,189.9L377.3,186.8L398.2,184.9L419.1,183.2L440,182L460.9,181.4L481.8,180.7L502.7,180.3L523.6,180.1L544.4,179.9L565.3,179.8L586.2,179.7L607.1,179.6L628,179.6"/>
+<polygon class="f2" fill-opacity="0.12" points="64,346 84.9,305.7 105.8,249.2 126.7,200.8 147.6,168.5 168.4,144.3 189.3,128.2 210.2,120.1 231.1,120.1 252,119.3 272.9,112.1 293.8,112.1 314.7,112.1 335.6,112.1 356.4,112.1 377.3,112.1 398.2,112.1 419.1,112.1 440,112.1 460.9,112.1 481.8,112.1 502.7,112.1 523.6,112.1 544.4,112.1 565.3,112.1 586.2,112.1 607.1,112.1 628,112.1 628,144.3 607.1,144.3 586.2,144.3 565.3,144.3 544.4,144.3 523.6,144.3 502.7,144.3 481.8,144.3 460.9,144.3 440,144.3 419.1,144.3 398.2,144.3 377.3,144.3 356.4,144.3 335.6,144.3 314.7,144.3 293.8,144.3 272.9,152.4 252,152.4 231.1,152.4 210.2,160.5 189.3,176.6 168.4,192.7 147.6,216.9 126.7,257.3 105.8,305.7 84.9,337.9 64,346"/>
+<path class="s2" fill="none" stroke-width="2" stroke-linejoin="round" d="M64,345.4L84.9,324.3L105.8,278.8L126.7,232L147.6,193.5L168.4,166.8L189.3,150.3L210.2,141.8L231.1,135.9L252,132.9L272.9,131.3L293.8,130.3L314.7,130.1L335.6,130L356.4,129.9L377.3,129.9L398.2,129.8L419.1,129.8L440,129.8L460.9,129.8L481.8,129.8L502.7,129.8L523.6,129.8L544.4,129.8L565.3,129.8L586.2,129.8L607.1,129.8L628,129.8"/>
+<polygon class="f3" fill-opacity="0.12" points="64,321.8 84.9,216.9 105.8,144.3 126.7,112.1 147.6,104 168.4,104 189.3,104 210.2,104 231.1,104 252,104 272.9,104 293.8,104 314.7,104 335.6,104 356.4,104 377.3,104 398.2,104 419.1,104 440,104 460.9,104 481.8,104 502.7,104 523.6,104 544.4,104 565.3,104 586.2,104 607.1,104 628,104 628,104 607.1,104 586.2,104 565.3,104 544.4,104 523.6,104 502.7,104 481.8,104 460.9,104 440,104 419.1,104 398.2,104 377.3,104 356.4,104 335.6,104 314.7,104 293.8,104 272.9,104 252,104 231.1,104 210.2,104 189.3,112.1 168.4,112.1 147.6,120.1 126.7,144.3 105.8,192.7 84.9,273.4 64,346"/>
+<path class="s3" fill="none" stroke-width="2" stroke-linejoin="round" d="M64,336.3L84.9,247.9L105.8,167.4L126.7,127.9L147.6,112.3L168.4,106.7L189.3,104.9L210.2,104.2L231.1,104.1L252,104L272.9,104L293.8,104L314.7,104L335.6,104L356.4,104L377.3,104L398.2,104L419.1,104L440,104L460.9,104L481.8,104L502.7,104L523.6,104L544.4,104L565.3,104L586.2,104L607.1,104L628,104"/>
+<text x="636" y="108" font-size="12" class="t1">Optimistic 100%</text>
+<text x="636" y="133.8" font-size="12" class="t1">Baseline 89%</text>
+<text x="636" y="183.6" font-size="12" class="t1">Conservative 69%</text>
+<text x="24" y="386" font-size="11" class="mu">Synthetic testers: 300 cohorts of 30 per scenario, seed 2026. Data: outputs/portfolio/pilot_daily.csv</text>
+</svg>

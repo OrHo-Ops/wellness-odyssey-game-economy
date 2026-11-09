@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Full Economy V2 Lab</title>
+<meta name="description" content="Wellness Odyssey Full Economy V2: World Tour, Chronons, missions, puzzles, Wellness Store and cosmetics. Synthetic players; every economy value hypothetical.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f5f6f1; --surface: #fcfcfb; --surface-2: #f0f1eb;
+  --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.10);
+  --accent: #0f7a55; --accent-ink: #ffffff; --accent-soft: #e2f0e8;
+  --s1: #2a78d6; --s3: #1baf7a; --price: #52514e;
+  --src1: #2a78d6; --src2: #eb6834; --src3: #1baf7a; --src4: #eda100; --src5: #e87ba4; --src6: #008300; --src7: #6250d6;
+  --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --tag-bg: #ecebe6; --tag-ink: #52514e; --appr-bg: #dff0e7; --appr-ink: #0b5c3f;
+  --shadow: 0 1px 2px rgba(11, 11, 11, 0.04), 0 4px 16px rgba(11, 11, 11, 0.04);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --surface-2: #232321;
+    --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+    --border: rgba(255, 255, 255, 0.10); --accent: #3fbf8a; --accent-ink: #0b0b0b; --accent-soft: rgba(63, 191, 138, 0.14);
+    --s1: #3987e5; --s3: #199e70; --price: #c3c2b7;
+    --src1: #3987e5; --src2: #d95926; --src3: #199e70; --src4: #c98500; --src5: #d55181; --src6: #008300; --src7: #9085e9;
+    --tag-bg: rgba(255, 255, 255, 0.08); --tag-ink: #c3c2b7; --appr-bg: rgba(63, 191, 138, 0.16); --appr-ink: #7fd8b0;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --surface-2: #232321;
+  --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+  --border: rgba(255, 255, 255, 0.10); --accent: #3fbf8a; --accent-ink: #0b0b0b; --accent-soft: rgba(63, 191, 138, 0.14);
+  --s1: #3987e5; --s3: #199e70; --price: #c3c2b7;
+  --src1: #3987e5; --src2: #d95926; --src3: #199e70; --src4: #c98500; --src5: #d55181; --src6: #008300; --src7: #9085e9;
+  --tag-bg: rgba(255, 255, 255, 0.08); --tag-ink: #c3c2b7; --appr-bg: rgba(63, 191, 138, 0.16); --appr-ink: #7fd8b0;
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+h1, h2, h3 { margin: 0; line-height: 1.25; }
+h2 { font-size: 16px; font-weight: 650; }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+.top { background: radial-gradient(1200px 220px at 0% 0%, var(--accent-soft), transparent 70%), var(--surface); border-bottom: 1px solid var(--border); }
+.top-inner { max-width: 1440px; margin: 0 auto; padding: 18px 24px 16px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.brand { flex: 1 1 360px; min-width: 0; }
+.brand-name { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+.brand h1 { font-size: 20px; font-weight: 700; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); font-size: 12.5px; font-weight: 600; }
+.chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--warning); }
+.icon-btn { border: 1px solid var(--border); background: var(--surface); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+.icon-btn:hover { background: var(--surface-2); }
+.layout { max-width: 1440px; margin: 0 auto; padding: 16px 24px 48px; display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 20px; align-items: start; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); }
+.controls { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; padding-bottom: 10px; }
+.controls-head { padding: 14px 16px 6px; display: flex; align-items: baseline; gap: 8px; }
+.controls-head h2 { flex: 1; }
+.link-btn { border: 0; background: none; color: var(--accent); cursor: pointer; padding: 0; font-weight: 600; font-size: 13px; }
+.group { border-top: 1px solid var(--border); padding: 12px 16px 8px; }
+.group h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); margin-bottom: 8px; }
+.field { margin: 0 0 12px; }
+.field-row { display: flex; align-items: baseline; gap: 8px; }
+.field label { flex: 1; font-size: 13px; font-weight: 550; }
+.field output { font-variant-numeric: tabular-nums; font-size: 13px; color: var(--ink); font-weight: 600; }
+.field input[type=range] { width: 100%; accent-color: var(--accent); }
+.field select { width: 100%; padding: 5px 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); }
+.field .hint { font-size: 11.5px; color: var(--muted); }
+.tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 6px; border-radius: 4px; background: var(--tag-bg); color: var(--tag-ink); }
+.tag.approved, .tag.implemented, .tag.linked { background: var(--appr-bg); color: var(--appr-ink); }
+.check { display: flex; gap: 8px; align-items: center; font-size: 13px; margin-bottom: 10px; }
+.check input { accent-color: var(--accent); }
+.main { display: grid; gap: 16px; min-width: 0; }
+.notice { padding: 12px 16px; display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--ink-2); }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 14px; }
+.kpi { padding: 10px 12px; border-radius: 10px; background: var(--surface-2); min-width: 0; }
+.kpi .k-label { font-size: 12px; color: var(--ink-2); }
+.kpi .k-value { font-size: 22px; font-weight: 650; }
+.kpi .k-sub { font-size: 11.5px; color: var(--muted); }
+.flags { padding: 4px 16px 14px; display: grid; gap: 8px; }
+.flag { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; padding: 8px 10px; border-radius: 8px; background: var(--surface-2); }
+.flag b { display: block; }
+.flag .ic { flex: none; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 800; color: #0b0b0b; }
+.ic.good { background: var(--good); color: #fff; } .ic.warning { background: var(--warning); } .ic.serious { background: var(--serious); } .ic.critical { background: var(--critical); color: #fff; }
+.charts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.card { padding: 14px 16px 10px; min-width: 0; position: relative; }
+.card .sub { font-size: 12.5px; color: var(--ink-2); margin: 2px 0 6px; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-bottom: 4px; }
+.legend i { display: inline-block; width: 14px; height: 4px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+.legend i.box { height: 10px; width: 10px; border-radius: 3px; }
+svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart text { font-size: 11px; fill: var(--muted); font-family: inherit; }
+.chart .grid { stroke: var(--grid); stroke-width: 1; }
+.chart .axis { stroke: var(--axis); stroke-width: 1; }
+.tooltip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; font-size: 12px; box-shadow: var(--shadow); display: none; z-index: 2; white-space: nowrap; }
+.section { padding: 14px 16px; }
+details summary { cursor: pointer; font-weight: 600; }
+table { border-collapse: collapse; width: 100%; font-size: 12.5px; margin-top: 10px; }
+th, td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+th:first-child, td:first-child { text-align: left; }
+.table-wrap { max-height: 360px; overflow: auto; }
+.footnote { font-size: 12px; color: var(--muted); padding: 0 16px 14px; }
+@media (max-width: 1020px) { .layout { grid-template-columns: 1fr; } .controls { position: static; max-height: none; } .charts { grid-template-columns: 1fr; } .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .layout, .top-inner { padding-left: 16px; padding-right: 16px; } .kpis { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="brand-name">Wellness Odyssey · Economy Lab</div>
+      <h1>Full Economy V2: World Tour, Chronons, missions, store and cosmetics</h1>
+    </div>
+    <span class="chip"><span class="dot"></span>Synthetic players · every economy value hypothetical</span>
+    <button class="icon-btn" id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="panel controls" aria-label="Scenario controls">
+    <div class="controls-head"><h2>Scenario</h2><button class="link-btn" id="reset" type="button">Reset</button></div>
+    <div class="group" id="g-player"><h3>Player</h3></div>
+    <div class="group" id="g-economy"><h3>Economy</h3></div>
+    <div class="group" id="g-rules"><h3>Rules and switches</h3></div>
+  </aside>
+
+  <main class="main">
+    <section class="panel notice" aria-label="Data status">
+      <span class="tag">Projection</span>
+      <p>No real players. Journeys 1-7 keep their implemented PP; journeys 8-100 are placeholders. Every rate, price and reward not linked to the V1 model is a hypothetical input for exploring the design space. Purchases only ever credit Chronons: never Energy, PP, journey progress or score. Wheel V3 tiers are offline-demo functionality.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="kpi-h">
+      <div class="section" style="padding-bottom:0"><h2 id="kpi-h">This player at a glance</h2><p class="sub" id="kpi-sub" style="font-size:12.5px;color:var(--ink-2)"></p></div>
+      <div class="kpis" id="kpis" aria-live="polite"></div>
+      <div class="flags" id="flags"></div>
+    </section>
+
+    <div class="charts">
+      <section class="panel card" aria-labelledby="c1-h"><h2 id="c1-h">Journeys completed over time</h2><p class="sub">Median player, with the 10th-90th percentile band.</p><div class="legend" id="lg1"></div><div id="c1"></div></section>
+      <section class="panel card" aria-labelledby="c2-h"><h2 id="c2-h">Time to unlock the next journey</h2><p class="sub">Median days between finishing a journey and unlocking the next.</p><div class="legend" id="lg2"></div><div id="c2"></div></section>
+      <section class="panel card" aria-labelledby="c3-h"><h2 id="c3-h">Chronon balance vs the next price</h2><p class="sub">Closed-form ledger: Chronons held on finishing each journey.</p><div class="legend" id="lg3"></div><div id="c3"></div></section>
+      <section class="panel card" aria-labelledby="c4-h"><h2 id="c4-h">Where Chronons come from, and where they go</h2><p class="sub">Per player over the horizon. Spending is attributed to sources pro rata.</p><div class="legend" id="lg4"></div><div id="c4"></div></section>
+    </div>
+
+    <section class="panel section" aria-labelledby="t-h">
+      <details><summary id="t-h">Per-journey table (ledger and simulation)</summary><div class="table-wrap" id="table"></div></details>
+    </section>
+    <p class="footnote">Engine: <code>full_economy_v2/engine/</code>, shared with the tests and the case study. The wheel enters through the reviewed table in <code>analysis/wheel.js</code>. Open this file straight from disk; no server or build step is needed.</p>
+  </main>
+</div>
+<div class="tooltip" id="tip" role="status"></div>
+
+<script src="../../pilot/pilot_model.js"></script>
+<script src="../../pilot/world_tour.js"></script>
+<script src="../generated/wheel_table.js"></script>
+<script src="../config/scenario_config.js"></script>
+<script src="../config/cosmetics_catalog.js"></script>
+<script src="../engine/wheel_v3.js"></script>
+<script src="../engine/projection_catalog.js"></script>
+<script src="../engine/journey_ledger.js"></script>
+<script src="../engine/business.js"></script>
+<script src="../engine/simulation.js"></script>
+<script>
+"use strict";
+(function () {
+  const C = window.V2Config, P = window.V2Projection, L = window.V2Ledger, S = window.V2Sim, B = window.V2Business;
+  const NS = "http://www.w3.org/2000/svg";
+  const $ = (id) => document.getElementById(id);
+  const fmt = (x, d = 0) => (Number.isFinite(x) ? x.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }) : "n/a");
+
+  // ---------------------------------------------------------------- controls
+  const FIELDS = [
+    ["g-player", { key: "activity", label: "Walking activity", type: "select", tag: "hypothetical", options: [["casual", "Casual (3,000 median steps, 60% of days)"], ["moderate", "Moderate (6,000, 70%)"], ["active", "Active (10,000, 85%)"]], def: "moderate" }],
+    ["g-player", { key: "missionsPerWeek", label: "Missions completed per week", type: "range", min: 0, max: 4, step: 0.25, def: 1, tag: "hypothetical", hint: "Organic or sponsored; each pays the mission reward once." }],
+    ["g-player", { key: "storeOrders", label: "Wellness Store orders per month", type: "range", min: 0, max: 3, step: 0.25, def: 0, tag: "hypothetical" }],
+    ["g-player", { key: "bundle", label: "Chronon bundles", type: "select", tag: "hypothetical", options: [["none", "None"], ["small", "$4.99 a month"], ["medium", "$9.99 a month"]], def: "none" }],
+    ["g-player", { key: "cosmetics", label: "Cosmetic spending", type: "select", tag: "hypothetical", options: [["none", "No cosmetics"], ["progression-first", "Progression-first"], ["share-20", "20% of earnings"], ["share-40", "40% of earnings"], ["share-60", "60% of earnings"], ["cosmetics-first", "Cosmetics-first"]], def: "none" }],
+    ["g-economy", { key: "organicChrononsPer1000", label: "Organic Chronons per 1,000 steps", type: "range", min: 0, max: 3, step: 0.25, def: 1, tag: "hypothetical", hint: "Prices stay frozen at their calibration basis." }],
+    ["g-economy", { key: "completionRewardPer100Pp", label: "Completion reward per 100 PP", type: "range", min: 0, max: 3, step: 0.25, def: 1, tag: "hypothetical" }],
+    ["g-economy", { key: "priceCurve", label: "Journey price family", type: "select", tag: "hypothetical", options: [["hybrid", "Coverage-targeted hybrid"], ["linear", "Linear"], ["exponential", "Exponential"], ["piecewise", "Piecewise"], ["milestone", "Milestone jumps"], ["exponential-fixed", "Exponential from a fixed start"]], def: "hybrid" }],
+    ["g-economy", { key: "lateCoverage", label: "Late-game coverage (journey 100)", type: "range", min: 0.5, max: 1.2, step: 0.05, def: 0.7, tag: "hypothetical", hint: "Lower is scarcer. Sets the total for every family except fixed-start." }],
+    ["g-economy", { key: "expGrowth", label: "Fixed-start price growth per journey", type: "range", min: 1, max: 1.05, step: 0.005, def: 1.03, tag: "hypothetical" }],
+    ["g-economy", { key: "ppCurve", label: "PP pacing after journey 7", type: "select", tag: "hypothetical", options: [["gentle", "Gentle growth"], ["flat", "Flat after Santorini"], ["capped", "8% growth, capped"]], def: "gentle" }],
+    ["g-economy", { key: "missionReward", label: "Chronons per mission", type: "range", min: 0, max: 15, step: 1, def: 5, tag: "proposed", hint: "5 is the provisional demo value (2 km, 90 pieces)." }],
+    ["g-economy", { key: "organicPiecesPer1000", label: "Puzzle pieces per 1,000 steps", type: "range", min: 0, max: 20, step: 1, def: 5, tag: "hypothetical" }],
+    ["g-economy", { key: "laterPuzzleCompletionEnergy", label: "Completion Energy, puzzles after Jaffa Gate", type: "range", min: 0, max: 200, step: 10, def: 100, tag: "hypothetical" }],
+    ["g-economy", { key: "tileRevealChronons", label: "Chronons per tile (experiment)", type: "range", min: 0, max: 3, step: 1, def: 0, tag: "hypothetical", hint: "0 matches the documentation and the offline demo." }],
+    ["g-economy", { key: "affiliateRewardRate", label: "Store reward rate", type: "range", min: 0, max: 0.15, step: 0.01, def: 0.05, tag: "hypothetical", pct: true }],
+    ["g-rules", { key: "energyCap", label: "Energy bank cap", type: "select", tag: "hypothetical", options: [["none", "None (analytical baseline)"], ["250", "250 (production)"], ["500", "500 (dev / beta / demo)"]], def: "none" }],
+    ["g-rules", { key: "dailyBonuses", label: "Implemented daily bonuses", type: "check", def: false, tag: "implemented" }],
+    ["g-rules", { key: "accrueWhileWaiting", label: "Organic Chronons accrue while waiting", type: "check", def: true, tag: "approved", hint: "Switch off to see the deadlock failure scenario." }],
+    ["g-rules", { key: "wheelMode", label: "Wheel accounting", type: "select", tag: "hypothetical", options: [["ev", "Expected value"], ["sampled", "Sampled outcomes"]], def: "ev" }],
+    ["g-rules", { key: "players", label: "Synthetic players", type: "select", tag: "hypothetical", options: [["60", "60"], ["120", "120"], ["200", "200"]], def: "120" }],
+  ];
+  const state = {};
+  for (const [, f] of FIELDS) state[f.key] = f.def;
+  try { const h = decodeURIComponent(location.hash.slice(1)); if (h) Object.assign(state, JSON.parse(h)); } catch (e) { /* ignore a malformed link */ }
+
+  function valueText(f) {
+    const v = state[f.key];
+    if (f.pct) return `${fmt(100 * v)}%`;
+    if (f.key === "expGrowth") return `x${Number(v).toFixed(3)}`;
+    return f.type === "range" ? fmt(Number(v), f.step < 1 ? (f.step < 0.1 ? 3 : 2) : 0) : "";
+  }
+  function renderFields() {
+    for (const id of ["g-player", "g-economy", "g-rules"]) [...$(id).querySelectorAll(".field, .check")].forEach((n) => n.remove());
+    for (const [group, f] of FIELDS) {
+      const wrap = document.createElement("div");
+      const id = `f-${f.key}`;
+      if (f.type === "check") {
+        wrap.className = "check";
+        wrap.innerHTML = `<input type="checkbox" id="${id}"><label for="${id}">${f.label}</label><span class="tag ${f.tag}">${f.tag}</span>`;
+        $(group).appendChild(wrap);
+        const input = wrap.querySelector("input");
+        input.checked = !!state[f.key];
+        input.addEventListener("change", () => { state[f.key] = input.checked; schedule(); });
+        if (f.hint) { const h = document.createElement("div"); h.className = "field"; h.innerHTML = `<div class="hint">${f.hint}</div>`; $(group).appendChild(h); }
+        continue;
+      }
+      wrap.className = "field";
+      const control = f.type === "select"
+        ? `<select id="${id}">${f.options.map(([v, t]) => `<option value="${v}">${t}</option>`).join("")}</select>`
+        : `<input type="range" id="${id}" min="${f.min}" max="${f.max}" step="${f.step}">`;
+      wrap.innerHTML = `<div class="field-row"><label for="${id}">${f.label}</label><output id="o-${f.key}"></output><span class="tag ${f.tag}">${f.tag}</span></div>${control}${f.hint ? `<div class="hint">${f.hint}</div>` : ""}`;
+      $(group).appendChild(wrap);
+      const input = wrap.querySelector(f.type === "select" ? "select" : "input");
+      input.value = state[f.key];
+      $(`o-${f.key}`).textContent = valueText(f);
+      input.addEventListener("input", () => { state[f.key] = f.type === "select" ? input.value : Number(input.value); $(`o-${f.key}`).textContent = valueText(f); schedule(); });
+    }
+  }
+
+  // --------------------------------------------------------------- scenario
+  function scenario() {
+    const act = C.ACTIVITY[state.activity];
+    const cfg = C.buildScenario({
+      organicChrononsPer1000: state.organicChrononsPer1000, completionRewardPer100Pp: state.completionRewardPer100Pp,
+      priceCurve: state.priceCurve, coverageAnchors: [1.3, 1.2, 0.95, state.lateCoverage], expGrowth: state.expGrowth, ppCurve: state.ppCurve,
+      organicMissionRewardShare: state.missionReward / C.linked("missionChronons"),
+      organicPiecesPer1000: state.organicPiecesPer1000, laterPuzzleCompletionEnergy: state.laterPuzzleCompletionEnergy,
+      tileRevealChronons: state.tileRevealChronons, affiliateRewardRate: state.affiliateRewardRate,
+      energyCap: state.energyCap === "none" ? null : Number(state.energyCap), dailyBonuses: state.dailyBonuses,
+      accrueWhileWaiting: state.accrueWhileWaiting, wheelMode: state.wheelMode, playersPerCohort: Number(state.players),
+      missionRatePerActiveDay: state.missionsPerWeek > 0 ? Math.min(1, state.missionsPerWeek / (7 * act.activeDayRate)) : null,
+    });
+    const player = { label: "This player", activity: state.activity, missions: state.missionsPerWeek > 0 ? "regular" : "none", sponsorInReach: false,
+      purchases: { affiliatePer30Days: state.storeOrders, bundle: state.bundle === "none" ? null : state.bundle, bundleEveryDays: state.bundle === "none" ? null : 30 },
+      cosmetics: state.cosmetics };
+    const walker = { label: "Walking only", activity: state.activity, missions: "none", sponsorInReach: false, purchases: "none", cosmetics: "none" };
+    return { cfg, player, walker };
+  }
+
+  // ----------------------------------------------------------------- charts
+  function svgEl(tag, attrs, parent) {
+    const n = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function lineChart(host, o) {
+    host.innerHTML = "";
+    const W = 560, H = 250, m = { l: 48, r: 14, t: 10, b: 30 };
+    const svg = svgEl("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.aria });
+    const pw = W - m.l - m.r, ph = H - m.t - m.b;
+    const [x0, x1] = o.x, yMax = o.yMax || 1;
+    const X = (v) => m.l + ((v - x0) / (x1 - x0)) * pw, Y = (v) => m.t + ph - (Math.max(0, Math.min(v, yMax)) / yMax) * ph;
+    const ticks = niceTicks(yMax);
+    for (const t of ticks) {
+      svgEl("line", { class: t === 0 ? "axis" : "grid", x1: m.l, x2: m.l + pw, y1: Y(t), y2: Y(t) }, svg);
+      svgEl("text", { x: m.l - 6, y: Y(t) + 4, "text-anchor": "end" }, svg).textContent = fmt(t);
+    }
+    for (const t of o.xTicks) svgEl("text", { x: X(t), y: H - 10, "text-anchor": "middle" }, svg).textContent = o.xFmt ? o.xFmt(t) : fmt(t);
+    for (const s of o.series) {
+      if (s.band) {
+        const pts = s.band.filter((p) => Number.isFinite(p[1]) && Number.isFinite(p[2]));
+        if (pts.length) svgEl("polygon", { points: pts.map((p) => `${X(p[0])},${Y(p[2])}`).concat(pts.slice().reverse().map((p) => `${X(p[0])},${Y(p[1])}`)).join(" "), fill: s.color, "fill-opacity": 0.1 }, svg);
+      }
+      const pts = s.points.filter((p) => p[1] !== null && Number.isFinite(p[1]));
+      if (pts.length) svgEl("path", { d: pts.map((p, i) => `${i ? "L" : "M"}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(""), fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    }
+    const cross = svgEl("line", { class: "axis", x1: 0, x2: 0, y1: m.t, y2: m.t + ph, visibility: "hidden" }, svg);
+    const hit = svgEl("rect", { x: m.l, y: m.t, width: pw, height: ph, fill: "transparent" }, svg);
+    const tip = $("tip");
+    hit.addEventListener("mousemove", (ev) => {
+      const r = svg.getBoundingClientRect(), xv = x0 + ((((ev.clientX - r.left) / r.width) * W - m.l) / pw) * (x1 - x0);
+      const rows = o.series.map((s) => { let best = null; for (const p of s.points) if (best === null || Math.abs(p[0] - xv) < Math.abs(best[0] - xv)) best = p; return [s, best]; });
+      if (!rows[0][1]) return;
+      const xx = rows[0][1][0];
+      cross.setAttribute("x1", X(xx)); cross.setAttribute("x2", X(xx)); cross.setAttribute("visibility", "visible");
+      tip.innerHTML = `<b>${o.xFmt ? o.xFmt(xx) : fmt(xx)}</b>` + rows.map(([s, p]) => `<div><span style="display:inline-block;width:10px;height:3px;background:${s.color};margin-right:6px;vertical-align:middle"></span>${s.label}: ${p && p[1] !== null ? fmt(p[1], o.digits || 0) : "n/a"}</div>`).join("");
+      tip.style.display = "block"; tip.style.left = `${ev.pageX + 12}px`; tip.style.top = `${ev.pageY + 12}px`;
+    });
+    hit.addEventListener("mouseleave", () => { cross.setAttribute("visibility", "hidden"); tip.style.display = "none"; });
+    host.appendChild(svg);
+  }
+  function niceTicks(max) {
+    const raw = max / 4, mag = Math.pow(10, Math.floor(Math.log10(raw || 1)));
+    const step = [1, 2, 2.5, 5, 10].map((x) => x * mag).find((s) => s >= raw) || mag;
+    const t = []; for (let v = 0; v <= max + step * 0.999; v += step) t.push(Math.round(v * 1e6) / 1e6);
+    return t;
+  }
+  function legendHtml(items) { return items.map(([label, color, box]) => `<span><i class="${box ? "box" : ""}" style="background:${color}"></i>${label}</span>`).join(""); }
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+  function stackBars(host, rows, names, colors) {
+    host.innerHTML = "";
+    const W = 560, rowH = 26, H = rows.length * (rowH + 18) + 10, x0 = 150, w = W - x0 - 14;
+    const svg = svgEl("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Chronon sources and sinks" });
+    rows.forEach((row, i) => {
+      const y = 8 + i * (rowH + 18), total = row.values.reduce((a, b) => a + b, 0) || 1;
+      svgEl("text", { x: x0 - 8, y: y + rowH / 2 + 4, "text-anchor": "end" }, svg).textContent = row.label;
+      let cx = x0;
+      row.values.forEach((v, j) => {
+        if (!(v > 0)) return;
+        const sw = (v / total) * w;
+        const r = svgEl("rect", { x: cx, y, width: Math.max(sw - 2, 0.5), height: rowH, rx: 3, fill: colors[row.colorKeys ? row.colorKeys[j] : j] }, svg);
+        svgEl("title", {}, r).textContent = `${row.names ? row.names[j] : names[j]}: ${fmt(v)} Chronons (${fmt((100 * v) / total)}%)`;
+        cx += sw;
+      });
+      svgEl("text", { x: x0, y: y + rowH + 13 }, svg).textContent = `${fmt(total)} Chronons per player`;
+    });
+    host.appendChild(svg);
+  }
+
+  // ------------------------------------------------------------------- run
+  let timer = null;
+  function schedule() {
+    try { history.replaceState(null, "", "#" + encodeURIComponent(JSON.stringify(state))); } catch (e) { /* a sandboxed page may refuse */ }
+    clearTimeout(timer); timer = setTimeout(run, 250);
+  }
+  const STAGE = (r, a, b) => r.stageWait.find((s) => s.from === a && s.to === b);
+
+  function run() {
+    const { cfg, player, walker } = scenario();
+    const prep = S.prepare(cfg);
+    const me = S.runCohort(prep, player), base = S.runCohort(prep, walker);
+    const steps = C.creditedStepsPerDay(cfg, state.activity);
+    const extra = state.missionsPerWeek * state.missionReward / 7
+      + state.storeOrders * B.orderChronons(cfg, cfg.productPriceMedian * Math.exp(cfg.productPriceSigma ** 2 / 2)) / 30
+      + (state.bundle === "none" ? 0 : C.bundleChronons(cfg, state.bundle) / 30);
+    const share = { "share-20": 0.2, "share-40": 0.4, "share-60": 0.6 }[state.cosmetics] || 0;
+    const ledgerMe = L.journeyLedger(prep.projection, { organicPer1000: cfg.organicChrononsPer1000, creditedStepsPerDay: steps, extraChrononsPerDay: extra, cosmeticShare: share, accrueWhileWaiting: cfg.accrueWhileWaiting });
+    const ledgerBase = L.journeyLedger(prep.projection, { organicPer1000: cfg.organicChrononsPer1000, creditedStepsPerDay: steps, accrueWhileWaiting: cfg.accrueWhileWaiting });
+    renderKpis(me, base, ledgerBase);
+    renderFlags(cfg, me, base, ledgerMe, ledgerBase);
+    renderCharts(prep, me, base, ledgerMe, ledgerBase);
+    renderTable(prep, me, ledgerMe);
+  }
+
+  function renderKpis(me, base, ledgerBase) {
+    const d100 = me.daysTo[99].p50, j1 = me.journeysBy.find((x) => x.day === 365).p50;
+    const sources = me.chronons.earnedShare, extShare = sources[2] + sources[3] + sources[4] + sources[5];
+    const tiles = [
+      ["Journey 100 finished", Number.isFinite(d100) ? `day ${fmt(d100)}` : "not reached", Number.isFinite(d100) ? `${fmt(100 * me.tourCompleteShare)}% finish within 6 years` : `${fmt(100 * me.tourCompleteShare)}% finish within 6 years`],
+      ["First wait for Chronons", Number.isFinite(me.onset.p50) ? `journey ${fmt(me.onset.p50)}` : "never", `walking only: ${Number.isFinite(base.onset.p50) ? `journey ${fmt(base.onset.p50)}` : "never"}`],
+      ["Sessions fully blocked", `${fmt(100 * me.waitingShareOfActiveDays)}%`, `walking only: ${fmt(100 * base.waitingShareOfActiveDays)}%`],
+      ["Journeys in year 1", fmt(j1), `walking only: ${fmt(base.journeysBy.find((x) => x.day === 365).p50)}`],
+      ["Chronons from missions and purchases", `${fmt(100 * extShare)}%`, `missions ${fmt(100 * (sources[2] + sources[3]))}% · store ${fmt(100 * sources[4])}% · bundles ${fmt(100 * sources[5])}%`],
+      ["Puzzles completed per year", fmt(me.puzzles.completedPerPlayerYear, 1), `completion Energy ${fmt(100 * me.energy.puzzleShare, 1)}% of Energy`],
+      ["Energy credited with no journey active", `${fmt(100 * me.energy.whileWaitingShare)}%`, me.energy.lostToCapShare > 0 ? `cap discards ${fmt(100 * me.energy.lostToCapShare)}%` : "no cap: banked, not lost"],
+      ["Deadlocked players", `${fmt(100 * me.deadlockedShare)}%`, `PP clock alone: ${fmt(ledgerBase.walkingOnlyTourDays)} days`],
+    ];
+    $("kpis").innerHTML = tiles.map(([l, v, s]) => `<div class="kpi"><div class="k-label">${l}</div><div class="k-value">${v}</div><div class="k-sub">${s}</div></div>`).join("");
+    $("kpi-sub").textContent = `Median of ${me.players} synthetic players over ${fmt(me.horizonDays / 365)} years, compared with walking-only players under the same economy.`;
+  }
+
+  function renderFlags(cfg, me, base, ledgerMe, ledgerBase) {
+    const flags = [];
+    if (me.deadlockedShare > 0) flags.push(["critical", "Deadlock", `${fmt(100 * me.deadlockedShare)}% of players can never afford their next journey: organic Chronons stop while no journey is active, and they have no other source.`]);
+    if (Number.isFinite(base.onset.p50)) flags.push(["warning", `Walking-only players first wait at journey ${fmt(base.onset.p50)}`, "The same journey at every activity level: steps earn Energy and Chronons together, so walking more only shortens each wait."]);
+    else flags.push(["good", "Walking alone never waits", "Every journey's price is covered by the Chronons earned while walking the journey before it."]);
+    if (me.waitingShareOfActiveDays > 0.25) flags.push(["serious", `${fmt(100 * me.waitingShareOfActiveDays)}% of sessions are fully blocked`, "No journey to play and none affordable. In the Chronon-bound phase, banked Energy completes each journey the moment it unlocks, so the wait is the whole cycle."]);
+    if (me.energy.whileWaitingShare > 0.3) flags.push(["warning", "Energy inflation", `${fmt(100 * me.energy.whileWaitingShare)}% of step Energy is credited while no journey is active; it has no sink until the next unlock.`]);
+    if (me.energy.lostToCapShare > 0.1) flags.push(["warning", "The bank cap paces the tour", `${fmt(100 * me.energy.lostToCapShare)}% of step Energy is discarded at sync (one sync per active day assumed).`]);
+    const tour = ledgerMe.tourDays, pp = ledgerMe.walkingOnlyTourDays;
+    if (Number.isFinite(tour)) flags.push([tour > pp * 1.05 ? "warning" : "good", tour > pp * 1.05 ? "Chronon-bound: prices set the pace" : "PP-bound: walking sets the pace", `Closed form: PP clock ${fmt(pp)} days, tour ${fmt(tour)} days for a steady walker.`]);
+    if (state.storeOrders > 0) {
+      const be = B.breakEvenRewardRate(cfg, cfg.productPriceMedian);
+      if (cfg.affiliateRewardRate > be) flags.push(["serious", "Store reward above break-even", `At a ${fmt(100 * cfg.affiliateRewardRate)}% reward a median order loses money once displaced bundle revenue is counted (break-even ${fmt(100 * be, 1)}%).`]);
+    }
+    if (me.tourCompleteShare < 0.5) flags.push(["warning", "Most players do not finish in 6 years", "Either the PP clock (tour length) or the Chronon clock (prices) is too long for this activity level."]);
+    const icon = { good: "✓", warning: "!", serious: "!", critical: "×" };
+    $("flags").innerHTML = flags.map(([lvl, t, b]) => `<div class="flag"><span class="ic ${lvl}" aria-hidden="true">${icon[lvl]}</span><div><b>${t}</b>${b}</div></div>`).join("");
+  }
+
+  function renderCharts(prep, me, base, ledgerMe, ledgerBase) {
+    const s1 = css("--s1"), s3 = css("--s3"), price = css("--price");
+    const days = (r) => r.weekly.done.map((x, w) => [w * 7 + 7, x.p50]);
+    const band = (r) => r.weekly.done.map((x, w) => [w * 7 + 7, x.p10, x.p90]);
+    $("lg1").innerHTML = legendHtml([["This player", s3], ["Walking only", s1]]);
+    lineChart($("c1"), { aria: "Journeys completed over time", x: [0, me.horizonDays], xTicks: [0, 365, 730, 1095, 1460, 1825, 2190].filter((d) => d <= me.horizonDays), xFmt: (d) => (d ? `day ${fmt(d)}` : "0"),
+      yMax: 100, series: [{ label: "Walking only", color: s1, points: days(base), band: band(base) }, { label: "This player", color: s3, points: days(me), band: band(me) }] });
+    const wait = (r) => r.wait.map((w, k) => [k + 1, w && Number.isFinite(w.p50) ? w.p50 : null]).slice(1);
+    const maxW = Math.max(5, ...wait(base).concat(wait(me)).map((p) => p[1] || 0));
+    $("lg2").innerHTML = legendHtml([["This player", s3], ["Walking only", s1]]);
+    lineChart($("c2"), { aria: "Median wait per journey", x: [2, 100], xTicks: [2, 25, 50, 75, 100], xFmt: (k) => `journey ${k}`, yMax: maxW,
+      series: [{ label: "Walking only", color: s1, points: wait(base) }, { label: "This player", color: s3, points: wait(me) }] });
+    const rowsMe = ledgerMe.rows, rowsBase = ledgerBase.rows;
+    const nextPrice = rowsBase.slice(0, 99).map((r, i) => [r.journey, rowsBase[i + 1].price]);
+    const bal = (rows) => rows.slice(0, 99).map((r) => [r.journey, r.deadlock ? null : r.balanceOnCompletion]);
+    const maxC = Math.max(...nextPrice.map((p) => p[1]), ...bal(rowsMe).concat(bal(rowsBase)).map((p) => p[1] || 0));
+    $("lg3").innerHTML = legendHtml([["Next journey's price", price], ["This player", s3], ["Walking only", s1]]);
+    lineChart($("c3"), { aria: "Chronon balance vs next price", x: [1, 99], xTicks: [1, 25, 50, 75, 99], xFmt: (k) => `after journey ${k}`, yMax: maxC,
+      series: [{ label: "Next price", color: price, points: nextPrice }, { label: "Walking only", color: s1, points: bal(rowsBase) }, { label: "This player", color: s3, points: bal(rowsMe) }] });
+    const names = ["Walking", "Completion", "Organic missions", "Sponsored missions", "Store", "Bundles", "Tile experiment"];
+    const colors = [1, 2, 3, 4, 5, 6, 7].map((i) => css(`--src${i}`));
+    const ch = me.chronons;
+    const spentJ = ch.spentOnJourneysTotal, spentC = ch.spentOnCosmeticsTotal, held = Math.max(ch.balancePerPlayer, 0);
+    $("lg4").innerHTML = legendHtml(names.map((nm, i) => [nm, colors[i], true]).filter((_, i) => ch.earnedPerPlayer[i] > 0)) + legendHtml([["Journeys", css("--src1"), true], ["Cosmetics", css("--src5"), true], ["Still held", css("--grid"), true]]);
+    const sinkColors = { j: css("--src1"), c: css("--src5"), h: css("--grid") };
+    stackBars($("c4"), [
+      { label: "Earned", values: ch.earnedPerPlayer },
+      { label: "Spent or held", values: [spentJ, spentC, held], names: ["Journeys", "Cosmetics", "Still held"], colorKeys: ["j", "c", "h"] },
+    ], names, Object.assign([...colors], sinkColors));
+  }
+
+  function renderTable(prep, me, ledger) {
+    const rows = prep.projection.journeys.map((j, i) => {
+      const lr = ledger.rows[i], w = me.wait[i];
+      return `<tr><td>${j.index}. ${j.label}</td><td>${fmt(j.pp)}</td><td>${j.price === null ? "free" : fmt(j.price)}</td><td>${fmt(j.completionReward)}</td><td>${lr.deadlock ? "deadlock" : fmt(lr.balanceOnCompletion)}</td><td>${lr.deadlock ? "n/a" : fmt(lr.waitDays, 1)}</td><td>${w && Number.isFinite(w.p50) ? fmt(w.p50) : i ? "n/a" : "start"}</td><td>${fmt(100 * me.reached[i])}%</td></tr>`;
+    }).join("");
+    $("table").innerHTML = `<table><thead><tr><th>Journey</th><th>PP</th><th>Price</th><th>Completion reward</th><th>Held on finishing (ledger)</th><th>Ledger wait (days)</th><th>Simulated median wait</th><th>Players reaching it</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }
+
+  // ------------------------------------------------------------------ setup
+  $("reset").addEventListener("click", () => { for (const [, f] of FIELDS) state[f.key] = f.def; renderFields(); schedule(); });
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("v2-lab-theme"); if (t === "light" || t === "dark") root.dataset.theme = t; } catch (e) { /* per-viewer convenience only */ }
+  $("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("v2-lab-theme", root.dataset.theme); } catch (e) { /* ignore */ }
+    run();
+  });
+  renderFields();
+  run();
+})();
+</script>
+</body>
+</html>
