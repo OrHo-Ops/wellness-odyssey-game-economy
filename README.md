@@ -4,6 +4,8 @@
 
 Wellness Odyssey is a mobile walking game. Real steps become **Energy**, Energy buys spins of a reward wheel, and the wheel pays **Progress Points (PP)** that carry the player along journeys to real-world destinations. **Chronons**, a planned second currency, open new journeys and buy cosmetics. This repository is the game's economy design, from the implemented core loop to a planned 100-journey World Tour: closed-form mathematics, Monte Carlo simulation of synthetic players, interactive labs and a validated content-catalog format.
 
+**Live labs:** [Economy Model V2 lab](https://orho-ops.github.io/wellness-odyssey-game-economy/full_economy_v2/dashboard/index.html) · [Economy Model V1 lab](https://orho-ops.github.io/wellness-odyssey-game-economy/pilot/index.html) · [all labs](https://orho-ops.github.io/wellness-odyssey-game-economy/)
+
 **Jump to:** [At a glance](#at-a-glance) · [Interactive labs](#interactive-economy-labs) · [Model V2 case study](full_economy_v2/docs/case_study.md) · [Model V1 case study](docs/v1_core_economy.md) · [Reproduce](#15-reproduce) · [My role](#18-my-role-and-ai-assisted-implementation)
 
 > **Pre-launch.** The game has no live players, revenue or commercial partners. Every player in this repository is synthetic, and every economy value is provisional until it is balanced with real playtesters. Nothing here is a forecast of player behaviour, retention or revenue.
@@ -35,7 +37,9 @@ Both labs run the same engines as the tests, entirely in the browser.
 | <img src="docs/images/lab_full_economy.png" alt="The Economy Model V2 lab: scenario controls on the left; journey 100 day, first wait, blocked sessions and Chronon sources on the right"> | <img src="docs/images/lab_pilot.png" alt="The Economy Model V1 lab: assumptions on the left; testers, journey completions, Energy and Chronons on the right"> |
 | Change walking activity, missions, store orders, bundles, cosmetics, prices and pacing, and watch waits, blocked sessions and Chronon sources respond | Switch between three pilot scenarios and edit every hypothetical assumption, with each value tagged model-verified, proposed or hypothetical |
 
-**To try them,** choose **Code → Download ZIP**, unzip it and open [`full_economy_v2/dashboard/index.html`](full_economy_v2/dashboard/index.html) or [`pilot/index.html`](pilot/index.html) in any browser. They need no install, no server and no network. GitHub shows HTML files as source code, so they can't run from this page.
+**Try them live:** [Economy Model V2 lab](https://orho-ops.github.io/wellness-odyssey-game-economy/full_economy_v2/dashboard/index.html) · [Economy Model V1 lab](https://orho-ops.github.io/wellness-odyssey-game-economy/pilot/index.html), served by GitHub Pages from this repository. GitHub shows HTML files here as source code, so use these links to run them.
+
+**Offline,** choose **Code → Download ZIP**, unzip it and open [`full_economy_v2/dashboard/index.html`](full_economy_v2/dashboard/index.html) or [`pilot/index.html`](pilot/index.html) in any browser. They need no install, no server and no network.
 
 **Why the Model V2 lab's opening numbers differ from the tables below.** The lab opens on a custom player rather than one of the reference cohorts: a moderate walker who completes exactly 1 mission a week, simulated with 120 synthetic players so the page stays responsive. The reference cohort with regular organic missions completes 1.18 missions a week, with 200 synthetic players per cohort. Set *Missions completed per week* to 0 and *Synthetic players* to 200, and the lab reproduces this README's moderate walking-only results: day 952 and 54% of sessions blocked.
 
@@ -355,7 +359,7 @@ node analysis/build_portfolio.js              # regenerate Model V1 tables and f
 node full_economy_v2/scripts/build_v2.js      # regenerate Model V2 tables, figures and results.md
 ```
 
-**Labs.** Open [`pilot/index.html`](pilot/index.html) or [`full_economy_v2/dashboard/index.html`](full_economy_v2/dashboard/index.html) in a browser, from a local copy of the repository. They run the same engines as the tests, with no server and no network requests. [`index.html`](index.html) at the root is a landing page for both, for static hosting.
+**Labs.** Run them live ([Model V2](https://orho-ops.github.io/wellness-odyssey-game-economy/full_economy_v2/dashboard/index.html), [Model V1](https://orho-ops.github.io/wellness-odyssey-game-economy/pilot/index.html)), or open [`pilot/index.html`](pilot/index.html) or [`full_economy_v2/dashboard/index.html`](full_economy_v2/dashboard/index.html) in a browser from a local copy of the repository. They run the same engines as the tests and load only their own files. [`index.html`](index.html) at the root is the [landing page](https://orho-ops.github.io/wellness-odyssey-game-economy/) for both.
 
 **Legacy model.** It needs Python 3 with numpy and matplotlib: `pip install -r requirements.txt`, then `python economy_model.py`. Tested on Python 3.13.2 with numpy 2.2.3 and matplotlib 3.10.0.
 
@@ -372,7 +376,7 @@ node full_economy_v2/scripts/build_v2.js      # regenerate Model V2 tables, figu
 | [`pilot/`](pilot) | Model V1 pilot engine, its lab, the World Tour catalog format and validator, Model V1 tests |
 | [`full_economy_v2/`](full_economy_v2) | Model V2 configuration, engine, lab, scripts, tests and outputs |
 | [`outputs/portfolio/`](outputs/portfolio) | Model V1 tables and figures |
-| [`index.html`](index.html) | Landing page for the two labs when the repository is served as a static site |
+| [`index.html`](index.html) | Landing page for the two labs, served by GitHub Pages |
 | [`full_economy_v2/docs/demo_audit.md`](full_economy_v2/docs/demo_audit.md) | Read-only audit of what the offline demo implements |
 | [`docs/legacy_case_study_2026-10.md`](docs/legacy_case_study_2026-10.md), [`docs/monetization_and_experiment.md`](docs/monetization_and_experiment.md), `economy_model.py`, `assumptions.csv`, `outputs/*.csv`, `outputs/*.png` | **Legacy**: the October 2026 seven-region model and sponsored-quest experiment design, kept to show how the design iterated. Both test suites read `assumptions.csv` for the implemented PP rule |
 

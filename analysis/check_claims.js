@@ -206,10 +206,17 @@ function existsExact(rel) {
 }
 const slug = (heading) => heading.trim().toLowerCase().replace(/[^\p{L}\p{N}\s_-]/gu, "").replace(/\s/g, "-");
 const anchors = (rel) => new Set(read(rel).split("\n").filter((l) => /^#{1,6} /.test(l)).map((l) => slug(l.replace(/^#+ /, ""))));
+const PAGES = "https://orho-ops.github.io/wellness-odyssey-game-economy/";
 const markdown = ["README.md", ...fs.readdirSync(path.join(ROOT, "docs")).filter((n) => n.endsWith(".md")).map((n) => `docs/${n}`)];
 for (const rel of markdown) {
   const text = read(rel).replace(/```[\s\S]*?```/g, "");
   for (const [, target] of text.matchAll(/\]\(([^)\s]+)\)/g)) {
+    if (target.startsWith(PAGES)) {
+      // A live lab link must name a file this repository publishes, with exact case.
+      const file = target.slice(PAGES.length).split("#")[0];
+      check(existsExact(file || "index.html"), `${rel}: live link to a missing file ${target}`);
+      continue;
+    }
     if (/^[a-z]+:/i.test(target)) continue;
     const [file, anchor] = target.split("#");
     const resolved = file ? path.posix.normalize(path.posix.join(path.posix.dirname(rel), file)) : rel;
