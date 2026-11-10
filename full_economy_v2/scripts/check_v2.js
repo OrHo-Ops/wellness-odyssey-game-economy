@@ -29,6 +29,26 @@ let passed = 0;
 const check = (ok, message) => (ok ? passed++ : failures.push(message));
 const read = (rel) => fs.readFileSync(path.join(ROOT, rel), "utf8");
 
+/** Render the Model V2 lab in a minimal browser stand-in, with the given state in its URL hash; returns the KPI HTML. */
+function renderLab(state) {
+  const vm = require("node:vm");
+  const els = {};
+  const el = (id) => els[id] || (els[id] = { id, innerHTML: "", textContent: "", style: {}, dataset: {}, children: [], value: "", checked: false,
+    appendChild(c) { this.children.push(c); return c; }, querySelectorAll: () => [], querySelector: () => el(`${id}-child`),
+    addEventListener() {}, setAttribute() {}, remove() {}, getBoundingClientRect: () => ({ left: 0, width: 560 }) });
+  let n = 0;
+  const ctx = { console, setTimeout: () => 0, clearTimeout() {}, location: { hash: "#" + encodeURIComponent(JSON.stringify(state)) },
+    history: { replaceState() {} }, localStorage: { getItem: () => null, setItem() {} }, matchMedia: () => ({ matches: false }),
+    getComputedStyle: () => ({ getPropertyValue: () => "#2a78d6" }) };
+  ctx.document = { getElementById: el, createElement: () => el(`new-${n++}`), createElementNS: () => el(`svg-${n++}`), documentElement: el("root") };
+  ctx.window = ctx; ctx.self = ctx;
+  vm.createContext(ctx);
+  const dir = path.join(ROOT, V2, "dashboard"), html = fs.readFileSync(path.join(dir, "index.html"), "utf8");
+  for (const [, src] of html.matchAll(/<script src="([^"]+)"><\/script>/g)) vm.runInContext(fs.readFileSync(path.join(dir, src), "utf8"), ctx, { filename: src });
+  vm.runInContext(html.slice(html.lastIndexOf("<script>") + 8, html.lastIndexOf("</script>")), ctx, { filename: "lab inline script" });
+  return els.kpis.innerHTML;
+}
+
 // 1. Generated outputs are current -------------------------------------------------
 const { res, files } = build();
 for (const [rel, content] of Object.entries(files)) {
@@ -74,6 +94,11 @@ const stepsPerDay = C.creditedStepsPerDay(res.reference.cfg, "moderate");
 const heat = res.heatmap.cells;
 const okGrowth = heat.filter((row) => row.find((c) => c.missionsPerWeek === 1).j730 >= 100).map((row) => row[0].growth);
 const badGrowth = heat.filter((row) => Math.max(...row.map((c) => c.j730)) < 100).map((row) => row[0].growth);
+const mmc = C.COHORTS["moderate-missions-cosmetics"], hec = C.COHORTS["high-engagement-collector"];
+// The Model V2 lab's defaults, read from the page, and its KPIs rendered with missions off and 200 players.
+const labHtml = read(`${V2}/dashboard/index.html`);
+const labDefault = (key) => { const m = labHtml.match(new RegExp(`key: "${key}"[^\\n]*?def: "?([\\w.]+)"?`)); return m ? m[1] : "unknown"; };
+const labWalkingOnly = renderLab({ missionsPerWeek: 0, players: "200" });
 const g = (x) => `${Number(((x - 1) * 100).toFixed(1))}%`;
 
 const claims = [
@@ -169,6 +194,25 @@ const claims = [
   [RD, `- ${pc(sweep(1.0, "moderate-walking").blockedShare)} of sessions at coverage 1.0;\n- ${pc(sweep(0.9, "moderate-walking").blockedShare)} at 0.9;\n- ${pc(sweep(0.7, "moderate-walking").blockedShare)} at 0.7.`],
   [RD, `At 0.7, organic missions cut it to ${pc(sweep(0.7, "moderate-regular-organic").blockedShare)}.`],
   [RD, pc(sweep(0.7, "moderate-walking").blockedShare) === pc(mod.blockedShare) ? "54%" : "the 0.7 sweep differs from the reference calibration"],
+  // The portfolio README: "At a glance"
+  [RD, cas.onset === mod.onset ? `At **journey ${mod.onset}** for casual and moderate walkers and **${act.onset}** for active ones` : "casual and moderate onsets differ"],
+  [RD, `walking-only players are fully blocked in **${pc(mod.blockedShare)}** of their in-tour sessions. Regular organic missions cut that to **${pc(org.blockedShare)}**`],
+  [RD, `A bundle buyer reaches journey 100 on **${day(dir.d100)}** against **${day(mod.d100)}** walking only`],
+  // The portfolio README: why the cosmetic-heavy personas are blocked most
+  [RD, mmc.cosmetics === "balanced" && mmc.activity === "moderate" && mmc.missions === "regular"
+    ? `the moderate walker with missions and cosmetics sets aside ${pc(C.COSMETIC_POLICIES.balanced.share)} of every Chronon for cosmetics` : "missions-and-cosmetics cohort changed"],
+  [RD, hec.cosmetics === "collector" && hec.activity === "active" && C.MISSION_PATTERNS[hec.missions] > 0.5 && C.COSMETIC_POLICIES.collector.setsFirst
+    ? `the high-engagement collector, an active walker who takes most missions, sets aside ${pc(C.COSMETIC_POLICIES.collector.share)} and buys complete sets first` : "collector cohort changed"],
+  [RD, `the first wait moves from journey ${org.onset} without cosmetics to journey ${co("moderate-missions-cosmetics").onset} with them`],
+  [RD, `**Collector:** it waits from journey ${co("high-engagement-collector").onset}.`],
+  [RD, co("high-engagement-collector").energyWhileWaitingShare > 0.99 ? "more than 99% of its step Energy is credited while no journey is active" : "collector banks less than 99%"],
+  [RD, `it still reaches journey 100 on ${day(co("high-engagement-collector").d100)}`],
+  [RD, `buying only from a surplus costs ${cos("moderate-walking", "progression-first")} days over the tour, while reserving a fixed 20% costs ${cos("moderate-walking", "share-20")}`],
+  // The portfolio README: why the Model V2 lab opens on different numbers
+  [RD, `a moderate walker who completes exactly ${labDefault("missionsPerWeek")} mission a week, simulated with ${labDefault("players")} synthetic players`],
+  [RD, `The reference cohort with regular organic missions completes ${org.missionsPerWeek.toFixed(2)} missions a week, with ${num(res.reference.cfg.playersPerCohort)} synthetic players per cohort`],
+  [RD, labWalkingOnly.includes(`day ${num(mod.d100)}`) && labWalkingOnly.includes(`${pc(mod.blockedShare)}`)
+    ? `the lab reproduces this README's moderate walking-only results: ${day(mod.d100)} and ${pc(mod.blockedShare)} of sessions blocked` : "the lab does not reproduce the walking-only cohort at 200 players"],
   // The difficulty-curve design direction quotes the same reference findings
   [PD, `first has to wait for Chronons at journey ${mod.onset}, whether they walk ${series(PROFILES.map((a) => num(C.ACTIVITY[a].medianDailySteps)), "or")} steps a day`],
   [PD, cas.onset === mod.onset && Math.abs(act.onset - mod.onset) <= 1 ? "The point where scarcity starts is a property of the catalog" : "onset differs by activity"],

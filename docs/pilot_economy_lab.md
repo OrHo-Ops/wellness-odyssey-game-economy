@@ -25,7 +25,7 @@ It is a separate model with its own engine.
 | What | How |
 |---|---|
 | Dashboard | Open [`pilot/index.html`](../pilot/index.html) in a browser. It works straight from disk, with no server and no build step |
-| Tests | `node --test` from the repository root (Node 18 or newer, no packages) |
+| Tests | `node --test` from the repository root (Node 22 or newer, tested on 24.16; no packages) |
 | Share a scenario | The address bar carries the scenario, edits and average basis. Copy the link |
 | Export | *Download configuration (JSON)* at the bottom of the dashboard |
 

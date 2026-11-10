@@ -143,8 +143,9 @@ const claims = [
     `| Chronons earned per active tester (none can be spent) | ${["conservative", "baseline", "optimistic"].map((s) => f(metric(s, "chrononsEarned", "perActive"), 2)).join(" | ")} |`],
   [README, "| PP beyond 1,500, per completed journey | 25.6 | 27.3 | 27.4 |",
     `| PP beyond 1,500, per completed journey | ${["conservative", "baseline", "optimistic"].map((s) => f(ratio(s, "ppOvershoot", "journeysCompleted"), 1)).join(" | ")} |`],
-  [README, "26.8 of 30 testers finish Jerusalem, half of them by **day 4.4**, and then **82% of active days**",
-    `${f(metric("baseline", "testersCompletedJerusalem"), 1)} of 30 testers finish Jerusalem, half of them by **day ${f(results.baseline.jerusalemCompletionDayMedian.mean, 1)}**, and then **${pct(ratio("baseline", "energyIdleTesterDays", "activeTesterDays"))} of active days**`],
+  [README, "about 27 of 30 testers finish Jerusalem (an average of 26.8 across 300 simulated pilots), half of them by **day 4.4**, and then **82% of active days**",
+    `about ${f(Math.round(metric("baseline", "testersCompletedJerusalem")))} of 30 testers finish Jerusalem (an average of ${f(metric("baseline", "testersCompletedJerusalem"), 1)} across ${f(results.baseline.replications)} simulated pilots), half of them by **day ${f(results.baseline.jerusalemCompletionDayMedian.mean, 1)}**, and then **${pct(ratio("baseline", "energyIdleTesterDays", "activeTesterDays"))} of active days**`],
+  [README, "Tester counts are averages across 300 simulated 30-tester pilots", `Tester counts are averages across ${f(results.baseline.replications)} simulated 30-tester pilots`],
   [README, "It is under 0.3% of Energy credited even in the optimistic scenario",
     `It is under ${pct(Math.ceil(1000 * metric("optimistic", "puzzleBonusEnergy") / (metric("optimistic", "energyCredited") + metric("optimistic", "puzzleBonusEnergy"))) / 1000, 1)} of Energy credited even in the optimistic scenario`],
   [README, "In the baseline, 41% of steps fall on days without a session", `In the baseline, ${pct(ratio("baseline", "stepsNeverSynced", "stepsWalked"))} of steps fall on days without a session`],
@@ -176,8 +177,13 @@ const claims = [
   [PORTFOLIO, "payouts from 20 to 250 PP and a 0.2% free respin",
     `payouts from ${f(W.stakeRow(50).minPp)} to ${f(W.stakeRow(50).maxPp)} PP and a ${pct(W.refundProbability(), 1)} free respin`],
   [PORTFOLIO, "at stakes 1–3, **65% of outcomes**", `at stakes 1–3, **${pct(W.fractionalShare(1))} of outcomes**`],
-  [PORTFOLIO, "26.8 of 30 synthetic testers finish the first journey, half of them by **day 4.4**",
-    `${f(metric("baseline", "testersCompletedJerusalem"), 1)} of 30 synthetic testers finish the first journey, half of them by **day ${f(results.baseline.jerusalemCompletionDayMedian.mean, 1)}**`],
+  [PORTFOLIO, "about 27 of 30 synthetic testers finish the first journey (an average of 26.8 across 300 simulated pilots), half of them by **day 4.4**",
+    `about ${f(Math.round(metric("baseline", "testersCompletedJerusalem")))} of 30 synthetic testers finish the first journey (an average of ${f(metric("baseline", "testersCompletedJerusalem"), 1)} across ${f(results.baseline.replications)} simulated pilots), half of them by **day ${f(results.baseline.jerusalemCompletionDayMedian.mean, 1)}**`],
+  [PORTFOLIO, "**52.25 PP** per 50-Energy spin, exactly", `**${f(W.expectedPp(50), 2)} PP** per 50-Energy spin, exactly`],
+  [PORTFOLIO, "made **65%** of rewards at stakes 1–3 fractional", `made **${pct(W.fractionalShare(1))}** of rewards at stakes 1–3 fractional`],
+  [PORTFOLIO, "do so by **day 4.4**, and **82%** of active days then leave Energy with nothing to buy",
+    `do so by **day ${f(results.baseline.jerusalemCompletionDayMedian.mean, 1)}**, and **${pct(ratio("baseline", "energyIdleTesterDays", "activeTesterDays"))}** of active days then leave Energy with nothing to buy`],
+  [PORTFOLIO, "Simulated: 300 synthetic 30-tester pilots", `Simulated: ${f(results.baseline.replications)} synthetic 30-tester pilots`],
   [PORTFOLIO, "**82% of active days**", `**${pct(ratio("baseline", "energyIdleTesterDays", "activeTesterDays"))} of active days**`],
   [PORTFOLIO, "still finishes ahead on PP 32.1% of the time on Journey Spin", `still finishes ahead on PP ${pct(sameTier[0].byTier[1].lessAhead, 1)} of the time on Journey Spin`],
   [PORTFOLIO, "raises their chance from 15.7% to 20.2%", `raises their chance from ${pct(choiceOf(50), 1)} to ${pct(choiceOf(100), 1)}`],
@@ -189,6 +195,15 @@ for (const [file, quoted, computed] of claims) {
 
 // 4. Links and anchors ------------------------------------------------------------
 
+/** Exists with exactly this case, segment by segment: GitHub serves paths case-sensitively. */
+function existsExact(rel) {
+  let dir = ROOT;
+  for (const seg of rel.split("/").filter((x) => x && x !== ".")) {
+    if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory() || !fs.readdirSync(dir).includes(seg)) return false;
+    dir = path.join(dir, seg);
+  }
+  return true;
+}
 const slug = (heading) => heading.trim().toLowerCase().replace(/[^\p{L}\p{N}\s_-]/gu, "").replace(/\s/g, "-");
 const anchors = (rel) => new Set(read(rel).split("\n").filter((l) => /^#{1,6} /.test(l)).map((l) => slug(l.replace(/^#+ /, ""))));
 const markdown = ["README.md", ...fs.readdirSync(path.join(ROOT, "docs")).filter((n) => n.endsWith(".md")).map((n) => `docs/${n}`)];
@@ -198,10 +213,17 @@ for (const rel of markdown) {
     if (/^[a-z]+:/i.test(target)) continue;
     const [file, anchor] = target.split("#");
     const resolved = file ? path.posix.normalize(path.posix.join(path.posix.dirname(rel), file)) : rel;
-    const exists = fs.existsSync(path.join(ROOT, resolved));
+    const exists = existsExact(resolved);
     check(exists, `${rel}: broken link ${target}`);
     if (exists && anchor && resolved.endsWith(".md")) check(anchors(resolved).has(anchor), `${rel}: missing anchor ${target}`);
   }
+  for (const [, src] of text.matchAll(/<img [^>]*src="([^"]+)"/g)) {
+    check(existsExact(path.posix.normalize(path.posix.join(path.posix.dirname(rel), src))), `${rel}: broken image ${src}`);
+  }
+}
+for (const [, target] of read("index.html").matchAll(/(?:href|src)="([^"#]+)/g)) {
+  if (/^[a-z]+:/i.test(target)) continue;
+  check(existsExact(path.posix.normalize(target)), `index.html: broken link ${target}`);
 }
 
 console.log(`${passed} checks passed, ${failures.length} failed${failures.length ? ":" : "."}`);

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wellness Odyssey Economy Labs</title>
+<meta name="description" content="Two interactive economy labs for Wellness Odyssey, a pre-launch walking game. Synthetic players; every economy value hypothetical.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f5f6f1; --surface: #fcfcfb; --surface-2: #f0f1eb;
+  --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --border: rgba(11, 11, 11, 0.10); --accent: #0f7a55; --accent-soft: #e2f0e8; --warning: #fab219;
+  --shadow: 0 1px 2px rgba(11, 11, 11, 0.04), 0 4px 16px rgba(11, 11, 11, 0.04);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --surface-2: #232321;
+    --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --border: rgba(255, 255, 255, 0.10); --accent: #3fbf8a; --accent-soft: rgba(63, 191, 138, 0.14);
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --surface-2: #232321;
+  --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --border: rgba(255, 255, 255, 0.10); --accent: #3fbf8a; --accent-soft: rgba(63, 191, 138, 0.14);
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 56px; }
+h1, h2 { margin: 0; line-height: 1.25; }
+a { color: var(--accent); }
+.eyebrow { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+h1 { font-size: 28px; font-weight: 700; margin-top: 6px; }
+.lede { color: var(--ink-2); max-width: 70ch; margin: 12px 0 0; }
+.notice { display: flex; gap: 10px; align-items: flex-start; margin: 24px 0 28px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--ink-2); }
+.notice .dot { flex: none; width: 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: var(--warning); }
+.notice strong { color: var(--ink); }
+.labs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.lab { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; color: inherit; text-decoration: none; }
+.lab:hover, .lab:focus-visible { border-color: var(--accent); }
+.lab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lab img { display: block; width: 100%; height: auto; aspect-ratio: 1280 / 800; object-fit: cover; object-position: top left; border-bottom: 1px solid var(--border); background: var(--surface-2); }
+.lab .body { padding: 16px 18px 18px; }
+.lab h2 { font-size: 18px; }
+.lab p { margin: 6px 0 12px; color: var(--ink-2); }
+.lab .go { font-weight: 600; color: var(--accent); }
+.more { margin-top: 32px; color: var(--ink-2); }
+footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
+@media (max-width: 520px) { main { padding: 28px 16px 40px; } h1 { font-size: 23px; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Wellness Odyssey · Game economy design</div>
+  <h1>Economy labs</h1>
+  <p class="lede">Wellness Odyssey is a mobile walking game: real steps become Energy, Energy buys spins of a reward wheel, and the wheel pays Progress Points that carry the player along journeys. Chronons, a planned second currency, open new journeys and buy cosmetics. These two labs run the game's economy models in your browser.</p>
+
+  <div class="notice"><span class="dot" aria-hidden="true"></span><div><strong>Pre-launch, synthetic players.</strong> The game has no live players, revenue or commercial partners. Every economy value is provisional or hypothetical, and nothing here is a forecast.</div></div>
+
+  <div class="labs">
+    <a class="lab" href="full_economy_v2/dashboard/index.html">
+      <img src="docs/images/lab_full_economy.png" alt="The Economy Model V2 lab: scenario controls beside journey 100 day, first wait, blocked sessions and Chronon sources" width="1280" height="800">
+      <div class="body">
+        <h2>Economy Model V2: the 100-journey economy</h2>
+        <p>A six-year World Tour with Chronon-priced journeys, missions, puzzles, a store, bundles and cosmetics. Change how a player walks and spends, or how the economy is priced, and watch waits and blocked sessions respond.</p>
+        <span class="go">Open the lab →</span>
+      </div>
+    </a>
+    <a class="lab" href="pilot/index.html">
+      <img src="docs/images/lab_pilot.png" alt="The Economy Model V1 lab: pilot assumptions beside testers, journey completions, Energy and Chronons" width="1280" height="800">
+      <div class="body">
+        <h2>Economy Model V1: the 30-tester pilot</h2>
+        <p>A 28-day pilot with 30 synthetic testers on the implemented core loop. Switch scenarios and edit every assumption, each tagged model-verified, proposed or hypothetical.</p>
+        <span class="go">Open the lab →</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="more">The case studies, methodology, tests and claim checkers are in the <a id="repo" href="README.md">repository README</a>.</p>
+
+  <footer>© 2026 Or Hotoveli. All rights reserved. Synthetic players only; no measured player data.</footer>
+</main>
+<script>
+// On GitHub Pages (user.github.io/repo/), point the README link at the repository itself.
+(function () {
+  var host = location.hostname, m = host.match(/^([a-z0-9-]+)\.github\.io$/i);
+  if (!m) return;
+  var repo = location.pathname.split("/").filter(Boolean)[0] || host;
+  document.getElementById("repo").href = "https://github.com/" + m[1] + "/" + repo + "#readme";
+})();
+</script>
+</body>
+</html>

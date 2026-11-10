@@ -46,7 +46,7 @@ text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-
 .h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
 </style>
 <rect class="bg" width="760" height="577" rx="8"/>
-<text x="24" y="34" font-size="17" class="t1" font-weight="600">E. Waiting time between journeys, by stage of the tour</text>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">Waiting time between journeys, by stage of the tour</text>
 <text x="24" y="56" font-size="12.5" class="t2">Mean days between finishing a journey and being able to unlock the next, per journey. Moderate</text>
 <text x="24" y="74" font-size="12.5" class="t2">walkers, reference scenario.</text>
 <rect class="c1" x="24" y="93" width="12" height="12" rx="3"/>

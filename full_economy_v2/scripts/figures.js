@@ -32,7 +32,7 @@ function figPriceCurves(res) {
   const names = { linear: "Linear", exponential: "Exponential", piecewise: "Piecewise", milestone: "Milestone jumps", hybrid: "Coverage-targeted hybrid (reference)" };
   const max = Math.max(...fams.map((f) => Math.max(...curves[f].slice(1))));
   const total = curves.hybrid.slice(1).reduce((a, b) => a + b, 0);
-  const h = header("A. Chronon unlock price across the 100-journey World Tour", [
+  const h = header("Chronon unlock price across the 100-journey World Tour", [
     `Five hypothetical price families. Each charges the same total, ${fmt(total)} Chronons for journeys 2 to 100; they differ only in when they charge it. Jerusalem is the free start journey. Prices are calibrated once and then frozen.`]);
   const lg = legend(fams.map((f, i) => ({ label: names[f], cls: `c${i + 1}` })), 24, h.y + 28, W - 48);
   const top = lg.y + 34;
@@ -49,7 +49,7 @@ function figPriceCurves(res) {
 function figPpCurves(res) {
   const pp = res.reference.ppCurves, keys = ["flat", "gentle", "capped"];
   const names = { flat: "Flat after Santorini", gentle: "Gentle growth (+1% of Santorini per journey)", capped: "8% growth capped at 3x Jerusalem" };
-  const h = header("A2. PP length per journey: three pacing scenarios", [
+  const h = header("PP length per journey: three pacing scenarios", [
     "Journeys 1 to 7 keep their implemented costs (1,500 x 1.08^(n-1)). After that, length is a separate, hypothetical pacing choice. Extending the implemented 8% growth instead would reach 3,055,224 PP at journey 100, far off this chart."]);
   const lg = legend(keys.map((k, i) => ({ label: names[k], cls: `o${i + 1}` })), 24, h.y + 28, W - 48);
   const top = lg.y + 34;
@@ -67,7 +67,7 @@ function figSources(res) {
   const srcNames = ["Walking (organic)", "Journey completion", "Organic missions", "Sponsored missions", "Wellness Store", "Chronon bundles"];
   const keys = ["walking", "completion", "organic-mission", "sponsored-mission", "store", "direct"];
   const textCls = ["tw", "tw", "tw", "tb", "tw", "tw"];
-  const h = header("B. Where each cohort's Chronons come from", "Share of all Chronons earned over the simulated horizon, by source. Reference scenario.");
+  const h = header("Where each cohort's Chronons come from", "Share of all Chronons earned over the simulated horizon, by source. Reference scenario.");
   const lg = legend(srcNames.map((nm, i) => ({ label: nm, cls: `c${i + 1}`, kind: "box" })), 24, h.y + 28, W - 48);
   const st = stackPanel({ x: 236, y: lg.y + 28, w: W - 236 - 30, rows: res.cohorts.map((c) => ({
     label: SHORT[c.key], segments: keys.map((k, i) => ({ v: c.sourceShare[k], cls: `c${i + 1}`, name: srcNames[i], textCls: textCls[i] })),
@@ -82,7 +82,7 @@ function figBalance(res) {
   const ptsBal = (rows) => rows.slice(0, 99).map((r) => [r.journey, r.balanceOnCompletion]);
   const price = walk.slice(0, 99).map((r, i) => [r.journey, walk[i + 1].price]);
   const max = Math.max(...price.map((x) => x[1]), ...ptsBal(walk).map((x) => x[1]), ...ptsBal(mis).map((x) => x[1]));
-  const h = header("C. Chronons held on finishing a journey vs the next journey's price", [
+  const h = header("Chronons held on finishing a journey vs the next journey's price", [
     `Closed-form ledger, moderate walker. Walking alone stays ahead of prices until journey ${onset - 1}; from then on the balance reaches the next price only after a wait. Regular missions keep the balance ahead for longer.`]);
   const lg = legend([{ label: "Next journey's price", cls: "fp" }, { label: "Held: walking only", cls: "c1" }, { label: "Held: regular organic missions", cls: "c3" }], 24, h.y + 28, W - 48);
   const top = lg.y + 34;
@@ -100,7 +100,7 @@ function figBalance(res) {
 }
 
 function figTimeline(res) {
-  const h = header("D. Journeys completed over time", "Median synthetic player per cohort (moderate walkers), reference scenario. Dots mark the median day the tour is finished.");
+  const h = header("Journeys completed over time", "Median synthetic player per cohort (moderate walkers), reference scenario. Dots mark the median day the tour is finished.");
   const keys = res.timeline.map((t) => t.key);
   const lg = legend(keys.map((k) => ({ label: KEY_LABEL[k], cls: COHORT_STYLE[k][1] })), 24, h.y + 28, W - 48);
   const top = lg.y + 34;
@@ -125,7 +125,7 @@ function figWaitStage(res) {
     return { v, cls: COHORT_STYLE[k][1], label: fmt(v, 1), title: `${KEY_LABEL[k]}, journeys ${st}: ${fmt(v, 1)} days on average` };
   }) }));
   const max = Math.max(...rows.flatMap((r) => r.bars.map((b) => b.v)));
-  const h = header("E. Waiting time between journeys, by stage of the tour", "Mean days between finishing a journey and being able to unlock the next, per journey. Moderate walkers, reference scenario.");
+  const h = header("Waiting time between journeys, by stage of the tour", "Mean days between finishing a journey and being able to unlock the next, per journey. Moderate walkers, reference scenario.");
   const lg = legend(keys.map((k) => ({ label: KEY_LABEL[k], cls: COHORT_STYLE[k][1], kind: "box" })), 24, h.y + 28, W - 48);
   const ticks = niceTicks(max, 4);
   const p = hbarPanel({ x: 150, y: lg.y + 32, w: W - 150 - 70, rows, max: ticks[ticks.length - 1], ticks, barHeight: 11, axisLabel: "Days of waiting per journey" });
@@ -142,9 +142,9 @@ function figWaitJourney(res, which) {
   const max = Math.max(...rows.flatMap((r) => r.wait.filter((v) => v !== null)));
   const onsets = rows.map((r) => res.cohorts.find((c) => c.key === r.key).firstMedianWait);
   const h = activity
-    ? header("E3. Walking only: scarcity starts at the same journey at every activity level", [
+    ? header("Walking only: scarcity starts at the same journey at every activity level", [
       `Median wait per journey. The casual, moderate and active walkers first wait at journeys ${onsets.join(", ")}: the same steps earn Energy and Chronons, so walking more changes how long a wait lasts, not where it starts.`])
-    : header("E2. Where Chronon scarcity starts affecting journey access", [
+    : header("Where Chronon scarcity starts affecting journey access", [
       `Median wait per journey, moderate walkers. First journey with a median wait of a day or more: ${rows.map((r, i) => `${label(r.key)} ${onsets[i] || "none"}`).join("; ")}.`]);
   const lg = legend(rows.map((r, i) => ({ label: label(r.key), cls: sty(r.key, i)[1] })), 24, h.y + 28, W - 48);
   const top = lg.y + 34;
@@ -160,7 +160,7 @@ function figWaitJourney(res, which) {
 
 function figPuzzles(res) {
   const rows = res.puzzleParticipation;
-  const h = header("F. Puzzle completion and its effect on PP progression", [
+  const h = header("Puzzle completion and its effect on PP progression", [
     "Moderate walker, one Future Vision puzzle per destination (Jaffa Gate's provisional 9 tiles x 30 pieces and 100 Energy, generalised as a labelled assumption), 5 organic pieces per 1,000 steps. Right: how many days the completion Energy brings journey 50 forward."]);
   const top = h.y + 36;
   const left = hbarPanel({ x: 196, y: top + 18, w: 150, rows: rows.map((r) => ({ label: r.label, bars: [{ v: r.puzzlesPerYear, cls: "c1", label: fmt(r.puzzlesPerYear, 1), title: `${r.label}: ${fmt(r.puzzlesPerYear, 1)} puzzles a year` }] })),
@@ -182,7 +182,7 @@ function figStoreAccess(res) {
       dots: rows.map((x) => [x.spendPerMonth, x.d100, `${r * 100}% reward, $${fmt(x.spendPerMonth)} a month: journey 100 on day ${fmt(x.d100)}`]) };
   });
   const all = res.storePlayer.map((x) => x.d100).filter(Number.isFinite);
-  const h = header("G. Wellness Store spending vs access to journeys", [
+  const h = header("Wellness Store spending vs access to journeys", [
     "Moderate walker who shops through the Store: median day journey 100 is finished, by monthly spend and reward rate. Store Chronons are worth the reward rate at the bundle price; purchases never add Energy, PP or progress."]);
   const lg = legend(series.map((s) => ({ label: s.label, cls: s.fillCls })), 24, h.y + 28, W - 48);
   const top = lg.y + 34;
@@ -204,7 +204,7 @@ function figStoreBusiness(res) {
     });
     return linePanel({ x: x0, y: top, w: 290, h: 220, xDomain: [0, 20], xTicks: [0, 5, 10, 15, 20], xFmt: (v) => `${v}%`, yTicks: [-4, -2, 0, 2, 4, 6], yFmt: (v) => `$${v}`, series });
   };
-  const h = header("G2. Does commission pay for the Chronons? Net contribution per $45 order", [
+  const h = header("Does commission pay for the Chronons? Net contribution per $45 order", [
     "Commission on kept orders, minus the bundle revenue the awarded Chronons displace (net of a 30% platform fee) and $0.15 handling. Left: half of store Chronons displace bundle purchases. Right: all of them do. Dots mark the break-even reward rate."]);
   const lg = legend([0.04, 0.08, 0.12].map((c, i) => ({ label: `${c * 100}% commission`, cls: `o${i + 1}` })), 24, h.y + 28, W - 48);
   const top = lg.y + 44;
@@ -226,7 +226,7 @@ function figCosmetics(res) {
     return { v: d === null ? cap : Math.max(d, 0), cls: i ? "c3" : "c1", label: d === null ? "not finished in 6 years" : `+${fmt(d)} d`,
       title: `${i ? "Regular missions" : "Walking only"}, ${x.policyLabel}: ${d === null ? "journey 100 not reached" : `${fmt(d)} more days to journey 100`}` };
   }) }));
-  const h = header("H. Cosmetic spending vs progression delay", [
+  const h = header("Cosmetic spending vs progression delay", [
     `Extra days to finish journey 100 compared with the same players buying no cosmetics. Starter catalog: 28 proposed items costing ${fmt(res.cosmeticsCatalogTotal)} Chronons in all. Timing matters more than amount: spending from a surplus costs little, spending during scarcity costs a lot.`]);
   const lg = legend([{ label: "Moderate, walking only", cls: "c1", kind: "box" }, { label: "Moderate, regular missions", cls: "c3", kind: "box" }], 24, h.y + 28, W - 48);
   const p = hbarPanel({ x: 236, y: lg.y + 32, w: W - 236 - 150, rows, max: cap, ticks: [0, 350, 700, 1050, 1400], barHeight: 12, axisLabel: "Extra days to journey 100" });
@@ -235,7 +235,7 @@ function figCosmetics(res) {
 }
 
 function figSourceSink(res) {
-  const h = header("I. Source and sink balance over time: Chronons and Energy held", [
+  const h = header("Source and sink balance over time: Chronons and Energy held", [
     "Median holdings by day, moderate walkers. A rising Energy line is inflation: in the Chronon-bound late game no journey is active, so step Energy has no sink and is spent in one burst when the next price is paid (no cap in this analytical baseline)."]);
   const keys = res.timeline.map((t) => t.key);
   const lg = legend(keys.map((k) => ({ label: KEY_LABEL[k], cls: COHORT_STYLE[k][1] })), 24, h.y + 28, W - 48);
@@ -252,7 +252,7 @@ function figSourceSink(res) {
 function figHeatmap(res) {
   const hm = res.heatmap, rows = hm.cells, cols = hm.freqs;
   const cw = 70, ch = 30, x0 = 190;
-  const h = header("J. Sensitivity: mission frequency x Chronon price growth", [
+  const h = header("Sensitivity: mission frequency × Chronon price growth", [
     "Median journeys completed in the first two years by a moderate walker. Prices grow by the shown factor per journey from a fixed 23-Chronon start (not budget-matched). Missions completed per week are set exactly."]);
   const top = h.y + 52, parts = [...h.parts];
   parts.push(text(x0 + (cols.length * cw) / 2, top - 26, "Missions completed per week", "mu", { size: 11, anchor: "middle" }));
@@ -283,7 +283,7 @@ function figPacing(res) {
     return { v: c.d100 === null ? 2190 : c.d100, cls: i ? "c3" : "c1", label: c.d100 === null ? `not finished (${fmt(100 * c.tourShare)}% did)` : `${fmt(c.d100)} d`,
       title: `${KEY_LABEL[k]}, ${x.curve} PP and ${x.level} prices: ${c.d100 === null ? "journey 100 not reached by the median player" : `day ${fmt(c.d100)}`}` };
   }) }));
-  const h = header("K. Pacing scenarios: tour length vs price level", [
+  const h = header("Pacing scenarios: tour length vs price level", [
     "Median day a moderate walker finishes journey 100, for three PP pacing curves and three price levels, with prices calibrated to each curve. No completion target is assumed: the figure shows the trade-off, not a recommendation."]);
   const lg = legend([{ label: "Walking only", cls: "c1", kind: "box" }, { label: "Regular organic missions", cls: "c3", kind: "box" }], 24, h.y + 28, W - 48);
   const p = hbarPanel({ x: 200, y: lg.y + 32, w: W - 200 - 150, rows, max: 2190, ticks: [0, 365, 730, 1095, 1460, 1825, 2190], fmt: dayFmt, barHeight: 10, groupGap: 9, axisLabel: "Median day journey 100 is finished" });
@@ -298,15 +298,18 @@ function figBalanceSweep(res) {
     points: res.balanceSweep.map((b, i) => [i, scale(b.cohorts.find((c) => c.key === k)[field])]),
     dots: res.balanceSweep.map((b, i) => [i, scale(b.cohorts.find((c) => c.key === k)[field]), `${KEY_LABEL[k]} at late coverage ${b.lateCoverage}: ${fmt(scale(b.cohorts.find((c) => c.key === k)[field]), 0)}`]) }));
   const walkAt = (cov) => res.balanceSweep.find((b) => b.lateCoverage === cov).cohorts.find((c) => c.key === "moderate-walking");
-  const h = header("L. Balance sweep: how much late-game scarcity, and who feels it", [
+  const shareOf = (b, k) => b.cohorts.find((c) => c.key === k).blockedShare;
+  const coincide = res.balanceSweep.every((b) => Math.abs(shareOf(b, "moderate-regular-sponsored") - shareOf(b, "moderate-direct")) < 0.03);
+  const h = header("Balance sweep: how much late-game scarcity, and who feels it", [
     "Coverage at journey 100 is the Chronons a walking-only player earns during the journey before it, divided by its price; the other anchors stay at the reference. Lower means scarcer.",
-    `Walking-only players start to be blocked below a coverage of about 1.0 (${fmt(100 * walkAt(0.9).blockedShare)}% of sessions at 0.9); missions and bundles keep players unblocked to about 0.8.`]);
+    `Walking-only players start to be blocked below a coverage of about 1.0 (${fmt(100 * walkAt(0.9).blockedShare)}% of sessions at 0.9); missions and bundles keep players unblocked to about 0.8.`,
+    ...(coincide ? ["Sponsored missions and Chronon bundles almost coincide, so one line largely hides the other."] : [])]);
   const lg = legend(keys.map((k) => ({ label: KEY_LABEL[k], cls: COHORT_STYLE[k][1] })), 24, h.y + 28, W - 48);
   const top = lg.y + 38;
   const xt = xs.map((_, i) => i), xf = (i) => `${xs[i]}`;
   const parts = [...h.parts, ...lg.parts,
     ...linePanel({ x: 72, y: top, w: W - 72 - 60, h: 160, xDomain: [0, xs.length - 1], xTicks: xt, xFmt: xf, yTicks: [0, 20, 40, 60], yFmt: (v) => `${v}%`, yLabel: "Sessions fully blocked (share of active days in the tour)", series: mk("blockedShare", (v) => 100 * v) }),
-    ...linePanel({ x: 72, y: top + 240, w: W - 72 - 60, h: 160, xDomain: [0, xs.length - 1], xTicks: xt, xFmt: xf, yTicks: [0, 10, 20, 30], yLabel: "Median wait before journey 100 (days)", xLabel: "Late-game coverage at journey 100", series: mk("wait100", (v) => v || 0) })];
+    ...linePanel({ x: 72, y: top + 240, w: W - 72 - 60, h: 160, xDomain: [0, xs.length - 1], xTicks: xt, xFmt: xf, yTicks: [0, 10, 20, 30], yLabel: "Median wait before journey 100 (days)", xLabel: "Late-game coverage at journey 100 (scarcer →)", series: mk("wait100", (v) => v || 0) })];
   return finish("L_balance_sweep.svg", "Late-game balance sweep", "Two line charts against late-game coverage: share of fully blocked sessions and median wait before journey 100, by player type.",
     parts, top + 240 + 160 + 36, data("balance_sweep.csv"));
 }

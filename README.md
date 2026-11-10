@@ -2,22 +2,42 @@
 
 *Or Hotoveli · Game economy and systems design · November 2026*
 
-Wellness Odyssey is a mobile walking game. Real steps become **Energy**, Energy buys spins of a reward wheel, and the wheel pays **Progress Points (PP)** that carry the player along journeys to real-world destinations. **Chronons**, a planned second currency, open new journeys and buy cosmetics.
+Wellness Odyssey is a mobile walking game. Real steps become **Energy**, Energy buys spins of a reward wheel, and the wheel pays **Progress Points (PP)** that carry the player along journeys to real-world destinations. **Chronons**, a planned second currency, open new journeys and buy cosmetics. This repository is the game's economy design, from the implemented core loop to a planned 100-journey World Tour: closed-form mathematics, Monte Carlo simulation of synthetic players, interactive labs and a validated content-catalog format.
 
-This repository is the game's economy design, from the implemented core loop to a planned 100-journey World Tour:
-- closed-form mathematics;
-- Monte Carlo simulation of synthetic players;
-- interactive labs;
-- a validated content-catalog format.
+**Jump to:** [At a glance](#at-a-glance) · [Interactive labs](#interactive-economy-labs) · [Model V2 case study](full_economy_v2/docs/case_study.md) · [Model V1 case study](docs/v1_core_economy.md) · [Reproduce](#15-reproduce) · [My role](#18-my-role-and-ai-assisted-implementation)
 
 > **Pre-launch.** The game has no live players, revenue or commercial partners. Every player in this repository is synthetic, and every economy value is provisional until it is balanced with real playtesters. Nothing here is a forecast of player behaviour, retention or revenue.
 
+## At a glance
+
+*Every player behind these results is synthetic. **Derived** results follow mathematically from the game's rules; **Simulated** results come from synthetic players under hypothetical economy values.*
+
+| Question | What the models show | Basis |
+|---|---|---|
+| What does one wheel spin pay? | **52.25 PP** per 50-Energy spin, exactly. Letting players choose small stakes kept that return but made **65%** of rewards at stakes 1–3 fractional, so Wheel V3 uses three whole-number tiers | Derived from the implemented wheel |
+| Does today's content last? | No. In a 28-day pilot model, half of the synthetic testers who finish the first journey do so by **day 4.4**, and **82%** of active days then leave Energy with nothing to buy | Simulated: 300 synthetic 30-tester pilots |
+| Where does a 100-journey tour turn scarce? | At **journey 60** for casual and moderate walkers and **61** for active ones. The same steps earn Energy and Chronons, so walking more shortens each wait but doesn't move where waiting starts | Derived · Simulated, hypothetical prices |
+| What risk did the model find? | At a hypothetical late-game price level, walking-only players are fully blocked in **54%** of their in-tour sessions. Regular organic missions cut that to **21%** | Simulated, hypothetical calibration ([section 10](#10-a-discovered-design-risk-blocked-sessions)) |
+| Can money buy progress? | No, by design. A bundle buyer reaches journey 100 on **day 767** against **day 952** walking only, and the tests confirm purchases never change Energy credited or PP per Energy | Simulated, hypothetical prices · tested invariant |
+
 | | |
 |---|---|
-| **My role** | Product owner and economy designer. I set the questions, made the design decisions, reviewed every result and directed the corrections (see [AI-assisted implementation](#18-ai-assisted-implementation)) |
+| **My role** | Product owner and economy designer. I made or approved the product rules these models test: money buys access and cosmetics, never progress; Chronons price a 100-journey World Tour; organic Chronons keep accruing while a player waits; competition ranks activity, not PP. Claude wrote the code and first drafts under my direction ([who did what](#18-my-role-and-ai-assisted-implementation)) |
 | **Scope** | Wheel mathematics, core loop, 28-day pilot model, 100-journey projection, missions, puzzles, store, bundles, cosmetics, competition metrics |
-| **Stack** | Plain JavaScript (Node 18+, no packages) for every current model and both dashboards; Python for the legacy model only |
-| **Start here** | [V2 case study](full_economy_v2/docs/case_study.md) · [V1 case study](docs/v1_core_economy.md) · [V2 lab](full_economy_v2/dashboard/index.html) and [pilot lab](pilot/index.html) (download and open in a browser) |
+| **Stack** | Plain JavaScript with no packages, on Node.js 22 or later (tested on 24.16), for every current model and both labs; Python for the legacy model only |
+
+## Interactive economy labs
+
+Both labs run the same engines as the tests, entirely in the browser.
+
+| Economy Model V2 lab: the 100-journey economy | Economy Model V1 lab: the 30-tester pilot |
+|---|---|
+| <img src="docs/images/lab_full_economy.png" alt="The Economy Model V2 lab: scenario controls on the left; journey 100 day, first wait, blocked sessions and Chronon sources on the right"> | <img src="docs/images/lab_pilot.png" alt="The Economy Model V1 lab: assumptions on the left; testers, journey completions, Energy and Chronons on the right"> |
+| Change walking activity, missions, store orders, bundles, cosmetics, prices and pacing, and watch waits, blocked sessions and Chronon sources respond | Switch between three pilot scenarios and edit every hypothetical assumption, with each value tagged model-verified, proposed or hypothetical |
+
+**To try them,** choose **Code → Download ZIP**, unzip it and open [`full_economy_v2/dashboard/index.html`](full_economy_v2/dashboard/index.html) or [`pilot/index.html`](pilot/index.html) in any browser. They need no install, no server and no network. GitHub shows HTML files as source code, so they can't run from this page.
+
+**Why the Model V2 lab's opening numbers differ from the tables below.** The lab opens on a custom player rather than one of the reference cohorts: a moderate walker who completes exactly 1 mission a week, simulated with 120 synthetic players so the page stays responsive. The reference cohort with regular organic missions completes 1.18 missions a week, with 200 synthetic players per cohort. Set *Missions completed per week* to 0 and *Synthetic players* to 200, and the lab reproduces this README's moderate walking-only results: day 952 and 54% of sessions blocked.
 
 ---
 
@@ -47,6 +67,12 @@ Every claim carries a status. The four reader-facing categories:
 | **Hypothetical and future** | Planned · Option · Unset · Approved (modelling rule) · Proposed · Hypothetical | Approved product directions, options, deliberately undecided values, and exploratory inputs with no evidence behind them |
 
 Results are additionally marked **Derived** (follows mathematically from the rules) or **Simulated** (output of a model run on synthetic players).
+
+**Two version series.** The repository holds two economy models:
+- **Economy Model V1** is the core economy and the 30-tester pilot model;
+- **Economy Model V2** is the 100-journey projection built on top of it. Its folder and code call it *Full Economy V2*.
+
+The reward wheel has versions of its own, always written **Wheel V1–V3**: Wheel V1 is the implemented 50-Energy spin, Wheel V2 a development-only stake experiment, and Wheel V3 the three tiers in the offline demo.
 
 ## 3. Economy architecture
 
@@ -85,7 +111,7 @@ flowchart LR
     class pending,chronons,missions,pieces,puzzle,money,next,cosmetics planned
 ```
 
-*Solid: implemented (the production wheel is a fixed 50-Energy spin; the three tiers are offline-demo behaviour). Dashed: planned.*
+*Solid: implemented (the production wheel is Wheel V1's fixed 50-Energy spin; Wheel V3's three tiers are offline-demo behaviour). Dashed: planned.*
 
 | Resource | Role | Status |
 |---|---|---|
@@ -103,7 +129,7 @@ flowchart LR
 
 ## 4. Wheel mathematics
 
-The production wheel (implemented) has these properties:
+The production wheel (Wheel V1, implemented) has these properties:
 - **Draw and payouts:** the server draws one of eight outcomes from integer weights out of 1,000, with payouts from 20 to 250 PP and a 0.2% free respin.
 - **Expected value:** it pays **52.25 PP per 50-Energy spin**. That is 1.045 PP per Energy staked, or 1.0471 PP per Energy actually spent.
 - **Shape:** right-skewed, with no single outcome carrying the economy.
@@ -114,9 +140,9 @@ The wheel went through three iterations.
 
 | Version | Change | Finding | Status |
 |---|---|---|---|
-| **V1** | One 50-Energy spin | Exact expected value, spread and first-passage cost of a journey | Implemented |
-| **V2** | Player-chosen stakes, 1–100, payouts scaled by stake ÷ 50 | Return per Energy is identical at every stake, but at stakes 1–3, **65% of outcomes** pay a fraction of a PP | Development only |
-| **V3** | Quick 10 · Journey 50 · Epic 100 | Payouts are all whole **exactly when the stake is a multiple of 10**. V3 keeps the return and makes every reward readable | Offline demo |
+| **Wheel V1** | One 50-Energy spin | Exact expected value, spread and first-passage cost of a journey | Implemented |
+| **Wheel V2** | Player-chosen stakes, 1–100, payouts scaled by stake ÷ 50 | Return per Energy is identical at every stake, but at stakes 1–3, **65% of outcomes** pay a fraction of a PP | Development only |
+| **Wheel V3** | Quick 10 · Journey 50 · Epic 100 | Payouts are all whole **exactly when the stake is a multiple of 10**. Wheel V3 keeps the return and makes every reward readable | Offline demo |
 
 **The lesson.** An economy can be mathematically correct and still fail at the moment of reward. Readability is a constraint on the maths.
 
@@ -129,11 +155,11 @@ The wheel went through three iterations.
 
 ## 5. The 100-journey progression model
 
-V1's 30-tester pilot model showed the near-term problem:
-- in the baseline, 26.8 of 30 synthetic testers finish the first journey, half of them by **day 4.4**;
+Economy Model V1's 30-tester pilot model showed the near-term problem:
+- in the baseline, about 27 of 30 synthetic testers finish the first journey (an average of 26.8 across 300 simulated pilots), half of them by **day 4.4**;
 - after that, **82% of active days** leave Energy with nothing to buy.
 
-Full Economy V2 projects the planned **World Tour** over six years:
+Economy Model V2 projects the planned **World Tour** over six years:
 - **Content:** the seven implemented destinations, then placeholders up to journey 100.
 - **Prices:** Chronon-priced journeys.
 - **Players:** 200 synthetic players per cohort.
@@ -161,7 +187,7 @@ Early in the tour the PP clock binds, and later the Chronon clock does. Because 
 
 ![Walking-only waiting time by journey and activity level](full_economy_v2/outputs/E3_wait_by_journey_activity.svg)
 
-**Validation.** The projection is written in the same catalog format as V1's World Tour layer and passes its validator: no cycles, broken references or invented values. Undecided values stay *unset*, never zero.
+**Validation.** The projection is written in the same catalog format as Model V1's World Tour layer and passes its validator: no cycles, broken references or invented values. Undecided values stay *unset*, never zero.
 
 ## 6. Missions, puzzles, monetization and cosmetics
 
@@ -185,7 +211,7 @@ Early in the tour the PP clock binds, and later the Chronon clock does. Because 
 
 ## 7. Player personas
 
-V2 simulates eleven synthetic cohorts. Activity levels are median daily steps of 3,000, 6,000 and 10,000, with a session on 60%, 70% and 85% of days. These are modelling personas, not observed segments.
+Model V2 simulates eleven synthetic cohorts. Activity levels are median daily steps of 3,000, 6,000 and 10,000, with a session on 60%, 70% and 85% of days. These are modelling personas, not observed segments.
 
 | Persona | Finish the tour within 6 years | Median day reaching journey 100 | First wait (journey) | Blocked sessions |
 |---|---|---|---|---|
@@ -200,6 +226,18 @@ V2 simulates eleven synthetic cohorts. Activity levels are median daily steps of
 | High-engagement collector | 100% | 592 | 2 | 80% |
 
 *Simulated, reference calibration, hypothetical values. "Blocked sessions" are sessions in the tour where no journey is active and none is affordable. All eleven cohorts are in [results](full_economy_v2/docs/results.md#reference-cohorts).*
+
+**Why the cosmetic-heavy personas are blocked most.** Chronons are one pool that pays for two sinks, the next journey and cosmetics. These two personas split every Chronon they earn between them, from the first day until their wish list is complete:
+- the moderate walker with missions and cosmetics sets aside 20% of every Chronon for cosmetics;
+- the high-engagement collector, an active walker who takes most missions, sets aside 60% and buys complete sets first.
+
+Early in the tour, walking alone pays for the next journey. A fixed reserve gives that cushion away, so waiting starts early:
+- **Moderate walker:** the first wait moves from journey 83 without cosmetics to journey 28 with them.
+- **Collector:** it waits from journey 2.
+
+"Blocked" means no journey is active and none is affordable; it doesn't mean slow walking. The collector walks so much that more than 99% of its step Energy is credited while no journey is active, yet it still reaches journey 100 on day 592.
+
+**The trade-off is when Chronons go to cosmetics, not how many.** For a moderate walking-only player, buying only from a surplus costs 13 days over the tour, while reserving a fixed 20% costs 432. That is why [section 12](#12-design-implications) recommends surfacing cosmetics in surplus.
 
 ## 8. Free-to-play accessibility
 
@@ -228,7 +266,7 @@ V2 simulates eleven synthetic cohorts. Activity levels are median daily steps of
 
 > **This is a risk found in a hypothetical calibration, not a production result.** No real player has experienced it.
 
-**The finding.** In the V2 reference calibration, late-game coverage is 0.7: Chronon prices outrun what walking earns. Synthetic walking-only players there are **fully blocked in 54% of their in-tour sessions**.
+**The finding.** In the Model V2 reference calibration, late-game coverage is 0.7: Chronon prices outrun what walking earns. Synthetic walking-only players there are **fully blocked in 54% of their in-tour sessions**.
 - **Banked Energy.** No spins can happen without an active journey, so 60% of their step Energy is credited while no journey is active.
 - **Burst completion.** The bank then completes the next journey the moment it unlocks.
 - **Why it matters.** The game cannot make a walking-only player wait *a little*: each Chronon-bound journey becomes a fully blocked wait followed by an instant completion.
@@ -242,7 +280,7 @@ At 0.7, organic missions cut it to 21%.
 
 ![Late-game balance sweep: blocked sessions and waits against coverage](full_economy_v2/outputs/L_balance_sweep.svg)
 
-**Why it is valuable.** It was found before launch, it has a measurable cause and it points to concrete levers. The planned difficulty curve (next section) is the response. Instrumentation for the pilot (`session_blocked`, `energy_banked_at_unlock`) is specified in the [V2 case study](full_economy_v2/docs/case_study.md#8-live-playtesting-requirements).
+**Why it is valuable.** It was found before launch, it has a measurable cause and it points to concrete levers. The planned difficulty curve (next section) is the response. Instrumentation for the pilot (`session_blocked`, `energy_banked_at_unlock`) is specified in the [Model V2 case study](full_economy_v2/docs/case_study.md#8-live-playtesting-requirements).
 
 ## 11. Planned: progressive difficulty, Accessible → Balanced → Challenging
 
@@ -284,9 +322,9 @@ These are directions supported by the models, not final values.
 |---|---|---|---|
 | Early prototype | 50 steps per Energy, an 80-Energy cap and 16-Energy spins | 10 steps per Energy, 50-Energy spins, a 250 cap, seven destinations | Implemented |
 | Seven-region simulation, October 2026 | Content lasted about three weeks, and the cap paced active players more than their walking did | A 500 cap for the beta; the content-exhaustion problem the World Tour now addresses | Legacy |
-| Player-chosen stakes | Correct maths, unreadable fractional rewards | Wheel V3's three whole-number tiers | Development only → Offline demo |
-| 30-tester pilot model, November 2026 | The first journey is done in days, then Energy has nothing to buy | World Tour, Chronons, prerequisite unlocking | Planned |
-| Full Economy V2, November 2026 | A late-game price schedule turns scarcity into blocked sessions | The progressive difficulty curve (section 11) | Design direction, work in progress |
+| Player-chosen stakes (Wheel V2) | Correct maths, unreadable fractional rewards | Wheel V3's three whole-number tiers | Development only → Offline demo |
+| Economy Model V1: 30-tester pilot model, November 2026 | The first journey is done in days, then Energy has nothing to buy | World Tour, Chronons, prerequisite unlocking | Planned |
+| Economy Model V2, November 2026 | A late-game price schedule turns scarcity into blocked sessions | The progressive difficulty curve (section 11) | Design direction, work in progress |
 
 **The October 2026 model is historical.** Its [case study](docs/legacy_case_study_2026-10.md) and [sponsored-quest experiment design](docs/monetization_and_experiment.md) are kept for their method and as a record of the design. It used an illustrative wheel and a 500-Energy model cap, so its completion dates and commercial figures belong to that model, not to the current design.
 
@@ -294,8 +332,8 @@ These are directions supported by the models, not final values.
 
 1. **Closed form first.** Wheel expectation, spread and stake scaling are derived exactly. Journey cost uses an exact first-passage recursion, and contest odds come from exact convolution. The two-clock ledger is solved in closed form.
 2. **Simulation second.**
-   - **V1:** a day-by-day 30-tester, 28-day pilot model with 300 synthetic cohorts per scenario.
-   - **V2:** a six-year model with 200 players per cohort, every Chronon tracked by source and sink. Random streams are separated, so cohort comparisons are paired.
+   - **Model V1:** a day-by-day 30-tester, 28-day pilot model with 300 synthetic cohorts per scenario.
+   - **Model V2:** a six-year model with 200 players per cohort, every Chronon tracked by source and sink. Random streams are separated, so cohort comparisons are paired.
 3. **Data that refuses to guess.** Every hypothetical value lives in one labelled configuration file. The catalog validator rejects cycles, broken references, fractional or negative values and any literal labelled "verified".
 4. **Invariants and mutation testing.**
    - **Invariants:** conservation of Energy, Chronons, pieces and PP on random scenarios; no negative wallets; purchases never touching Energy or PP.
@@ -304,36 +342,37 @@ These are directions supported by the models, not final values.
 
 ## 15. Reproduce
 
-Requires Node.js 18 or later (tested on 24). No packages to install.
+Requires Node.js 22 or later, a currently supported release line. Tested on Node 24.16; other versions are expected to work but have not been tested. No packages to install.
 
 ```bash
-node --test                                   # V1: pilot engine and World Tour catalog tests
-node full_economy_v2/scripts/run_tests.js     # V2: projection, simulation, store, cosmetics and dashboard tests
-node analysis/check_claims.js                 # V1 figures, quoted numbers, outputs and links
-node full_economy_v2/scripts/check_v2.js      # V2 outputs and quoted numbers; reruns the V1 checks (several minutes)
-node full_economy_v2/scripts/mutation_check.js  # breaks 13 V2 safeguards one at a time (a few minutes)
+node --test                                   # Model V1: pilot engine and World Tour catalog tests
+node full_economy_v2/scripts/run_tests.js     # Model V2: projection, simulation, store, cosmetics and lab tests
+node analysis/check_claims.js                 # Model V1 figures, quoted numbers, outputs and links
+node full_economy_v2/scripts/check_v2.js      # Model V2 outputs and quoted numbers; reruns the Model V1 checks (several minutes)
+node full_economy_v2/scripts/mutation_check.js  # breaks 13 Model V2 safeguards one at a time (a few minutes)
 
-node analysis/build_portfolio.js              # regenerate V1 tables and figures
-node full_economy_v2/scripts/build_v2.js      # regenerate V2 tables, figures and results.md
+node analysis/build_portfolio.js              # regenerate Model V1 tables and figures
+node full_economy_v2/scripts/build_v2.js      # regenerate Model V2 tables, figures and results.md
 ```
 
-**Dashboards.** Open [`pilot/index.html`](pilot/index.html) or [`full_economy_v2/dashboard/index.html`](full_economy_v2/dashboard/index.html) in a browser, from a local copy of the repository. They run the same engines as the tests, with no server and no network requests.
+**Labs.** Open [`pilot/index.html`](pilot/index.html) or [`full_economy_v2/dashboard/index.html`](full_economy_v2/dashboard/index.html) in a browser, from a local copy of the repository. They run the same engines as the tests, with no server and no network requests. [`index.html`](index.html) at the root is a landing page for both, for static hosting.
 
-**Legacy model.** It needs Python 3.9+ with numpy and matplotlib: `pip install -r requirements.txt`, then `python economy_model.py`.
+**Legacy model.** It needs Python 3 with numpy and matplotlib: `pip install -r requirements.txt`, then `python economy_model.py`. Tested on Python 3.13.2 with numpy 2.2.3 and matplotlib 3.10.0.
 
 ## 16. Repository map
 
 | Path | What it holds |
 |---|---|
-| [`docs/v1_core_economy.md`](docs/v1_core_economy.md) | **V1 case study**: core loop, wheel V1–V3, pilot lab, planned systems summary |
-| [`full_economy_v2/docs/case_study.md`](full_economy_v2/docs/case_study.md) | **V2 case study**: the 100-journey economy, missions, store, cosmetics, failure modes |
-| [`full_economy_v2/docs/results.md`](full_economy_v2/docs/results.md) | Generated V2 results and fifteen design questions |
+| [`docs/v1_core_economy.md`](docs/v1_core_economy.md) | **Economy Model V1 case study**: core loop, Wheel V1–V3, pilot lab, planned systems summary |
+| [`full_economy_v2/docs/case_study.md`](full_economy_v2/docs/case_study.md) | **Economy Model V2 case study**: the 100-journey economy, missions, store, cosmetics, failure modes |
+| [`full_economy_v2/docs/results.md`](full_economy_v2/docs/results.md) | Generated Model V2 results and fifteen design questions |
 | [`docs/progressive_difficulty.md`](docs/progressive_difficulty.md) | The planned difficulty curve (design direction) |
-| [`docs/`](docs) | Wheel economics, planned systems (Chronons, store, leagues, duels, World Atlas), pilot lab, playtest plan |
-| [`analysis/`](analysis) | Wheel table and derivations, contest odds, V1 figure build, V1 claim checker |
-| [`pilot/`](pilot) | V1 pilot engine, its dashboard, the World Tour catalog format and validator, V1 tests |
-| [`full_economy_v2/`](full_economy_v2) | V2 configuration, engine, dashboard, scripts, tests and outputs |
-| [`outputs/portfolio/`](outputs/portfolio) | V1 tables and figures |
+| [`docs/`](docs) | Wheel economics, planned systems (Chronons, store, leagues, duels, World Atlas), pilot lab, playtest plan, lab screenshots |
+| [`analysis/`](analysis) | Wheel table and derivations, contest odds, Model V1 figure build, Model V1 claim checker |
+| [`pilot/`](pilot) | Model V1 pilot engine, its lab, the World Tour catalog format and validator, Model V1 tests |
+| [`full_economy_v2/`](full_economy_v2) | Model V2 configuration, engine, lab, scripts, tests and outputs |
+| [`outputs/portfolio/`](outputs/portfolio) | Model V1 tables and figures |
+| [`index.html`](index.html) | Landing page for the two labs when the repository is served as a static site |
 | [`full_economy_v2/docs/demo_audit.md`](full_economy_v2/docs/demo_audit.md) | Read-only audit of what the offline demo implements |
 | [`docs/legacy_case_study_2026-10.md`](docs/legacy_case_study_2026-10.md), [`docs/monetization_and_experiment.md`](docs/monetization_and_experiment.md), `economy_model.py`, `assumptions.csv`, `outputs/*.csv`, `outputs/*.png` | **Legacy**: the October 2026 seven-region model and sponsored-quest experiment design, kept to show how the design iterated. Both test suites read `assumptions.csv` for the implemented PP rule |
 
@@ -347,16 +386,22 @@ node full_economy_v2/scripts/build_v2.js      # regenerate V2 tables, figures an
 - **The progressive difficulty curve is a design direction,** not a calibrated result.
 - **Not modelled:** competition outcomes, the Coins migration, fraud and the next era's economy.
 
-## 18. AI-assisted implementation
+## 18. My role and AI-assisted implementation
 
-I built this portfolio with Claude (Anthropic) as an implementation partner.
-- **Claude's part:** it wrote the simulation, analysis, test and checker code and drafted the documents from my game's rules and briefs.
-- **My part:**
-  - I set the design questions and made every product and economy decision;
-  - I defined what counts as implemented, approved or hypothetical;
-  - I reviewed the results;
-  - I directed the corrections, several of which came from catching a claim the numbers did not support.
-- **Guarding against plausible errors:** the claim checkers and mutation tests exist so that AI-written code and text could not quietly drift from the models.
+**Decisions I made or approved.** The product rules these models test:
+- **Money buys timing, never progress.** Purchases reward Chronons for journey access and cosmetics; they never generate Energy, PP, journey progress or competitive score.
+- **Chronons and the World Tour.** A second currency prices access to a 100-journey tour, and a journey's overflow PP is kept as pending PP.
+- **No deadlock.** Organic Chronons keep accruing while no journey is active, approved as a Model V2 modelling rule.
+- **Competition on activity, not PP.** Leagues and Duels are to rank a dedicated Odyssey Score.
+- **A 500-Energy cap for the beta.**
+- **Responding to the blocked-session risk** with a progressive Accessible → Balanced → Challenging curve, which is still in progress.
+- **How every claim is labelled:** what counts as implemented, approved, hypothetical or unset, and that every commercial input is hypothetical.
+
+**What Claude did.** I built this portfolio with Claude (Anthropic) as an implementation partner. Claude wrote the simulation, analysis, test, chart and checker code and drafted the documents from my game's rules and briefs. The findings, including the blocked-session risk, came out of those models; deciding what they mean for the game was my part.
+
+**How I checked it.**
+- I reviewed the results and directed the corrections, several of which came from catching a claim the numbers did not support.
+- The claim checkers and mutation tests exist so that AI-written code and text could not quietly drift from the models.
 
 ## License
 

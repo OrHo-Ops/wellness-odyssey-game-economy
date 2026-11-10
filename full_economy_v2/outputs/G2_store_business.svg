@@ -46,7 +46,7 @@ text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-
 .h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
 </style>
 <rect class="bg" width="760" height="460" rx="8"/>
-<text x="24" y="34" font-size="17" class="t1" font-weight="600">G2. Does commission pay for the Chronons? Net contribution per $45 order</text>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">Does commission pay for the Chronons? Net contribution per $45 order</text>
 <text x="24" y="56" font-size="12.5" class="t2">Commission on kept orders, minus the bundle revenue the awarded Chronons displace (net of a 30%</text>
 <text x="24" y="74" font-size="12.5" class="t2">platform fee) and $0.15 handling. Left: half of store Chronons displace bundle purchases. Right: all</text>
 <text x="24" y="92" font-size="12.5" class="t2">of them do. Dots mark the break-even reward rate.</text>

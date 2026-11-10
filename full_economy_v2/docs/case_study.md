@@ -1,6 +1,6 @@
-# Full Economy V2: Designing the Long Game of a Walking Economy
+# Economy Model V2 (Full Economy V2): Designing the Long Game of a Walking Economy
 
-*Or Hotoveli · November 2026 · portfolio case study · a projection layer on top of the [V1 economy lab](../../docs/v1_core_economy.md)*
+*Or Hotoveli · November 2026 · portfolio case study · a projection layer on top of [Economy Model V1](../../docs/v1_core_economy.md)*
 
 > **Projection, not observation.** Every player here is synthetic and nothing has been validated with real players. Journeys 1-7 keep their implemented PP costs; journeys 8-100 are placeholders. Every rate, price and reward that is not linked to V1 code is a **hypothetical** input, chosen to map the design space, not proposed for launch. Wheel V3 (Quick 10 / Journey 50 / Epic 100) is offline-demo functionality, not production.
 
@@ -32,7 +32,7 @@ V1 showed that the 30-tester pilot runs out of content within days. V2 asks what
 | Element | Value used | Label | Source |
 |---|---|---|---|
 | Steps to Energy | 10 verified steps = 1 Energy; PP only from spins; PP cannot be bought | Implemented | `pilot_model.js` (linked) |
-| Wheel | Reviewed table: 52.25 PP per 50-Energy attempt, 0.2% refund. V3 tiers 10 / 50 / 100 at 1.045 PP per staked Energy | Implemented table · V3 offline demo | `analysis/wheel.js` (linked) |
+| Wheel | Reviewed table: 52.25 PP per 50-Energy attempt, 0.2% refund. Wheel V3 tiers 10 / 50 / 100 at 1.045 PP per staked Energy | Implemented table · V3 offline demo | `analysis/wheel.js` (linked) |
 | Journeys 1-7 | Jerusalem, Dead Sea, Petra, Cappadocia, Burj Khalifa, Acropolis, Santorini at 1,500 × 1.08ⁿ⁻¹ PP | Implemented; their World Tour placement is hypothetical | `assumptions.csv` (pinned by a test) |
 | Journeys 8-100 | Placeholders in prerequisite tiers of three; PP from a pacing curve | Hypothetical | V2 projection |
 | Chronons while waiting | Organic Chronons keep accruing when no journey is active | Approved for V2; the opposite is tested as a failure | V2 brief |

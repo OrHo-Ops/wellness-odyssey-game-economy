@@ -1,8 +1,8 @@
-# V1: Core Economy, Wheel Mathematics and the 30-Tester Pilot Lab
+# Economy Model V1: Core Economy, Wheel Mathematics and the 30-Tester Pilot Lab
 
 *Or Hotoveli · November 2026 · part of the [Wellness Odyssey game economy portfolio](../README.md)*
 
-> **This is the V1 case study.** It covers the implemented core loop, the wheel mathematics, the 28-day pilot model and the planned systems. The long-horizon 100-journey economy is [Full Economy V2](../full_economy_v2/docs/case_study.md). Commands below run from the repository root.
+> **This is the Economy Model V1 case study.** It covers the implemented core loop, the wheel mathematics, the 28-day pilot model and the planned systems. The long-horizon 100-journey economy is [Economy Model V2](../full_economy_v2/docs/case_study.md), called Full Economy V2 in its folder and code. Wheel versions are always written Wheel V1–V3. Commands below run from the repository root.
 
 Wellness Odyssey is a mobile walking game. Real steps become Energy, Energy buys spins of a reward wheel, and the wheel pays Progress Points that carry the player along journeys to real-world destinations.
 
@@ -49,7 +49,7 @@ The designer controls conversion rates, caps, sinks and content. Walking has to 
 |---|---|---|
 | 1 | The reviewed wheel pays **52.25 PP per 50-Energy spin**: 1.045 PP per Energy staked and **1.0471 PP per Energy actually spent**. Scaling every payout by stake ÷ 50 keeps that return identical at every stake, so stake choice changes variance and pace of play, not progress per step | Derived |
 | 2 | Small stakes produce fractional rewards: at stakes 1–3, **65% of outcomes** pay a fraction of a PP. Payouts are all whole **exactly when the stake is a multiple of 10**, which led to the Wheel V3 tiers of 10 / 50 / 100. They keep the same return | Derived · Offline demo |
-| 3 | Content runs out first. In the baseline scenario 26.8 of 30 testers finish Jerusalem, half of them by **day 4.4**, and then **82% of active days** leave Energy with nothing to buy | Simulated |
+| 3 | Content runs out first. In the baseline scenario about 27 of 30 testers finish Jerusalem (an average of 26.8 across 300 simulated pilots), half of them by **day 4.4**, and then **82% of active days** leave Energy with nothing to buy | Simulated |
 | 4 | Puzzle completion depends on mission supply, not effort. With two participating businesses the first puzzle cannot be completed at all, and with four, about 1 tester in 30 completes it | Simulated |
 | 5 | **PP is a poor competitive metric at everyday volumes.** A player who walks 10% less still finishes ahead on PP about a third of the time at 10,000 steps, and choosing the riskiest tier raises a trailing player's odds. A tier choice that is neutral for progress becomes a gamble in a contest. This is why Leagues and Duels are planned on a dedicated Odyssey Score instead | Derived (mathematical analysis) |
 | 6 | The earlier seven-region model found the content-exhaustion pattern at a larger scale: active players finished all seven regions in about three weeks, and the Energy cap paced them more than their walking did | Legacy |
@@ -275,6 +275,8 @@ Full derivations, the variance table and the presentation rules: [docs/wheel_eco
 
 ### 4.2 Results (simulated)
 
+Tester counts are averages across 300 simulated 30-tester pilots, so they can be fractional.
+
 | Metric (cohort of 30) | Conservative | Baseline | Optimistic |
 |---|---|---|---|
 | Testers with at least one active day | 22.6 | 27.0 | 30.0 |
@@ -311,7 +313,7 @@ Full derivations, the variance table and the presentation rules: [docs/wheel_eco
 
 - **Every tester is synthetic.** Activity, steps, the mission funnel, stake choice and spending are assumptions.
 - **The wheel enters the lab as expected values.** Individual outcomes vary more than the model shows.
-- **The lab's stake mix uses the eight development stakes, not the V3 tiers.** Expected PP per Energy is identical at every stake, but that alone does not make pilot results identical. Discrete stake affordability, Energy left below the smallest tier, journey overshoot and daily spending budgets can all shift completion timing and idle balances. Overshoot alone means Jerusalem costs an expected 1,439 net Energy at Quick Spin and 1,502 at Epic Spin. **A V3-specific rerun is needed** before any pilot result is quoted for V3.
+- **The lab's stake mix uses the eight development stakes, not the Wheel V3 tiers.** Expected PP per Energy is identical at every stake, but that alone does not make pilot results identical. Discrete stake affordability, Energy left below the smallest tier, journey overshoot and daily spending budgets can all shift completion timing and idle balances. Overshoot alone means Jerusalem costs an expected 1,439 net Energy at Quick Spin and 1,502 at Epic Spin. **A V3-specific rerun is needed** before any pilot result is quoted for V3.
 - **The lab drops overflow PP, and it has no cap or daily bonuses by default.**
 - **Not modelled:** retention as a decision, purchases, cosmetics, competition, revenue, fraud and Coins.
 
@@ -567,7 +569,7 @@ About 30 testers for 28 days, run as a **calibration exercise rather than an exp
 |---|---|
 | Daily verified steps and their variation | Journey lengths; pacing; how much of a contest walking decides |
 | Sessions per day and the balance at each sync | Energy cap |
-| Tier choice and steps before the first spin | V3 tiers; onboarding |
+| Tier choice and steps before the first spin | Wheel V3 tiers; onboarding |
 | Day each tester finishes Jerusalem; idle days afterwards | Second-journey price and length |
 | Mission funnel and extra walking | Mission rewards and supply |
 | Tiles, leftover pieces, Chronons held | Puzzle size; organic rates |
@@ -592,7 +594,7 @@ Its content-exhaustion finding is the same problem the World Tour addresses. **I
 ## 12. Reproduce Everything
 
 ```bash
-node --test                          # 74 tests: pilot engine and World Tour catalog (Node 18+, no packages)
+node --test                          # 74 tests: pilot engine and World Tour catalog (Node 22+, tested on 24.16; no packages)
 node analysis/build_portfolio.js     # regenerate outputs/portfolio/ (wheel, contest and pilot tables; figures)
 node analysis/check_claims.js        # derived figures, engine constants, quoted numbers, links, stale outputs
 

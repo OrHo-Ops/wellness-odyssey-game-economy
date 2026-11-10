@@ -46,7 +46,7 @@ text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-
 .h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
 </style>
 <rect class="bg" width="760" height="499" rx="8"/>
-<text x="24" y="34" font-size="17" class="t1" font-weight="600">K. Pacing scenarios: tour length vs price level</text>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">Pacing scenarios: tour length vs price level</text>
 <text x="24" y="56" font-size="12.5" class="t2">Median day a moderate walker finishes journey 100, for three PP pacing curves and three price levels,</text>
 <text x="24" y="74" font-size="12.5" class="t2">with prices calibrated to each curve. No completion target is assumed: the figure shows the</text>
 <text x="24" y="92" font-size="12.5" class="t2">trade-off, not a recommendation.</text>

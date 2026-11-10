@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pilot Economy Lab</title>
+<title>Economy Model V1: Pilot Lab</title>
 <meta name="description" content="Wellness Odyssey 30-tester pilot economy model: Wheel V2, sponsored walking missions, puzzle tiles and Chronons. Synthetic testers only.">
 <style>
 :root {
@@ -246,7 +246,7 @@ ul.limits b { color: var(--ink); }
         <circle cx="29" cy="12" r="2.4" fill="var(--accent)"/>
       </svg>
       <div>
-        <div class="brand-name">Wellness Odyssey · Economy Lab</div>
+        <div class="brand-name">Wellness Odyssey · Economy Model V1</div>
         <h1>30-tester pilot economy</h1>
       </div>
     </div>
@@ -657,7 +657,7 @@ ul.limits b { color: var(--ink); }
     const res = last, cfg = res.cfg, m = res.metrics, b = state.basis;
     const n = cfg.enrolledTesters;
     const basisWord = b === "perEnrolled" ? "per enrolled tester" : "per active tester";
-    $("kpi-sub").textContent = `${cfg.pilotDays}-day pilot, ${scenarioName(state.scenario)} scenario${Object.keys(state.overrides).length ? " with edits" : ""}. Wallet figures ${basisWord}; the small print is the range across 80% of simulated cohorts.`;
+    $("kpi-sub").textContent = `${cfg.pilotDays}-day pilot, ${scenarioName(state.scenario)} scenario${Object.keys(state.overrides).length ? " with edits" : ""}. Wallet figures ${basisWord}; the small print is the range across 80% of simulated cohorts. Tester counts are averages across ${fmt(res.replications)} simulated cohorts, so they can be fractional.`;
 
     const v = (key) => m[key][b];
     const income = v("energyCredited").mean + v("legacyBonusEnergy").mean + v("puzzleBonusEnergy").mean;

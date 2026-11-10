@@ -1,6 +1,6 @@
-# Full Economy V2: World Tour, Chronons, Missions, Puzzles, Store and Cosmetics
+# Economy Model V2 (Full Economy V2): World Tour, Chronons, Missions, Puzzles, Store and Cosmetics
 
-A long-horizon projection layer on top of the [Wellness Odyssey Economy Lab](../docs/v1_core_economy.md). It models the planned 100-destination World Tour with Chronon-priced journeys, organic and sponsored walking missions, Future Vision puzzles, a Wellness Store with affiliate rewards, Chronon bundles and a proposed starter cosmetic catalog.
+A long-horizon projection layer on top of [Economy Model V1](../docs/v1_core_economy.md). It models the planned 100-destination World Tour with Chronon-priced journeys, organic and sponsored walking missions, Future Vision puzzles, a Wellness Store with affiliate rewards, Chronon bundles and a proposed starter cosmetic catalog.
 
 > **Synthetic players; hypothetical economy values.** Nothing here is observed. Journeys 1-7 keep their implemented PP; journeys 8-100 are placeholders. Every value that is not linked to V1 code is a labelled hypothetical input in [`config/scenario_config.js`](config/scenario_config.js). Wheel V3 is offline-demo functionality. V2 adds files only under `full_economy_v2/` and modifies no V1 file.
 
@@ -9,7 +9,7 @@ A long-horizon projection layer on top of the [Wellness Odyssey Economy Lab](../
 ## Reproduce
 
 ```bash
-node full_economy_v2/scripts/run_tests.js   # the V2 tests (Node 18+, no packages)
+node full_economy_v2/scripts/run_tests.js   # the V2 tests (Node 22+, tested on 24.16; no packages)
 node full_economy_v2/scripts/build_v2.js    # regenerate outputs/, docs/results.md and generated/ (about a minute)
 node full_economy_v2/scripts/check_v2.js    # outputs current, quoted numbers recomputed, links resolve, V1 still green
 ```

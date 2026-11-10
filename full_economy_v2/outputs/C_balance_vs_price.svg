@@ -46,7 +46,7 @@ text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-
 .h7{fill:#b7d3f6}.ht7{fill:#0b0b0b}}
 </style>
 <rect class="bg" width="760" height="515" rx="8"/>
-<text x="24" y="34" font-size="17" class="t1" font-weight="600">C. Chronons held on finishing a journey vs the next journey's price</text>
+<text x="24" y="34" font-size="17" class="t1" font-weight="600">Chronons held on finishing a journey vs the next journey's price</text>
 <text x="24" y="56" font-size="12.5" class="t2">Closed-form ledger, moderate walker. Walking alone stays ahead of prices until journey 61; from then</text>
 <text x="24" y="74" font-size="12.5" class="t2">on the balance reaches the next price only after a wait. Regular missions keep the balance ahead for</text>
 <text x="24" y="92" font-size="12.5" class="t2">longer.</text>
