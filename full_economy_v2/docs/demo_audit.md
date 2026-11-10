@@ -58,4 +58,6 @@ Two V2 rules are assumptions rather than demo behaviour, and both are labelled h
 
 **Limits V2 does not adopt.** The demo's three-mission limit is a boundary of the demo session, not a rule V2 adopts; V2 allows at most one mission a day.
 
-**Values still unapproved.** The 500-Energy step cap is one of the scenarios V2 already compares. No journey price has been approved. Organic Chronons and pieces, completion rewards, the store, bundles and cosmetics have no demo implementation, so they stay labelled hypothetical.
+**Values still unapproved.** No journey price has been approved. Organic Chronons and pieces, completion rewards, the store, bundles and cosmetics have no demo implementation, so they stay labelled hypothetical.
+
+**The Energy cap.** The demo's 500-Energy step cap matches the cap approved as a closed-beta experiment, which V2 already compares as a scenario.

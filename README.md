@@ -115,7 +115,7 @@ flowchart LR
 
 | Resource | Role | Status |
 |---|---|---|
-| **Energy** | Fuel for spins. 10 verified steps make 1 Energy; daily milestones and quest arrivals add more | Implemented. The Energy cap is 250 in production code and 500 in the approved beta |
+| **Energy** | Fuel for spins. 10 verified steps make 1 Energy; daily milestones and quest arrivals add more | Implemented. The Energy cap is 250 in production code; 500 is approved as a closed-beta experiment and is on the development branch |
 | **Progress Points** | Progress, not a currency: cannot be spent or bought | Implemented |
 | **Pending PP** | A journey's overflow, kept for the next journey. Never pays a price or bypasses an unlock | Planned |
 | **Chronons** | The access-and-expression currency. Sources: walking, journey completion, missions, store rewards, bundles. Sinks: journeys and cosmetics | Planned. Every rate and price unset or hypothetical |
@@ -393,7 +393,7 @@ node full_economy_v2/scripts/build_v2.js      # regenerate Model V2 tables, figu
 - **Chronons and the World Tour.** A second currency prices access to a 100-journey tour, and a journey's overflow PP is kept as pending PP.
 - **No deadlock.** Organic Chronons keep accruing while no journey is active, approved as a Model V2 modelling rule.
 - **Competition on activity, not PP.** Leagues and Duels are to rank a dedicated Odyssey Score.
-- **A 500-Energy cap for the beta.**
+- **A 500-Energy cap for the closed beta,** approved as a beta experiment; production code still has 250.
 - **Responding to the blocked-session risk** with a progressive Accessible → Balanced → Challenging curve, which is still in progress.
 - **How every claim is labelled:** what counts as implemented, approved, hypothetical or unset, and that every commercial input is hypothetical.
 

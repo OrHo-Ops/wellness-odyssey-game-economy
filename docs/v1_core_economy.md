@@ -151,7 +151,7 @@ Daily milestones pay Energy and Coins once a day each, all above the cap:
 | Where | Bank cap on step Energy | Status |
 |---|---|---|
 | Production code | **250** | Implemented |
-| Development branch and approved beta | **500** | Implemented on the development branch |
+| Development branch; approved as a closed-beta experiment | **500** | Implemented on the development branch |
 | Offline demo | 500 | Offline demo |
 | The build pilot testers will receive | **Unverified** | To be checked before the pilot |
 | Economy Lab default | No cap. A legacy switch applies 500 plus the daily bonuses | Simulation assumption |
